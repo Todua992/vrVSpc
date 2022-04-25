@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CannonShoot : MonoBehaviour {
     [SerializeField] private float shootSpeed;
-    [SerializeField] private Transform spawn;
+    [SerializeField] private Transform cannonBallSpawn;
     [SerializeField] private GameObject cannonBallPrefab;
     [SerializeField] private AudioSource explosionSound;
     [SerializeField] private ParticleSystem explosionVFX;
@@ -17,7 +17,7 @@ public class CannonShoot : MonoBehaviour {
         explosionSound.Play();
         explosionVFX.Play();
 
-        Rigidbody cannonBall = Instantiate(cannonBallPrefab, spawn.position, spawn.rotation).GetComponent<Rigidbody>();
-        cannonBall.AddForce(spawn.forward * shootSpeed, ForceMode.Impulse);
+        Rigidbody cannonBall = Instantiate(cannonBallPrefab, cannonBallSpawn.position, cannonBallSpawn.rotation).GetComponent<Rigidbody>();
+        cannonBall.AddForce(cannonBallSpawn.forward * shootSpeed, ForceMode.Impulse);
     }
 }
