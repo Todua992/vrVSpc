@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10065,75 +10065,75 @@ Transform:
   m_Father: {fileID: 2213314930026736581}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3807777871807664773
+--- !u!1001 &3583700381623356404
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1179613074957764686, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 330325886649536754, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1179613074957764686, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 330325886649536754, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.99282
+      value: -3.0122862
       objectReference: {fileID: 0}
-    - target: {fileID: 1179613074957764686, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 330325886649536754, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 137.61684
+      value: -4.6542253
       objectReference: {fileID: 0}
-    - target: {fileID: 1179613074957764686, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 330325886649536754, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.287612
+      value: -15.820095
       objectReference: {fileID: 0}
-    - target: {fileID: 1179613074957764686, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 330325886649536754, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1179613074957764686, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 330325886649536754, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1179613074957764686, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 330325886649536754, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1179613074957764686, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 330325886649536754, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1179613074957764686, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 330325886649536754, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1179613074957764686, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 330325886649536754, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1179613074957764686, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 330325886649536754, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3431212155822665268, guid: 2e9a166b966e34944b27d3635dc5c7de,
+    - target: {fileID: 736854008969042348, guid: 6193c9d1d4caa4b418d8258ea3130ecb,
         type: 3}
       propertyPath: m_Name
-      value: Hand effect
+      value: Handeffect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2e9a166b966e34944b27d3635dc5c7de, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 6193c9d1d4caa4b418d8258ea3130ecb, type: 3}
 --- !u!198 &4120962419796541642
 ParticleSystem:
   m_ObjectHideFlags: 0

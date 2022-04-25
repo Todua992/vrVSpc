@@ -1,23 +1,27 @@
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class RagdollController : MonoBehaviour {
+public class RagdollController : MonoBehaviour
+{
     private Rigidbody[] rb;
     private Animator animator;
     private bool isRagdool = false;
-
+    [SerializeField] private int RegDollTime;
     [SerializeField] private Transform hips;
 
-    
 
-    void Start() {
+
+    void Start()
+    {
         rb = GetComponentsInChildren<Rigidbody>();
         animator = GetComponent<Animator>();
         DisableRagdoll();
     }
 
-    public async void EnableRagdoll() {
-        if (!isRagdool) {
+    public async void EnableRagdoll()
+    {
+        if (!isRagdool)
+        {
             isRagdool = true;
 
             foreach (Rigidbody selected in rb)
@@ -28,19 +32,21 @@ public class RagdollController : MonoBehaviour {
 
             animator.enabled = false;
 
-            await Task.Delay(2000);
+            await Task.Delay(RegDollTime);
 
             DisableRagdoll();
         }
     }
 
-    private void DisableRagdoll() {
+    private void DisableRagdoll()
+    {
         isRagdool = false;
 
-        foreach (Rigidbody selected in rb) {
+        foreach (Rigidbody selected in rb)
+        {
             selected.isKinematic = true;
             selected.detectCollisions = false;
-            
+
         }
 
         transform.position = hips.position;
