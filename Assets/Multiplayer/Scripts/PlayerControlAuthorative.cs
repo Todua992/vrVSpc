@@ -6,11 +6,11 @@ using UnityEngine;
 [RequireComponent(typeof(ClientNetworkTransform))]
 public class PlayerControlAuthorative : NetworkBehaviour {
     [Header("Initialization Variables")]
-    [SerializeField] private Vector2 defaultInitialPositionOnPlane = new Vector2(-4, 4);
+    [SerializeField] private Vector3 defaultInitialPosition;
 
     [Header("Movement Variables")]
-    [SerializeField] private float walkSpeed = 3.5f;
-    [SerializeField] private float sprintSpeedMultiplier = 2.0f;
+    [SerializeField] private float walkSpeed;
+    [SerializeField] private float sprintSpeedMultiplier;
 
     [Header("Rotation Variables")]
     [SerializeField] private float sensitivityX;
@@ -38,23 +38,26 @@ public class PlayerControlAuthorative : NetworkBehaviour {
     private float inputHorizontal;
     private float inputVertical;
     private Vector3 movement;
-    
 
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
     }
 
-    void Start() {
+    private void Start() {
         Cursor.lockState = CursorLockMode.Locked;
 
         if (IsClient && IsOwner) {
-            transform.position = new Vector3(Random.Range(defaultInitialPositionOnPlane.x, defaultInitialPositionOnPlane.y), 0, Random.Range(defaultInitialPositionOnPlane.x, defaultInitialPositionOnPlane.y));
+            transform.position = defaultInitialPosition;
             PlayerCameraFollow.Instance.FollowPlayer(transform.Find("CameraRotate").Find("PlayerCameraRoot"));
         }
     }
 
-    void Update() {
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.L)) {
+            transform.position = defaultInitialPosition;
+        }
+
         if (IsClient && IsOwner) {
             ClientMovement();
             ClientRotation();
