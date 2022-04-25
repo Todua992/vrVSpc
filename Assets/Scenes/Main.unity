@@ -2394,6 +2394,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1661320135
       objectReference: {fileID: 0}
+    - target: {fileID: 2961294108237528645, guid: 678bcda36110ad34dbe180fc221805fe,
+        type: 3}
+      propertyPath: m_StepOffset
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 3576309048919539903, guid: 678bcda36110ad34dbe180fc221805fe,
         type: 3}
       propertyPath: m_RootOrder

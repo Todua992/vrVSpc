@@ -14,7 +14,7 @@ public class CannonShoot : MonoBehaviour {
     }
 
     private void Shoot() {
-        explosionSound.Play();
+        //explosionSound.Play();
         explosionVFX.Play();
 
         Rigidbody cannonBall = Instantiate(cannonBallPrefab, cannonBallSpawn.position, cannonBallSpawn.rotation).GetComponent<Rigidbody>();
