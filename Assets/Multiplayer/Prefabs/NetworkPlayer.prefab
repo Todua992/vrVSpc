@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9df045a324281cb4896db3f0605be804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultInitialPositionOnPlane: {x: 4, y: -4}
+  defaultInitialPositionOnPlane: {x: 40, y: 60}
   walkSpeed: 5
   sprintSpeedMultiplier: 1.75
   sensitivityX: 50
