@@ -29,6 +29,10 @@ public class CannonShoot : MonoBehaviour {
             UpdateReloadTimeServerRcp(true);
         }
 
+        if (shooting != networkShooting.Value) {
+            shooting = networkShooting.Value;
+        }
+
         if (shooting == true) {
             UpdateShootingServerRpc(false);
             Shoot();
