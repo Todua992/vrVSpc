@@ -31,7 +31,7 @@ public class CannonShoot : NetworkBehaviour {
             UpdateShootingServerRpc(true);
 
             timing = true;
-            UpdateTimingServerRcp(true);
+            UpdateTimingServerRpc(true);
         }
 
         if (shooting != networkShooting.Value) {
@@ -62,14 +62,14 @@ public class CannonShoot : NetworkBehaviour {
     private void OnTriggerEnter(Collider collider) {
         if (collider.CompareTag("Player")) {
             colliding = true;
-            UpdateCollidingServerRcp(true);
+            UpdateCollidingServerRpc(true);
         }
     }
 
     private void OnTriggerExit(Collider collider) {
         if (collider.CompareTag("Player")) {
             colliding = false;
-            UpdateCollidingServerRcp(false);
+            UpdateCollidingServerRpc(false);
         }
     }
 
@@ -98,7 +98,7 @@ public class CannonShoot : NetworkBehaviour {
             timer = reloadTime;
 
             timing = false;
-            UpdateTimingServerRcp(false);
+            UpdateTimingServerRpc(false);
         }
     }
 
@@ -107,7 +107,7 @@ public class CannonShoot : NetworkBehaviour {
     #region SERVER CALLS
 
     [ServerRpc]
-    public void UpdateCollidingServerRcp(bool colliding) {
+    public void UpdateCollidingServerRpc(bool colliding) {
         networkColliding.Value = colliding;
     }
 
@@ -117,7 +117,7 @@ public class CannonShoot : NetworkBehaviour {
     }
 
     [ServerRpc]
-    public void UpdateTimingServerRcp(bool timing) {
+    public void UpdateTimingServerRpc(bool timing) {
         networkTiming.Value = timing;
     }
 
