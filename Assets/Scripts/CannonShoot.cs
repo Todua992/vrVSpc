@@ -8,39 +8,43 @@ public class CannonShoot : NetworkBehaviour {
     [SerializeField] private GameObject cannonBallPrefab;
     [SerializeField] private AudioSource explosionSound;
     [SerializeField] private ParticleSystem explosionVFX;
-
-    [SerializeField] private NetworkVariable<bool> networkColliding = new NetworkVariable<bool>();
-    [SerializeField] private NetworkVariable<bool> networkShooting = new NetworkVariable<bool>();
-    [SerializeField] private NetworkVariable<bool> networkTiming = new NetworkVariable<bool>();
-
+    
     private float timer = 0;
     private bool colliding = false;
     private bool shooting = false;
     private bool timing = false;
 
+    private PlayerShoot playerShoot;
+
     private void Update() {
+        if (timer > 0) {
+            timer -= Time.deltaTime;
+        }
+
+        if (playerShoot == null) {
+            return;
+        }
+        
         CheckColliding();
         CheckShooting();
         CheckTiming();        
 
-        if (timer > 0) {
-            timer -= Time.deltaTime;
-        } else if (colliding && Input.GetKeyDown(KeyCode.P)) {
+        if (colliding && timer <= 0f && Input.GetKeyDown(KeyCode.P)) {
             
             shooting = true;
-            UpdateShootingServerRpc(true);
+            playerShoot.Shooting(true);
 
             timing = true;
-            UpdateTimingServerRpc(true);
+            playerShoot.Timing(true);
         }
 
-        if (shooting != networkShooting.Value) {
-            shooting = networkShooting.Value;
+        if (shooting != playerShoot.networkShooting.Value) {
+            shooting = playerShoot.networkShooting.Value;
         }
 
         if (shooting == true) {
             shooting = false;
-            UpdateShootingServerRpc(false);
+            playerShoot.Shooting(false);
 
             if (IsHost) {
                 Shoot();
@@ -61,15 +65,19 @@ public class CannonShoot : NetworkBehaviour {
 
     private void OnTriggerEnter(Collider collider) {
         if (collider.CompareTag("Player")) {
+            playerShoot = collider.GetComponent<PlayerShoot>();
+            
             colliding = true;
-            UpdateCollidingServerRpc(true);
+            playerShoot.Colliding(true);
         }
     }
 
     private void OnTriggerExit(Collider collider) {
         if (collider.CompareTag("Player")) {
             colliding = false;
-            UpdateCollidingServerRpc(false);
+            playerShoot.Colliding(false);
+
+            playerShoot = null;
         }
     }
 
@@ -78,48 +86,30 @@ public class CannonShoot : NetworkBehaviour {
     #region CHECK SERVER CALLS
 
     private void CheckColliding() {
-        if (colliding != networkColliding.Value) {
-            colliding = networkColliding.Value;
+        if (colliding != playerShoot.networkColliding.Value) {
+            colliding = playerShoot.networkColliding.Value;
         }
     }
 
     private void CheckShooting() {
-        if (shooting != networkShooting.Value) {
-            shooting = networkShooting.Value;
+        if (shooting != playerShoot.networkShooting.Value) {
+            shooting = playerShoot.networkShooting.Value;
         }
     }
 
     private void CheckTiming() {
-        if (timing != networkTiming.Value) {
-            timing = networkTiming.Value;
+        if (timing != playerShoot.networkTiming.Value) {
+            timing = playerShoot.networkTiming.Value;
         }
 
         if (timing) {
             timer = reloadTime;
 
             timing = false;
-            UpdateTimingServerRpc(false);
+            playerShoot.Timing(false);
         }
     }
 
     #endregion
 
-    #region SERVER CALLS
-
-    [ServerRpc]
-    public void UpdateCollidingServerRpc(bool colliding) {
-        networkColliding.Value = colliding;
-    }
-
-    [ServerRpc]
-    public void UpdateShootingServerRpc(bool shooting) {
-        networkShooting.Value = shooting;
-    }
-
-    [ServerRpc]
-    public void UpdateTimingServerRpc(bool timing) {
-        networkTiming.Value = timing;
-    }
-
-    #endregion
 }
