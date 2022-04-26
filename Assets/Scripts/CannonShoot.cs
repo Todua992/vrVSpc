@@ -7,13 +7,13 @@ public class CannonShoot : MonoBehaviour {
     [SerializeField] private GameObject cannonBallPrefab;
     [SerializeField] private AudioSource explosionSound;
     [SerializeField] private ParticleSystem explosionVFX;
-
+    /*
     private void Update() {
         if (Input.GetKeyDown(KeyCode.P)) {
             Shoot();
         }
     }
-
+    */
     private void Shoot() {
         //explosionSound.Play();
         explosionVFX.Play();
@@ -21,5 +21,11 @@ public class CannonShoot : MonoBehaviour {
         GameObject cannonBall = Instantiate(cannonBallPrefab, cannonBallSpawn.position, cannonBallSpawn.rotation);
         cannonBall.GetComponent<NetworkObject>().Spawn();
         cannonBall.GetComponent<Rigidbody>().AddForce(cannonBallSpawn.forward * shootSpeed, ForceMode.Impulse);
+    }
+
+    private void OnTriggerStay(Collider collider) {
+        if (Input.GetKeyDown(KeyCode.P) && collider.CompareTag("Player")) {
+            Shoot();
+        }
     }
 }
