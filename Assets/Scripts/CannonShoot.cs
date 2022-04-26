@@ -36,13 +36,7 @@ public class CannonShoot : NetworkBehaviour {
 
             timing = true;
             playerShoot.Timing(true);
-        }
-
-        if (shooting != playerShoot.networkShooting.Value) {
-            shooting = playerShoot.networkShooting.Value;
-        }
-
-        if (shooting == true) {
+        } else if (shooting == true) {
             shooting = false;
             playerShoot.Shooting(false);
 
