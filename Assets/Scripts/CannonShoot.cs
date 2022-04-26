@@ -1,7 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class CannonShoot : MonoBehaviour {
+public class CannonShoot : NetworkBehaviour {
     [SerializeField] private float reloadTime;
     [SerializeField] private float shootSpeed;
     [SerializeField] private Transform cannonBallSpawn;
@@ -9,24 +9,29 @@ public class CannonShoot : MonoBehaviour {
     [SerializeField] private AudioSource explosionSound;
     [SerializeField] private ParticleSystem explosionVFX;
 
-    [SerializeField] private NetworkVariable<bool> networkTimer = new NetworkVariable<bool>();
+    [SerializeField] private NetworkVariable<bool> networkColliding = new NetworkVariable<bool>();
     [SerializeField] private NetworkVariable<bool> networkShooting = new NetworkVariable<bool>();
+    [SerializeField] private NetworkVariable<bool> networkTiming = new NetworkVariable<bool>();
 
     private float timer = 0;
     private bool colliding = false;
     private bool shooting = false;
+    private bool timing = false;
 
     private void Update() {
-        if (networkTimer.Value) {
-            timer = reloadTime;
-            UpdateReloadTimeServerRcp(false);
-        }
-        
+        CheckColliding();
+        CheckShooting();
+        CheckTiming();        
+
         if (timer > 0) {
             timer -= Time.deltaTime;
         } else if (colliding && Input.GetKeyDown(KeyCode.P)) {
+            
+            shooting = true;
             UpdateShootingServerRpc(true);
-            UpdateReloadTimeServerRcp(true);
+
+            timing = true;
+            UpdateTimingServerRcp(true);
         }
 
         if (shooting != networkShooting.Value) {
@@ -34,8 +39,12 @@ public class CannonShoot : MonoBehaviour {
         }
 
         if (shooting == true) {
+            shooting = false;
             UpdateShootingServerRpc(false);
-            Shoot();
+
+            if (IsHost) {
+                Shoot();
+            }
         }
     }
     
@@ -48,25 +57,69 @@ public class CannonShoot : MonoBehaviour {
         cannonBall.GetComponent<Rigidbody>().AddForce(cannonBallSpawn.forward * shootSpeed, ForceMode.Impulse);
     }
 
+    #region COLLISIONS
+
     private void OnTriggerEnter(Collider collider) {
         if (collider.CompareTag("Player")) {
             colliding = true;
+            UpdateCollidingServerRcp(true);
         }
     }
 
     private void OnTriggerExit(Collider collider) {
         if (collider.CompareTag("Player")) {
             colliding = false;
+            UpdateCollidingServerRcp(false);
         }
     }
 
+    #endregion
+
+    #region CHECK SERVER CALLS
+
+    private void CheckColliding() {
+        if (colliding != networkColliding.Value) {
+            colliding = networkColliding.Value;
+        }
+    }
+
+    private void CheckShooting() {
+        if (shooting != networkShooting.Value) {
+            shooting = networkShooting.Value;
+        }
+    }
+
+    private void CheckTiming() {
+        if (timing != networkTiming.Value) {
+            timing = networkTiming.Value;
+        }
+
+        if (timing) {
+            timer = reloadTime;
+
+            timing = false;
+            UpdateTimingServerRcp(false);
+        }
+    }
+
+    #endregion
+
+    #region SERVER CALLS
+
     [ServerRpc]
-    public void UpdateReloadTimeServerRcp(bool reloadTimer) {
-        networkTimer.Value = reloadTimer;
+    public void UpdateCollidingServerRcp(bool colliding) {
+        networkColliding.Value = colliding;
     }
 
     [ServerRpc]
     public void UpdateShootingServerRpc(bool shooting) {
         networkShooting.Value = shooting;
     }
+
+    [ServerRpc]
+    public void UpdateTimingServerRcp(bool timing) {
+        networkTiming.Value = timing;
+    }
+
+    #endregion
 }
