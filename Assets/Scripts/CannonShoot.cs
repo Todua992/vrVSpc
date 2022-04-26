@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 
 public class CannonShoot : MonoBehaviour {
@@ -17,7 +18,8 @@ public class CannonShoot : MonoBehaviour {
         //explosionSound.Play();
         explosionVFX.Play();
 
-        Rigidbody cannonBall = Instantiate(cannonBallPrefab, cannonBallSpawn.position, cannonBallSpawn.rotation).GetComponent<Rigidbody>();
-        cannonBall.AddForce(cannonBallSpawn.forward * shootSpeed, ForceMode.Impulse);
+        GameObject cannonBall = Instantiate(cannonBallPrefab, cannonBallSpawn.position, cannonBallSpawn.rotation);
+        cannonBall.GetComponent<NetworkObject>().Spawn();
+        cannonBall.GetComponent<Rigidbody>().AddForce(cannonBallSpawn.forward * shootSpeed, ForceMode.Impulse);
     }
 }
