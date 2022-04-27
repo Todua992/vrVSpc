@@ -1758,7 +1758,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1459143, y: 1}
+    m_SensorSize: {x: 1.5329949, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1841,6 +1841,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 913101670018868320, guid: e8979157fd7b15046b648b4c454e51d0,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104948933092738371, guid: e8979157fd7b15046b648b4c454e51d0,
+        type: 3}
+      propertyPath: threshold
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104948933092738371, guid: e8979157fd7b15046b648b4c454e51d0,
+        type: 3}
+      propertyPath: currentScaleSpeed.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104948933092738371, guid: e8979157fd7b15046b648b4c454e51d0,
+        type: 3}
+      propertyPath: currentScaleSpeed.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104948933092738371, guid: e8979157fd7b15046b648b4c454e51d0,
+        type: 3}
+      propertyPath: currentScaleSpeed.z
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8421755636051918745, guid: e8979157fd7b15046b648b4c454e51d0,
         type: 3}
       propertyPath: m_RootOrder
