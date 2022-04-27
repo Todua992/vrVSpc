@@ -7,6 +7,7 @@ public class CannonSpawn : NetworkBehaviour {
     [SerializeField] private GameObject cannonPrefab;
     [SerializeField] private float spawnTime;
     [SerializeField] private int maxCannonCount;
+    private int index = 0;
 
     private List<GameObject> cannons = new();
     private float timer;
@@ -23,10 +24,12 @@ public class CannonSpawn : NetworkBehaviour {
                 timer -= Time.deltaTime;
             } else {
                 timer = spawnTime;
-                int index = Random.Range(0, spawnPoints.Count);
-                GameObject cannon = Instantiate(cannonPrefab, spawnPoints[index].position, spawnPoints[index].rotation);
+                int choose = Random.Range(0, spawnPoints.Count);
+                GameObject cannon = Instantiate(cannonPrefab, spawnPoints[choose].position, spawnPoints[choose].rotation);
                 cannon.GetComponent<NetworkObject>().Spawn();
-                cannon.GetComponent<CannonShoot>().cannonSpawn = this;
+                cannon.GetComponentInChildren<CannonShoot>().cannonSpawn = this;
+                cannon.GetComponentInChildren<CannonShoot>().index = index;
+                index++;
                 cannons.Add(cannon);
             }
         }

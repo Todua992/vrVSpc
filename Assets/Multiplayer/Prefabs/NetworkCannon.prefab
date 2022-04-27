@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20f105f09904f2429a93bcb746e5649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 0
+  holdTime: 1
   shootSpeed: 75
   cannonBallSpawn: {fileID: 6364459234655574777}
   cannonBallPrefab: {fileID: 1105128207619160928, guid: 3fc64a66441b5df4d95baf818001cc1f,

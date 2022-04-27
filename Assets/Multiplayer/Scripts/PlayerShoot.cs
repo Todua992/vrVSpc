@@ -6,15 +6,17 @@ using UnityEngine;
 [RequireComponent(typeof(ClientNetworkTransform))]
 public class PlayerShoot : NetworkBehaviour {
     public NetworkVariable<bool> networkShoot = new NetworkVariable<bool>();
+    public NetworkVariable<int> networkIndex = new NetworkVariable<int>();
 
-    public void UpdateNetowrkValues(bool shoot) {
+    public void UpdateNetowrkValues(bool shoot, int index) {
         if (IsClient && IsOwner) {
-            UpdateNetworkValuesServerRpc(shoot);
+            UpdateNetworkValuesServerRpc(shoot, index);
         }
     }
 
     [ServerRpc]
-    public void UpdateNetworkValuesServerRpc(bool shoot) {
+    public void UpdateNetworkValuesServerRpc(bool shoot, int index) {
         networkShoot.Value = shoot;
+        networkIndex.Value = index;
     }
 }

@@ -2,6 +2,8 @@ using Unity.Netcode;
 using UnityEngine;
 
 public class CannonShoot : NetworkBehaviour {
+    [HideInInspector] public int index;
+
     [SerializeField] private float holdTime;
     [SerializeField] private float shootSpeed;
     [SerializeField] private Transform cannonBallSpawn;
@@ -26,11 +28,11 @@ public class CannonShoot : NetworkBehaviour {
             Shoot();
         }
 
-        if (colliding && Input.GetKeyDown(KeyCode.E)) {
+        if (colliding && Input.GetKey(KeyCode.E)) {
             if (timer > 0f) {
                 timer -= Time.deltaTime;
             } else {
-                playerShoot.UpdateNetowrkValues(true);
+                playerShoot.UpdateNetowrkValues(true, index);
             }
         } else if (timer != holdTime) {
             timer = holdTime;
@@ -48,12 +50,12 @@ public class CannonShoot : NetworkBehaviour {
 
         //explosionSound.Play();
         explosionVFX.Play();
-        cannonSpawn.RemoveCannon(gameObject);
-        Destroy(gameObject);
+        cannonSpawn.RemoveCannon(transform.parent.gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
     private void CheckNetworkValues() {
-        if (shoot != playerShoot.networkShoot.Value) {
+        if (shoot != playerShoot.networkShoot.Value && index == playerShoot.networkIndex.Value) {
             shoot = playerShoot.networkShoot.Value;
         }
     }
