@@ -5,48 +5,16 @@ using UnityEngine;
 [RequireComponent(typeof(NetworkObject))]
 [RequireComponent(typeof(ClientNetworkTransform))]
 public class PlayerShoot : NetworkBehaviour {
-    public NetworkVariable<bool> networkColliding = new NetworkVariable<bool>();
-    public NetworkVariable<bool> networkShooting = new NetworkVariable<bool>();
-    public NetworkVariable<bool> networkTiming = new NetworkVariable<bool>();
+    public NetworkVariable<bool> networkShoot = new NetworkVariable<bool>();
 
-    #region CLIENT CALLS
-
-    public void Colliding(bool colliding) {
+    public void UpdateNetowrkValues(bool shoot) {
         if (IsClient && IsOwner) {
-            UpdateCollidingServerRpc(colliding);
+            UpdateNetworkValuesServerRpc(shoot);
         }
     }
 
-    public void Shooting(bool shooting) {
-        if (IsClient && IsOwner) {
-            UpdateShootingServerRpc(shooting);
-        }
-    }
-
-    public void Timing(bool timing) {
-        if (IsClient && IsOwner) {
-            UpdateTimingServerRpc(timing);
-        }
-    }
-
-    #endregion
-
-    #region SERVER CALLS
-
     [ServerRpc]
-    public void UpdateCollidingServerRpc(bool colliding) {
-        networkColliding.Value = colliding;
+    public void UpdateNetworkValuesServerRpc(bool shoot) {
+        networkShoot.Value = shoot;
     }
-
-    [ServerRpc]
-    public void UpdateShootingServerRpc(bool shooting) {
-        networkShooting.Value = shooting;
-    }
-
-    [ServerRpc]
-    public void UpdateTimingServerRpc(bool timing) {
-        networkTiming.Value = timing;
-    }
-
-    #endregion
 }
