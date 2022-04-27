@@ -18,7 +18,7 @@ public class CannonSpawn : NetworkBehaviour {
         }
     }
 
-    private void Update() {
+    private void Update() {   
         if (IsHost && cannons.Count < maxCannonCount) {
             if (timer > 0f) {
                 timer -= Time.deltaTime;
