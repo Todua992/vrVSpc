@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager> {
+    [HideInInspector] public string playerName;
+
     [Header("Button")]
     [SerializeField] private Button startServerButton;
     [SerializeField] private Button startHostButton;
@@ -27,6 +29,7 @@ public class UIManager : Singleton<UIManager> {
     void Start() {
         startServerButton?.onClick.AddListener(() => {
             if (NetworkManager.Singleton.StartServer()) {
+                playerName = playerNameInputField.text;
                 RemoveNetworkUI();
                 Logger.Instance.LogInfo("Server started...");
             } else {
@@ -40,6 +43,7 @@ public class UIManager : Singleton<UIManager> {
             }
                 
             if (NetworkManager.Singleton.StartHost()) {
+                playerName = playerNameInputField.text;
                 RemoveNetworkUI();
                 Logger.Instance.LogInfo("Host started...");
             } else {
@@ -54,6 +58,7 @@ public class UIManager : Singleton<UIManager> {
             }   
 
             if (NetworkManager.Singleton.StartClient()) {
+                playerName = playerNameInputField.text;
                 RemoveNetworkUI();
                 Logger.Instance.LogInfo("Client started...");
             } else {

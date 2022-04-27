@@ -8,10 +8,10 @@ public class PlayerHud : NetworkBehaviour {
     [SerializeField] private NetworkVariable<NetworkString> networkPlayerName = new();
     [SerializeField] private NetworkVariable<bool> networkPlayerNameSet = new();
 
-    private TMP_InputField playerNameInputField;
+    private UIManager UIManager;
     private string playerName;
 
-    private void Awake() => playerNameInputField = GameObject.Find("PlayerNameInputField").GetComponent<TMP_InputField>();
+    private void Awake() => UIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
 
     public void Update() => CheckPlayerName();
 
@@ -27,8 +27,8 @@ public class PlayerHud : NetworkBehaviour {
 
     public override void OnNetworkSpawn() {
         if (IsClient && IsOwner) {
-            if (!string.IsNullOrEmpty(playerNameInputField.text)) {
-                UpdatePlayerNameServerRpc(playerNameInputField.text, true);
+            if (!string.IsNullOrEmpty(UIManager.playerName)) {
+                UpdatePlayerNameServerRpc(UIManager.playerName, true);
             } else {
                 UpdatePlayerNameServerRpc($"Player {OwnerClientId}", true);
             } 
