@@ -26,7 +26,7 @@ public class TreeRegrow : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (transform.position.y <= -10)
         {

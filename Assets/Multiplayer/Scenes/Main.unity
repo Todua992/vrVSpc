@@ -1841,11 +1841,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 913101670018868320, guid: e8979157fd7b15046b648b4c454e51d0,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5104948933092738371, guid: e8979157fd7b15046b648b4c454e51d0,
         type: 3}
       propertyPath: threshold
