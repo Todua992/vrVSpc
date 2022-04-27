@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(NetworkObject))]
 [RequireComponent(typeof(ClientNetworkTransform))]
 public class PlayerShoot : NetworkBehaviour {
-    public NetworkVariable<bool> networkShoot = new NetworkVariable<bool>();
-    public NetworkVariable<int> networkIndex = new NetworkVariable<int>();
+    public NetworkVariable<bool> networkShoot = new();
+    public NetworkVariable<int> networkIndex = new();
 
     private void Start() {
         if (IsClient && IsOwner) {

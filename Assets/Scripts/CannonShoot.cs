@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CannonShoot : NetworkBehaviour {
     public int index = -1;
-    public NetworkVariable<int> networkIndex = new NetworkVariable<int>();
+    public NetworkVariable<int> networkIndex = new();
 
     [SerializeField] private float holdTime;
     [SerializeField] private float shootSpeed;
@@ -76,7 +76,6 @@ public class CannonShoot : NetworkBehaviour {
                 shoot = selected.networkShoot.Value;
             }
         }
-        
     }
 
     private void CheckIndexValue() {
@@ -100,7 +99,5 @@ public class CannonShoot : NetworkBehaviour {
     }
 
     [ServerRpc]
-    public void UpdateIndexServerRpc(int index) {
-        networkIndex.Value = index;
-    }
+    public void UpdateIndexServerRpc(int index) => networkIndex.Value = index;
 }

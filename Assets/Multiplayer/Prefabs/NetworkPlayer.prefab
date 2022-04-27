@@ -258,7 +258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4087343423476206717
 RectTransform:
   m_ObjectHideFlags: 0
@@ -902,7 +902,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f47d396b5463cb4ca56c49daafe62ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userNameText: {fileID: 0}
+  playerCanvas: {fileID: 7600246910141177569}
+  playerNameText: {fileID: 8096343206088220397}
+  networkPlayerNameSet:
+    m_InternalValue: 0
 --- !u!114 &3816292019137560569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,6 +919,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: -834652336955396748}
+--- !u!114 &6271561465970161803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5286562490224435651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5952b33fd65eb4ea191bb214fd5ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkShoot:
+    m_InternalValue: 0
+  networkIndex:
+    m_InternalValue: 0
 --- !u!114 &7720272093076082956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,21 +978,3 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &6271561465970161803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5286562490224435651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5952b33fd65eb4ea191bb214fd5ceb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  networkColliding:
-    m_InternalValue: 0
-  networkShooting:
-    m_InternalValue: 0
-  networkTiming:
-    m_InternalValue: 0

@@ -3,59 +3,43 @@ using Unity.Netcode;
 using UnityEngine;
 
 public class PlayerHud : NetworkBehaviour {
-    [SerializeField] private TMP_InputField userNameText;
-    [SerializeField] private NetworkVariable<NetworkString> playerNetworkName = new NetworkVariable<NetworkString>();
-    [SerializeField] private NetworkVariable<NetworkString> networkPlayerName = new NetworkVariable<NetworkString>();
+    [SerializeField] private GameObject playerCanvas;
+    [SerializeField] private TextMeshProUGUI playerNameText;
+    [SerializeField] private NetworkVariable<NetworkString> networkPlayerName = new();
+    [SerializeField] private NetworkVariable<bool> networkPlayerNameSet = new();
 
+    private TMP_InputField playerNameInputField;
     private string playerName;
-    private bool overlaySet = false;
 
-    private void Awake() {
-        userNameText = GameObject.Find("UserNameText").GetComponent<TMP_InputField>();
-    }
+    private void Awake() => playerNameInputField = GameObject.Find("UserNameText").GetComponent<TMP_InputField>();
 
-    public override void OnNetworkSpawn() {
-        UpdatePlayerNameServerRpc(userNameText.text);
-    }
-
-    public void SetOverlay() {
-        var localPlayerOverlay = gameObject.GetComponentInChildren<TextMeshProUGUI>();
-        localPlayerOverlay.text = $"{playerNetworkName.Value}";
-    }
-
-    public void Update() {
-        CheckPlayerName();
-
-        if (!overlaySet && !string.IsNullOrEmpty(playerNetworkName.Value)) {
-            SetOverlay();
-            overlaySet = true;
-
-            if (IsClient && IsOwner) {
-                gameObject.GetComponentInChildren<Canvas>().gameObject.SetActive(false);
-            }
-        }
-
-        if (playerName == "") {
-            return;
-        }
-
-        if (IsServer) {
-            if (string.IsNullOrWhiteSpace(userNameText.text)) {
-                playerNetworkName.Value = $"Player {OwnerClientId}";
-            } else {
-                playerNetworkName.Value = $"{playerName}";
-            }
-        }
-    }
+    public void Update() => CheckPlayerName();
 
     private void CheckPlayerName() {
-        if (playerName != networkPlayerName.Value) {
+        if (networkPlayerNameSet.Value) {
             playerName = networkPlayerName.Value;
+
+            UpdatePlayerName();
+        }
+    }
+
+    private void UpdatePlayerName() => playerNameText.text = playerName;
+
+    public override void OnNetworkSpawn() {
+        if (IsClient && IsOwner) {
+            if (!string.IsNullOrEmpty(playerNameInputField.text)) {
+                UpdatePlayerNameServerRpc(playerNameInputField.text, true);
+            } else {
+                UpdatePlayerNameServerRpc($"Player {OwnerClientId}", true);
+            } 
+        } else {
+            playerCanvas.SetActive(true);
         }
     }
 
     [ServerRpc]
-    public void UpdatePlayerNameServerRpc(string playerName) {
+    public void UpdatePlayerNameServerRpc(string playerName, bool playerNameSet) {
         networkPlayerName.Value = playerName;
+        networkPlayerNameSet.Value = playerNameSet;
     }
 }
