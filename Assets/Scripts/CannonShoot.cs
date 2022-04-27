@@ -29,24 +29,19 @@ public class CannonShoot : NetworkBehaviour {
         CheckShooting();
         CheckTiming();        
 
-        if (colliding && timer <= 0f && Input.GetKeyDown(KeyCode.P)) {
-            
-            shooting = true;
+        if (colliding && Input.GetKeyDown(KeyCode.P)) {
             playerShoot.Shooting(true);
-
-            timing = true;
             playerShoot.Timing(true);
-        } else if (shooting == true) {
-            shooting = false;
-            playerShoot.Shooting(false);
+        }
 
-            if (IsHost) {
-                Shoot();
-            }
+        if (shooting != playerShoot.networkShooting.Value) {
+            shooting = playerShoot.networkShooting.Value;
         }
     }
     
     private void Shoot() {
+        print("Shooting");
+
         //explosionSound.Play();
         explosionVFX.Play();
 
@@ -54,8 +49,6 @@ public class CannonShoot : NetworkBehaviour {
         cannonBall.GetComponent<NetworkObject>().Spawn();
         cannonBall.GetComponent<Rigidbody>().AddForce(cannonBallSpawn.forward * shootSpeed, ForceMode.Impulse);
     }
-
-    #region COLLISIONS
 
     private void OnTriggerEnter(Collider collider) {
         if (collider.CompareTag("Player")) {
@@ -74,10 +67,6 @@ public class CannonShoot : NetworkBehaviour {
             playerShoot = null;
         }
     }
-
-    #endregion
-
-    #region CHECK SERVER CALLS
 
     private void CheckColliding() {
         if (colliding != playerShoot.networkColliding.Value) {
@@ -103,7 +92,4 @@ public class CannonShoot : NetworkBehaviour {
             playerShoot.Timing(false);
         }
     }
-
-    #endregion
-
 }

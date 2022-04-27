@@ -54,10 +54,6 @@ public class PlayerControlAuthorative : NetworkBehaviour {
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.L)) {
-            transform.position = defaultInitialPosition;
-        }
-
         if (IsClient && IsOwner) {
             ClientMovement();
             ClientRotation();
