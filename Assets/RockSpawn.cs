@@ -6,15 +6,8 @@ public class RockSpawn : MonoBehaviour {
     [SerializeField] private GameObject Prefab;
     [SerializeField] private int Maxrocks;
     [SerializeField] private float TimeTillSpawn;
-    [HideInInspector] public int Currentrocks;
+    public int Currentrocks;
     private float CurrentTime;
-
-    private void Start() {
-        CurrentTime = TimeTillSpawn;
-        Currentrocks = 2;
-        for (int i = 0; i < Currentrocks; i++)Spawn();
-            
-    }
 
     private void Update() {
         if (Currentrocks < Maxrocks) {
