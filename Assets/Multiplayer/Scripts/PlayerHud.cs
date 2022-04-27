@@ -31,6 +31,10 @@ public class PlayerHud : NetworkBehaviour {
         if (!overlaySet && !string.IsNullOrEmpty(playerNetworkName.Value)) {
             SetOverlay();
             overlaySet = true;
+
+            if (IsClient && IsOwner) {
+                gameObject.GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+            }
         }
     }
 }
