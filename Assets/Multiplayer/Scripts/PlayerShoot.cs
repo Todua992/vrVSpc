@@ -8,6 +8,12 @@ public class PlayerShoot : NetworkBehaviour {
     public NetworkVariable<bool> networkShoot = new NetworkVariable<bool>();
     public NetworkVariable<int> networkIndex = new NetworkVariable<int>();
 
+    private void Start() {
+        if (IsClient && IsOwner) {
+            UpdateNetworkValues(false, -1);
+        }
+    }
+
     public void UpdateNetworkValues(bool shoot, int index) {
         if (IsClient && IsOwner) {
             UpdateNetworkValuesServerRpc(shoot, index);
