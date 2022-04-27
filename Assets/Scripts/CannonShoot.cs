@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ public class CannonShoot : NetworkBehaviour {
     private float timer;
     
     [HideInInspector] public CannonSpawn cannonSpawn;
-    private PlayerShoot playerShoot = null;
+    private List<PlayerShoot> playerShoots = new();
 
     private void Start() {
         timer = holdTime;
@@ -33,7 +34,7 @@ public class CannonShoot : NetworkBehaviour {
             return;
         }
 
-        if (playerShoot == null) {
+        if (playerShoots.Count == 0) {
             return;
         }
         
@@ -45,7 +46,9 @@ public class CannonShoot : NetworkBehaviour {
             if (timer > 0f) {
                 timer -= Time.deltaTime;
             } else {
-                playerShoot.UpdateNetworkValues(true, index);
+                foreach (PlayerShoot selected in playerShoots) {
+                    selected.UpdateNetworkValues(true, index);
+                }
             }
         } else if (timer != holdTime) {
             timer = holdTime;
@@ -68,11 +71,12 @@ public class CannonShoot : NetworkBehaviour {
     }
 
     private void CheckNetworkValues() {
-        print(playerShoot.networkShoot.Value + " : " + playerShoot.networkIndex.Value);
-
-        if (shoot != playerShoot.networkShoot.Value && index == playerShoot.networkIndex.Value) {
-            shoot = playerShoot.networkShoot.Value;
+        foreach (PlayerShoot selected in playerShoots) {
+            if (shoot != selected.networkShoot.Value && index == selected.networkIndex.Value) {
+                shoot = selected.networkShoot.Value;
+            }
         }
+        
     }
 
     private void CheckIndexValue() {
@@ -83,13 +87,14 @@ public class CannonShoot : NetworkBehaviour {
 
     private void OnTriggerEnter(Collider collider) {
         if (collider.CompareTag("Player")) {
-            playerShoot = collider.GetComponent<PlayerShoot>();
+            playerShoots.Add(collider.GetComponent<PlayerShoot>());
             colliding = true;
         }
     }
 
     private void OnTriggerExit(Collider collider) {
         if (collider.CompareTag("Player")) {
+            playerShoots.Remove(collider.GetComponent<PlayerShoot>());
             colliding = false;
         }
     }
