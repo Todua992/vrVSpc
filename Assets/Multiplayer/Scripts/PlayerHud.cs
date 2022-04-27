@@ -13,12 +13,6 @@ public class PlayerHud : NetworkBehaviour {
 
     private void Awake() => UIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
 
-    private void Start() {
-        if (!string.IsNullOrEmpty(networkPlayerName.Value)) { 
-            playerName = networkPlayerName.Value;
-            UpdatePlayerName();
-        }
-    }
     public void Update() => CheckPlayerName();
 
     private void CheckPlayerName() {

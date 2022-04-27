@@ -415,7 +415,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1515787040}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: UpdatePlayerName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2081,6 +2093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31190a18d5f0e9429e1a6f6dabb202c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
   startServerButton: {fileID: 1625435506}
   startHostButton: {fileID: 629012550}
   startClientButton: {fileID: 354323103}

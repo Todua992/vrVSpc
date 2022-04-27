@@ -29,7 +29,6 @@ public class UIManager : Singleton<UIManager> {
     void Start() {
         startServerButton?.onClick.AddListener(() => {
             if (NetworkManager.Singleton.StartServer()) {
-                playerName = playerNameInputField.text;
                 RemoveNetworkUI();
                 Logger.Instance.LogInfo("Server started...");
             } else {
@@ -43,7 +42,6 @@ public class UIManager : Singleton<UIManager> {
             }
                 
             if (NetworkManager.Singleton.StartHost()) {
-                playerName = playerNameInputField.text;
                 RemoveNetworkUI();
                 Logger.Instance.LogInfo("Host started...");
             } else {
@@ -58,7 +56,6 @@ public class UIManager : Singleton<UIManager> {
             }   
 
             if (NetworkManager.Singleton.StartClient()) {
-                playerName = playerNameInputField.text;
                 RemoveNetworkUI();
                 Logger.Instance.LogInfo("Client started...");
             } else {
@@ -81,5 +78,9 @@ public class UIManager : Singleton<UIManager> {
         startClientButton.gameObject.SetActive(false);
         playerNameInputField.gameObject.SetActive(false);
         joinCodeInputField.gameObject.SetActive(false);
+    }
+
+    public void UpdatePlayerName() {
+        playerName = playerNameInputField.text;
     }
 }
