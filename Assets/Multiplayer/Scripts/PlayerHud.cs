@@ -11,7 +11,7 @@ public class PlayerHud : NetworkBehaviour {
     private TMP_InputField playerNameInputField;
     private string playerName;
 
-    private void Awake() => playerNameInputField = GameObject.Find("UserNameText").GetComponent<TMP_InputField>();
+    private void Awake() => playerNameInputField = GameObject.Find("PlayerNameInputField").GetComponent<TMP_InputField>();
 
     public void Update() => CheckPlayerName();
 

@@ -8,13 +8,13 @@ public class UIManager : Singleton<UIManager> {
     [SerializeField] private Button startServerButton;
     [SerializeField] private Button startHostButton;
     [SerializeField] private Button startClientButton;
-    [SerializeField] private Button executePhysicsButton;
 
     [Header("Text")]
     [SerializeField] private TextMeshProUGUI playersInGameText;
 
     [Header("InputField")]
-    [SerializeField] private TMP_InputField joinCodeInput;
+    [SerializeField] private TMP_InputField joinCodeInputField;
+    [SerializeField] private TMP_InputField playerNameInputField;
 
     private bool hasServerStarted;
 
@@ -27,6 +27,7 @@ public class UIManager : Singleton<UIManager> {
     void Start() {
         startServerButton?.onClick.AddListener(() => {
             if (NetworkManager.Singleton.StartServer()) {
+                RemoveNetworkUI();
                 Logger.Instance.LogInfo("Server started...");
             } else {
                 Logger.Instance.LogInfo("Unable to start server...");
@@ -39,6 +40,7 @@ public class UIManager : Singleton<UIManager> {
             }
                 
             if (NetworkManager.Singleton.StartHost()) {
+                RemoveNetworkUI();
                 Logger.Instance.LogInfo("Host started...");
             } else {
                 Logger.Instance.LogInfo("Unable to start host...");
@@ -46,12 +48,13 @@ public class UIManager : Singleton<UIManager> {
         });
 
         startClientButton?.onClick.AddListener(async () => {
-            if (RelayManager.Instance.IsRelayEnabled && !string.IsNullOrEmpty(joinCodeInput.text)) {
+            if (RelayManager.Instance.IsRelayEnabled && !string.IsNullOrEmpty(joinCodeInputField.text)) {
 
-                await RelayManager.Instance.JoinRelay(joinCodeInput.text);
+                await RelayManager.Instance.JoinRelay(joinCodeInputField.text);
             }   
 
             if (NetworkManager.Singleton.StartClient()) {
+                RemoveNetworkUI();
                 Logger.Instance.LogInfo("Client started...");
             } else {
                 Logger.Instance.LogInfo("Unable to start client...");
@@ -65,14 +68,13 @@ public class UIManager : Singleton<UIManager> {
         NetworkManager.Singleton.OnServerStarted += () => {
             hasServerStarted = true;
         };
+    }
 
-        executePhysicsButton.onClick.AddListener(() => {
-            if (!hasServerStarted) {
-                Logger.Instance.LogWarning("Server has not started...");
-                return;
-            }
-
-            SpawnerControl.Instance.SpawnObjects();
-        });
+    private void RemoveNetworkUI() {
+        startServerButton.gameObject.SetActive(false);
+        startHostButton.gameObject.SetActive(false);
+        startClientButton.gameObject.SetActive(false);
+        playerNameInputField.gameObject.SetActive(false);
+        joinCodeInputField.gameObject.SetActive(false);
     }
 }
