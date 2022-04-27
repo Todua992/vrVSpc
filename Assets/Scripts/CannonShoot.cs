@@ -17,10 +17,9 @@ public class CannonShoot : NetworkBehaviour {
     private float timer;
     
     [HideInInspector] public CannonSpawn cannonSpawn;
-    private PlayerShoot playerShoot;
+    private PlayerShoot playerShoot = null;
 
     private void Start() {
-        playerShoot = NetworkManager.LocalClient.PlayerObject.GetComponent<PlayerShoot>();
         timer = holdTime;
 
         if (IsHost) {
@@ -29,10 +28,12 @@ public class CannonShoot : NetworkBehaviour {
     }
 
     private void Update() {
-        print(playerShoot.networkIndex.Value);
-
         if (index != networkIndex.Value) {
             CheckIndexValue();
+            return;
+        }
+
+        if (playerShoot == null) {
             return;
         }
         
@@ -82,6 +83,7 @@ public class CannonShoot : NetworkBehaviour {
 
     private void OnTriggerEnter(Collider collider) {
         if (collider.CompareTag("Player")) {
+            playerShoot = collider.GetComponent<PlayerShoot>();
             colliding = true;
         }
     }
