@@ -14051,8 +14051,8 @@ MonoBehaviour:
   useHeadCollision: 1
   headRadius: 0.15
   useGrounding: 1
-  maxStepHeight: 0.3
-  maxStepAngle: 30
+  maxStepHeight: 0
+  maxStepAngle: 0
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 1
