@@ -213,6 +213,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1161354858981019177}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7765206480856510006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8925703660537618463, guid: 9674e3ea8af542a4fb5104c67af10f22,
+    type: 3}
+  m_PrefabInstance: {fileID: 1161354858981019177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1827395742731358751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7765206480856510006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &3549853369022823222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7765206480856510006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 0
+  SyncScaleY: 0
+  SyncScaleZ: 0
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1
 --- !u!1001 &6504267931962362736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,6 +268,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4439793569231163650}
     m_Modifications:
+    - target: {fileID: -6896631236502017477, guid: 6e359609c43c0154db41bd930de9ba70,
+        type: 3}
+      propertyPath: SyncScaleX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6896631236502017477, guid: 6e359609c43c0154db41bd930de9ba70,
+        type: 3}
+      propertyPath: SyncScaleY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6896631236502017477, guid: 6e359609c43c0154db41bd930de9ba70,
+        type: 3}
+      propertyPath: SyncScaleZ
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4762121473312373625, guid: 6e359609c43c0154db41bd930de9ba70,
         type: 3}
       propertyPath: m_RootOrder
