@@ -772,7 +772,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 438438121}
-    PlayerPrefab: {fileID: 5286562490224435651, guid: 6e359609c43c0154db41bd930de9ba70,
+    PlayerPrefab: {fileID: 3623582083476864808, guid: 12b65a1b20b94054b949940aaf94e7d4,
       type: 3}
     NetworkPrefabs:
     - Override: 0
@@ -783,6 +783,18 @@ MonoBehaviour:
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
       Prefab: {fileID: 6364459236000594721, guid: 78c8964a59ca8fb47be36ad001339242,
+        type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 5286562490224435651, guid: 9d152ee7c479e004ab81cf71f97599ad,
+        type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 5286562490224435651, guid: 6e359609c43c0154db41bd930de9ba70,
         type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
@@ -1282,7 +1294,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1531,7 +1543,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.2
+  near clip plane: 0.001
   far clip plane: 5000
   field of view: 40
   orthographic: 0
@@ -1605,13 +1617,13 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
-    NearClipPlane: 0.2
+    NearClipPlane: 0.001
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6962963, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2164,6 +2176,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VR Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925703660537618463, guid: 9674e3ea8af542a4fb5104c67af10f22,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9674e3ea8af542a4fb5104c67af10f22, type: 3}
@@ -4948,6 +4965,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 15.896
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667806299123195906, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6355604860188915370, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
@@ -9466,6 +9488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -40.517
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667806299123195906, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6355604860188915370, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
@@ -24797,7 +24824,7 @@ Transform:
   m_GameObject: {fileID: 9199664976220616449}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 111673988}
