@@ -32,6 +32,10 @@ public class TreeRegrow : NetworkBehaviour {
 
         scaleSpeed = new Vector3(growSpeed * startScale.x, growSpeed * startScale.y, growSpeed * startScale.z);
         rb.mass = Map(startScale.x * startScale.y * startScale.z, 0.125f, 3.375f, 10f, 40f);
+
+        if (!IsHost) {
+            ChangeKinematic();
+        }
     }
 
     private void Update() {
@@ -51,12 +55,16 @@ public class TreeRegrow : NetworkBehaviour {
 
         if (!IsHost) {
             if (rb.isKinematic != networkIsKinematic.Value) {
-                foreach(MeshCollider meshCollider in meshColliders) {
-                    meshCollider.convex = !networkIsKinematic.Value;
-                }
-                rb.isKinematic = networkIsKinematic.Value;
+                ChangeKinematic();
             }
         }
+    }
+
+    private void ChangeKinematic() {
+        foreach (MeshCollider meshCollider in meshColliders) {
+            meshCollider.convex = !networkIsKinematic.Value;
+        }
+        rb.isKinematic = networkIsKinematic.Value;
     }
 
     private void RespawnTree() {
