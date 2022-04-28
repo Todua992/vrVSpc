@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class CannonSpawn : NetworkBehaviour {
     [SerializeField] private List<Transform> spawnPoints = new();
@@ -20,17 +19,6 @@ public class CannonSpawn : NetworkBehaviour {
     }
 
     private void Update() {
-
-
-        if (Input.GetKeyDown(KeyCode.K)) {
-            List<InputDevice> devices = new();
-            InputDevices.GetDevices(devices);
-
-            foreach (InputDevice device in devices) {
-                Debug.Log(device.name);
-            }
-        }
-
         if (IsHost && cannons.Count < maxCannonCount) {
             if (timer > 0f) {
                 timer -= Time.deltaTime;
