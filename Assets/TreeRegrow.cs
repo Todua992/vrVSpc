@@ -18,38 +18,37 @@ public class TreeRegrow : NetworkBehaviour {
 
    private void Start() {
         rb = GetComponent<Rigidbody>();
+        grabbable = GetComponent<Grabbable>();
 
-        if (IsHost) {
-            grabbable = GetComponent<Grabbable>();
-            startPosition = transform.position;
-            startRotation = transform.rotation;
-            startScale = transform.localScale;
+        startPosition = transform.position;
+        startRotation = transform.rotation;
+        startScale = transform.localScale;
 
-            scaleSpeed = new Vector3(growSpeed * startScale.x, growSpeed * startScale.y, growSpeed * startScale.z);
-            rb.mass = Map(startScale.x * startScale.y * startScale.z, 0.125f, 3.375f, 10f, 40f);
-        }
+        scaleSpeed = new Vector3(growSpeed * startScale.x, growSpeed * startScale.y, growSpeed * startScale.z);
+        rb.mass = Map(startScale.x * startScale.y * startScale.z, 0.125f, 3.375f, 10f, 40f);
     }
 
     private void Update() {
-        if (IsHost) {
-            if (transform.position.y <= -10f) {
-                RespawnTree();
-                grabbable.enabled = false;
-            }
+        if (transform.position.y <= -10f) {
+            RespawnTree();
+            grabbable.enabled = false;
+        }
 
-            if (respawnTree) {
-                transform.localScale += scaleSpeed * Time.deltaTime;
-                if (transform.localScale.x > startScale.x) {
-                    respawnTree = false;
-                    grabbable.enabled = true;
+        if (respawnTree) {
+            transform.localScale += scaleSpeed * Time.deltaTime;
+            if (transform.localScale.x > startScale.x) {
+                respawnTree = false;
+                grabbable.enabled = true;
 
-                }
             }
-        } else {
+        }
+
+        if (!IsHost) {
             if (rb.isKinematic != networkIsKinematic.Value) {
                 rb.isKinematic = networkIsKinematic.Value;
             }
         }
+
     }
 
     private void RespawnTree() {
