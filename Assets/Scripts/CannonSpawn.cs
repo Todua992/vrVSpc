@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
+using UnityEngine.XR;
+
+
 public class CannonSpawn : NetworkBehaviour {
     [SerializeField] private List<Transform> spawnPoints = new();
     [SerializeField] private GameObject cannonPrefab;
@@ -19,6 +22,7 @@ public class CannonSpawn : NetworkBehaviour {
     }
 
     private void Update() {
+
         if (IsHost && cannons.Count < maxCannonCount) {
             if (timer > 0f) {
                 timer -= Time.deltaTime;
