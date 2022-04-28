@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8181941185280722888}
   - component: {fileID: 6166646761771115492}
   m_Layer: 0
-  m_Name: CannonBall
+  m_Name: NetworkCannonBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
