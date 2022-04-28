@@ -1424,6 +1424,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1579022798975754704, guid: 9674e3ea8af542a4fb5104c67af10f22,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 432b7419d16f7014096cc18d136377bb, type: 2}
     - target: {fileID: 5259849404359994251, guid: 9674e3ea8af542a4fb5104c67af10f22,
         type: 3}
       propertyPath: maxStepAngle
@@ -1497,7 +1502,7 @@ PrefabInstance:
     - target: {fileID: 8925703660537618463, guid: 9674e3ea8af542a4fb5104c67af10f22,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9674e3ea8af542a4fb5104c67af10f22, type: 3}
@@ -1695,7 +1700,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.6962963, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
