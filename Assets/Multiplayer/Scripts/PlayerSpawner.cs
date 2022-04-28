@@ -24,5 +24,6 @@ public class PlayerSpawner : NetworkBehaviour {
         NetworkObject netObj = newPlayer.GetComponent<NetworkObject>();
         newPlayer.SetActive(true);
         netObj.SpawnAsPlayerObject(clientId, true);
+        Destroy(gameObject);
     }
 }
