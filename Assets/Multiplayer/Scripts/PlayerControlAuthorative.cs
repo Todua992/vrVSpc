@@ -98,7 +98,7 @@ public class PlayerControlAuthorative : NetworkBehaviour {
         animator.SetFloat("Horizontal", inputHorizontal);
         animator.SetFloat("Vertical", inputVertical);
 
-        characterController.SimpleMove(movement * walkSpeed);
+        characterController.Move(movement * walkSpeed);
         UpdatePlayerVisualsServerRpc(inputJump, inputSprint, inputHorizontal, inputVertical);
     }
 
