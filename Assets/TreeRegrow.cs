@@ -51,10 +51,10 @@ public class TreeRegrow : NetworkBehaviour {
 
         if (!IsHost) {
             if (rb.isKinematic != networkIsKinematic.Value) {
-                rb.isKinematic = networkIsKinematic.Value;
                 foreach(MeshCollider meshCollider in meshColliders) {
                     meshCollider.convex = !networkIsKinematic.Value;
                 }
+                rb.isKinematic = networkIsKinematic.Value;
             }
         }
     }
@@ -63,22 +63,18 @@ public class TreeRegrow : NetworkBehaviour {
         transform.position = startPosition;
         transform.rotation = startRotation;
         transform.localScale = new Vector3(0f, 0f, 0f);
-        foreach (MeshCollider meshCollider in meshColliders) {
-            meshCollider.convex = false;
-        }
         rb.isKinematic = true;
-        UpdateIsKinematicServerRpc(true);
+        if (IsHost) {
+            UpdateIsKinematicServerRpc(true);
+        }
         respawnTree = true;
     }
 
     public void IsKinematic () {
-        print("Hello");
-        
         rb.isKinematic = false;
-        foreach (MeshCollider meshCollider in meshColliders) {
-            meshCollider.convex = true;
+        if (IsHost) {
+            UpdateIsKinematicServerRpc(true);
         }
-        UpdateIsKinematicServerRpc(false);
     }
 
     private float Map(float s, float a1, float a2, float b1, float b2) {
