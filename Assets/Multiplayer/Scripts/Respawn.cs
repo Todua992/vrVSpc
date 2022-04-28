@@ -3,9 +3,8 @@ using UnityEngine;
 using Autohand;
 using System.Collections.Generic;
 
-public class TreeRegrow : NetworkBehaviour {
+public class Respawn : NetworkBehaviour {
     [SerializeField] private NetworkVariable<bool> networkIsKinematic = new();
-    [SerializeField] private NetworkVariable<bool> networkMesh = new();
     
     [SerializeField] private float growSpeed;
 
@@ -17,7 +16,7 @@ public class TreeRegrow : NetworkBehaviour {
     private Quaternion startRotation;
     private Vector3 startScale;
     private Vector3 scaleSpeed;
-    private bool respawnTree = false;
+    private bool respawn = false;
 
    private void Start() {
         foreach (MeshCollider meshCollider in GetComponentsInChildren<MeshCollider>()) {
@@ -40,14 +39,14 @@ public class TreeRegrow : NetworkBehaviour {
 
     private void Update() {
         if (transform.position.y <= -10f) {
-            RespawnTree();
+            RespawnObject();
             grabbable.enabled = false;
         }
 
-        if (respawnTree) {
+        if (respawn) {
             transform.localScale += scaleSpeed * Time.deltaTime;
             if (transform.localScale.x > startScale.x) {
-                respawnTree = false;
+                respawn = false;
                 grabbable.enabled = true;
 
             }
@@ -60,14 +59,7 @@ public class TreeRegrow : NetworkBehaviour {
         }
     }
 
-    private void ChangeKinematic() {
-        foreach (MeshCollider meshCollider in meshColliders) {
-            meshCollider.convex = !networkIsKinematic.Value;
-        }
-        rb.isKinematic = networkIsKinematic.Value;
-    }
-
-    private void RespawnTree() {
+    private void RespawnObject() {
         transform.position = startPosition;
         transform.rotation = startRotation;
         transform.localScale = new Vector3(0f, 0f, 0f);
@@ -75,7 +67,18 @@ public class TreeRegrow : NetworkBehaviour {
         if (IsHost) {
             UpdateIsKinematicServerRpc(true);
         }
-        respawnTree = true;
+        respawn = true;
+    }
+
+    private float Map(float s, float a1, float a2, float b1, float b2) {
+        return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
+    }
+
+    private void ChangeKinematic() {
+        foreach (MeshCollider meshCollider in meshColliders) {
+            meshCollider.convex = !networkIsKinematic.Value;
+        }
+        rb.isKinematic = networkIsKinematic.Value;
     }
 
     public void IsKinematic () {
@@ -83,10 +86,6 @@ public class TreeRegrow : NetworkBehaviour {
         if (IsHost) {
             UpdateIsKinematicServerRpc(true);
         }
-    }
-
-    private float Map(float s, float a1, float a2, float b1, float b2) {
-        return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
     }
 
     [ServerRpc]
