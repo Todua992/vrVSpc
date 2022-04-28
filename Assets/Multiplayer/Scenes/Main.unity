@@ -1822,7 +1822,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6962963, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5476,6 +5476,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 694947592737166639, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -5545,6 +5550,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 694947592737166639, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -5807,6 +5817,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 4135280489577196577, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -5879,6 +5894,11 @@ PrefabInstance:
     - target: {fileID: 1383894863, guid: 07921d43c648fc344b0f2e580d5e8afe, type: 3}
       propertyPath: grabbable
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135280489577196577, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
@@ -6038,6 +6058,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 694947592737166639, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -6423,6 +6448,11 @@ PrefabInstance:
       propertyPath: grabbable
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4135280489577196577, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -6492,6 +6522,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 694947592737166639, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -6713,6 +6748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTreeTall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3729128852118816856, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
@@ -7147,6 +7187,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTreeTall
       objectReference: {fileID: 0}
+    - target: {fileID: 3729128852118816856, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
 --- !u!1001 &1131904535958709915
@@ -7156,6 +7201,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 694947592737166639, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -7289,6 +7339,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTreeTall
       objectReference: {fileID: 0}
+    - target: {fileID: 3729128852118816856, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
 --- !u!1001 &1131904535968167062
@@ -7298,6 +7353,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 4135280489577196577, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -7579,6 +7639,11 @@ PrefabInstance:
       propertyPath: grabbable
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4135280489577196577, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -7801,6 +7866,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTreeTall
       objectReference: {fileID: 0}
+    - target: {fileID: 3729128852118816856, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
 --- !u!1001 &1131904536047729380
@@ -7983,6 +8053,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 694947592737166639, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -8139,6 +8214,11 @@ PrefabInstance:
     - target: {fileID: 539178508, guid: 07921d43c648fc344b0f2e580d5e8afe, type: 3}
       propertyPath: grabbable
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135280489577196577, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
@@ -8847,6 +8927,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 694947592737166639, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -9197,6 +9282,11 @@ PrefabInstance:
       propertyPath: grabbable
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4135280489577196577, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -9270,6 +9360,11 @@ PrefabInstance:
       propertyPath: grabbable
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4135280489577196577, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -9339,6 +9434,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 694947592737166639, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -9411,6 +9511,11 @@ PrefabInstance:
     - target: {fileID: 384357045, guid: 07921d43c648fc344b0f2e580d5e8afe, type: 3}
       propertyPath: grabbable
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135280489577196577, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
@@ -9570,6 +9675,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 694947592737166639, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -9806,6 +9916,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTreeTall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3729128852118816856, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
@@ -10232,6 +10347,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTreeTall
       objectReference: {fileID: 0}
+    - target: {fileID: 3729128852118816856, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
 --- !u!1001 &1131904537386831917
@@ -10409,6 +10529,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
+    - target: {fileID: 694947592737166639, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
