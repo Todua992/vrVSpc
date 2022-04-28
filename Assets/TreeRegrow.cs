@@ -18,7 +18,6 @@ public class TreeRegrow : NetworkBehaviour {
 
    private void Start() {
         rb = GetComponent<Rigidbody>();
-        UpdateIsKinematicServerRpc(true);
 
         if (IsHost) {
             grabbable = GetComponent<Grabbable>();
