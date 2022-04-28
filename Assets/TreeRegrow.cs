@@ -1,60 +1,44 @@
 using UnityEngine;
 
-public class TreeRegrow : MonoBehaviour
-{
-    [SerializeField] private float Scaleratio;
+public class TreeRegrow : MonoBehaviour {
+    [SerializeField] private float growSpeed;
 
     private Rigidbody rb;
 
-    private Vector3 currentScaleSpeed;
-    private Vector3 Startposition;
-    private Vector3 StartScale;
+    private Vector3 startPosition;
+    private Quaternion startRotation;
+    private Vector3 startScale;
+    private Vector3 scaleSpeed;
+    private bool respawnTree = false;
 
-    private Quaternion StartRotation;
-    
-    private bool newborn;
-    
-    void Start()
-    {
-        currentScaleSpeed = new Vector3 (currentScaleSpeed.x = Scaleratio, currentScaleSpeed.y = Scaleratio, currentScaleSpeed.z = Scaleratio);
-        newborn = false;
-    rb = GetComponent<Rigidbody>();
-        rb.isKinematic = true;
-        StartScale = transform.localScale;
-        Startposition = transform.position;
-        StartRotation = transform.rotation;
+   private void Start() {
+        rb = GetComponent<Rigidbody>();
+        startPosition = transform.position;
+        startRotation = transform.rotation;
+        startScale = transform.localScale;
 
+
+        scaleSpeed = new Vector3(growSpeed * startScale.x, growSpeed * startScale.y, growSpeed * startScale.z);
     }
 
-    void FixedUpdate()
-    {
-        if (transform.position.y <= -10)
-        {
-            Givebirth();
+    private void Update() {
+        if (transform.position.y <= -10f) {
+            RespawnTree();
         }
 
-        if(newborn == true)
-        {
-            transform.localScale = transform.localScale + currentScaleSpeed * Time.deltaTime;
-            if ((StartScale.x - transform.localScale.x) < 0)
-            {
-                newborn=false;
+        if (respawnTree) {
+            transform.localScale += scaleSpeed * Time.deltaTime;
+            if (transform.localScale.x > startScale.x) {
+                respawnTree = false;
             }
         }
-        
     }
 
-
-
-    void Givebirth()
-    {
-        transform.position = Startposition;
-        transform.rotation = StartRotation;
+    private void RespawnTree() {
+        transform.position = startPosition;
+        transform.rotation = startRotation;
+        transform.localScale = new Vector3(0f, 0f, 0f);
         rb.isKinematic = true;
-        transform.localScale = new Vector3(0, 0, 0);
-        newborn = true;
+        respawnTree = true;
     }
-
-
-}
-    
+} 
