@@ -3033,7 +3033,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.6009027, b: 0.4377358, a: 1}
-  m_Intensity: 0.29
+  m_Intensity: 0.38
   m_Range: 40
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -15352,7 +15352,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.6009027, b: 0.4377358, a: 1}
-  m_Intensity: 0.29
+  m_Intensity: 0.38
   m_Range: 40
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -15613,7 +15613,7 @@ Transform:
   m_GameObject: {fileID: 9199664976664782115}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.90561, y: 30.78745, z: -19.0669}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3524435901076651525}
@@ -15911,6 +15911,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -15984,7 +15994,7 @@ PrefabInstance:
     - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_Name
-      value: PineTree
+      value: Tree1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
@@ -16309,7 +16319,7 @@ PrefabInstance:
     - target: {fileID: 6878175472969916566, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6000001
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6878175472969916566, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
@@ -16319,7 +16329,7 @@ PrefabInstance:
     - target: {fileID: 6878175472969916566, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6000001
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6878175472969916566, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
@@ -16676,6 +16686,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -16749,7 +16769,7 @@ PrefabInstance:
     - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_Name
-      value: PineTree
+      value: Tree1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
@@ -17636,6 +17656,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -18466,6 +18496,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -18651,6 +18691,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -18851,6 +18901,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -18924,7 +18984,7 @@ PrefabInstance:
     - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_Name
-      value: PineTree
+      value: Tree1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
@@ -19716,6 +19776,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -20066,6 +20136,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -20139,7 +20219,7 @@ PrefabInstance:
     - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_Name
-      value: PineTree
+      value: Tree1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
@@ -20651,6 +20731,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -21086,6 +21176,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224801802672074052, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8280936331889637757, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -21159,7 +21259,7 @@ PrefabInstance:
     - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: m_Name
-      value: PineTree
+      value: Tree1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
