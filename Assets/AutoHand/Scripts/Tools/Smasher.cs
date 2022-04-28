@@ -8,7 +8,7 @@ namespace Autohand.Demo {
     public class Smasher : MonoBehaviour {
 
         [SerializeField] private Material handMaterial;
-        public RockSpawn rock;
+        [HideInInspector] public RockSpawn rock;
         Rigidbody rb;
         [Header("Options")]
         public LayerMask smashableLayers;
@@ -68,7 +68,7 @@ namespace Autohand.Demo {
 
             targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue);
 
-            if (gripValue > 0) {
+            if (gripValue > 0f) {
                 Debug.Log(gripValue);
             }
 
@@ -116,15 +116,21 @@ namespace Autohand.Demo {
 
                 }
             }
-            if (CanExplode == true && collision.gameObject.layer != 17 && collision.gameObject.layer != 16) {
-                if (GetMagnitude() > MinMag) {
+
+           
+        }
+
+        private void OnCollisionStay(Collision collision)
+        {
+            if (CanExplode == true && collision.gameObject.layer != 17 && collision.gameObject.layer != 16)
+            {
+                if (GetMagnitude() > MinMag)
+                {
                     destroy();
 
                 }
             }
         }
-
-
         float GetMagnitude() {
             Vector3 velocity = Vector3.zero;
             for (int i = 0; i < velocityOverTime.Length; i++) {
