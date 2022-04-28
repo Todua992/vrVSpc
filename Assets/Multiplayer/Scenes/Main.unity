@@ -1720,7 +1720,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.6962963, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3780,7 +3780,7 @@ GameObject:
   - component: {fileID: 2131995525}
   - component: {fileID: 2131995529}
   - component: {fileID: 2131995528}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
