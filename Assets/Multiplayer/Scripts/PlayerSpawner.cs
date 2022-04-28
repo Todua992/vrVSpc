@@ -18,9 +18,9 @@ public class PlayerSpawner : NetworkBehaviour {
         GameObject newPlayer;
         if (prefabId == 0) {
             newPlayer = Instantiate(playerPrefabA);
+            Destroy(GameObject.Find("MainCamera"));
         } else {
             newPlayer = Instantiate(playerPrefabB);
-            Destroy(GameObject.Find("MainCamera"));
         }
         NetworkObject netObj = newPlayer.GetComponent<NetworkObject>();
         newPlayer.SetActive(true);
