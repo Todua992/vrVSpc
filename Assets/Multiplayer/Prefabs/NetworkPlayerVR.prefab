@@ -3200,6 +3200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enable: 0
+  cam: {fileID: 0}
 --- !u!1 &1579022798620725354
 GameObject:
   m_ObjectHideFlags: 0
@@ -5037,6 +5038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enable: 0
+  cam: {fileID: 0}
 --- !u!1 &1579022799116101447
 GameObject:
   m_ObjectHideFlags: 0
@@ -18618,6 +18620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enable: 0
+  cam: {fileID: 8925703659354989428}
 --- !u!1 &8925703659531158115
 GameObject:
   m_ObjectHideFlags: 0
