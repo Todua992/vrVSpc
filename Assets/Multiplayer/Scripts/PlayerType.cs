@@ -29,18 +29,18 @@ public class PlayerType : NetworkBehaviour {
     public void VRPlayer () {
         if (IsClient && IsOwner && !networkPlayerTypeSet.Value) {
             UpdatePlayerTypeServerRpc(0, true);
-            playerVR.SetActive(true);
+            playerPC.SetActive(false);
         } else if (IsClient && !IsOwner) {
-            playerVR.SetActive(true);
+            playerPC.SetActive(false);
         }
     }
 
     public void PCPlayer () {
         if (IsClient && IsOwner && !networkPlayerTypeSet.Value) {
             UpdatePlayerTypeServerRpc(1, true);
-            playerPC.SetActive(true);
+            playerVR.SetActive(false);
         } else if (IsClient && !IsOwner) {
-            playerPC.SetActive(true);
+            playerVR.SetActive(false);
         }
     }
 

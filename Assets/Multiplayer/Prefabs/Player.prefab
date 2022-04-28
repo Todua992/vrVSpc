@@ -84,7 +84,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4439793568801887263
 Transform:
   m_ObjectHideFlags: 0
@@ -116,7 +116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4439793569231163650
 Transform:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1161354858981019177}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1827395742731358751
+--- !u!114 &4241809284796557697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,7 +235,7 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &3549853369022823222
+--- !u!114 &6693510818146191982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
