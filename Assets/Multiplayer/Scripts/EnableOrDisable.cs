@@ -11,8 +11,8 @@ public class EnableOrDisable : NetworkBehaviour {
                 gameObject.SetActive(enable);
             } else {
                 cam.enabled = enable;
+                cam.gameObject.GetComponent<AudioListener>().enabled = enable; 
             }
-            
         }
     }
 }
