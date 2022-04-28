@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2640405000100527817}
   - component: {fileID: 2640405000100527816}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Fakkel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
