@@ -14181,6 +14181,7 @@ GameObject:
   - component: {fileID: 5259849404359994251}
   - component: {fileID: 5259849404359994247}
   - component: {fileID: 7336561543950889080}
+  - component: {fileID: 5024218447852324816}
   m_Layer: 0
   m_Name: AutoHandPlayer
   m_TagString: Untagged
@@ -14313,6 +14314,19 @@ MonoBehaviour:
   player: {fileID: 5259849404359994251}
   moveAxis: 0
   turnAxis: 0
+--- !u!114 &5024218447852324816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5259849404359994249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0a33df1ef72c34882459f4b18e0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enable: 0
 --- !u!1 &5283355525658101465
 GameObject:
   m_ObjectHideFlags: 0
