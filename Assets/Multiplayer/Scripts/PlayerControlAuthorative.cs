@@ -11,6 +11,7 @@ public class PlayerControlAuthorative : NetworkBehaviour {
     [Header("Movement Variables")]
     [SerializeField] private float walkSpeed;
     [SerializeField] private float sprintSpeedMultiplier;
+    [SerializeField] private float gravity;
 
     [Header("Rotation Variables")]
     [SerializeField] private float sensitivityX;
@@ -93,12 +94,14 @@ public class PlayerControlAuthorative : NetworkBehaviour {
             movement *= sprintSpeedMultiplier;
         }
 
+        movement += Vector3.up * gravity;
+
         animator.SetBool("Jumping", inputJump);
         animator.SetBool("Sprinting", inputSprint);
         animator.SetFloat("Horizontal", inputHorizontal);
         animator.SetFloat("Vertical", inputVertical);
 
-        characterController.Move(movement * walkSpeed);
+        characterController.Move(movement * walkSpeed * Time.deltaTime);
         UpdatePlayerVisualsServerRpc(inputJump, inputSprint, inputHorizontal, inputVertical);
     }
 

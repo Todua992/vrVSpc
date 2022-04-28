@@ -4,9 +4,11 @@ using Autohand;
 
 public class TreeRegrow : NetworkBehaviour {
     [SerializeField] private NetworkVariable<bool> networkIsKinematic = new();
+    [SerializeField] private NetworkVariable<bool> networkMesh = new();
     
     [SerializeField] private float growSpeed;
 
+    private MeshCollider meshCollider;
     private Rigidbody rb;
     public Grabbable grabbable;
 
@@ -17,6 +19,7 @@ public class TreeRegrow : NetworkBehaviour {
     private bool respawnTree = false;
 
    private void Start() {
+        meshCollider = GetComponent<MeshCollider>();
         rb = GetComponent<Rigidbody>();
         grabbable = GetComponent<Grabbable>();
 
@@ -46,6 +49,7 @@ public class TreeRegrow : NetworkBehaviour {
         if (!IsHost) {
             if (rb.isKinematic != networkIsKinematic.Value) {
                 rb.isKinematic = networkIsKinematic.Value;
+                meshCollider.convex = !networkIsKinematic.Value;
             }
         }
 
@@ -55,12 +59,15 @@ public class TreeRegrow : NetworkBehaviour {
         transform.position = startPosition;
         transform.rotation = startRotation;
         transform.localScale = new Vector3(0f, 0f, 0f);
+        meshCollider.convex = false;
         rb.isKinematic = true;
         UpdateIsKinematicServerRpc(true);
         respawnTree = true;
     }
 
     public void IsKinematic () {
+        rb.isKinematic = false;
+        meshCollider.convex = true;
         UpdateIsKinematicServerRpc(false);
     }
 
