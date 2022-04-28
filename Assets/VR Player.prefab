@@ -939,7 +939,7 @@ MonoBehaviour:
   rock: {fileID: 0}
   smashableLayers:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 256
   forceMulti: 30
   centerOfMassPoint: {fileID: 0}
   Starttime: 20
@@ -1283,7 +1283,7 @@ MonoBehaviour:
   rock: {fileID: 0}
   smashableLayers:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 256
   forceMulti: 30
   centerOfMassPoint: {fileID: 0}
   Starttime: 20
