@@ -1700,7 +1700,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6962963, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -24317,7 +24317,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.6009027, b: 0.4377358, a: 1}
   m_Intensity: 0.01
-  m_Range: 40
+  m_Range: 0.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
