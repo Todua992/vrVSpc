@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.XR;
 namespace Autohand.Demo {
     public delegate void SmashEvent(Smasher smasher, Smash smashable);
 
@@ -17,6 +17,8 @@ namespace Autohand.Demo {
         [Tooltip("Can be left empty - The center of mass point to calculate velocity magnitude - for example: the camera of the hammer is a better point vs the pivot center of the hammer object")]
         public Transform centerOfMassPoint;
 
+
+        private InputDevice targetDevice;
        
         
         [SerializeField] private float Starttime;
@@ -62,7 +64,14 @@ namespace Autohand.Demo {
 
 
         void FixedUpdate() {
-            
+
+
+            targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue);
+
+            if (gripValue > 0) {
+                Debug.Log(gripValue);
+            }
+
             for (int i = 1; i < velocityOverTime.Length; i++) {
                 velocityOverTime[i] = velocityOverTime[i - 1];
             }
@@ -86,9 +95,7 @@ namespace Autohand.Demo {
 
 
         private void OnCollisionEnter(Collision collision) {
-            
-                
-            
+           
 
             Smash smash;
             if (blast == true) {
@@ -101,6 +108,7 @@ namespace Autohand.Demo {
             }
 
             if (collision.transform.CanGetComponent(out smash)) {
+
                 if (GetMagnitude() >= smash.smashForce) {
                     smash.DoSmash();
                     OnSmashEvent?.Invoke(this, smash);
