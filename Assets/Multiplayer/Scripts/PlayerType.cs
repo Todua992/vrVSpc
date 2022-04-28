@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class PlayerType : NetworkBehaviour {
     [SerializeField] private NetworkVariable<int> networkPlayerType = new();
@@ -7,8 +9,19 @@ public class PlayerType : NetworkBehaviour {
 
     [SerializeField] private GameObject playerPC;
     [SerializeField] private GameObject playerVR;
- 
-    private void Update() {
+
+    public override void OnNetworkSpawn() {
+        if (Input.GetKeyDown(KeyCode.K)) {
+            List<InputDevice> devices = new();
+            InputDevices.GetDevices(devices);
+
+            foreach (InputDevice device in devices) {
+                Debug.Log(device.name);
+            }
+        }
+    }
+
+    private void Update() {        
         CheckPlayerType();
     }
 
