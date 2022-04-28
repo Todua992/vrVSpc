@@ -57,7 +57,6 @@ public class TreeRegrow : NetworkBehaviour {
                 }
             }
         }
-
     }
 
     private void RespawnTree() {
@@ -73,6 +72,8 @@ public class TreeRegrow : NetworkBehaviour {
     }
 
     public void IsKinematic () {
+        print("Hello");
+        
         rb.isKinematic = false;
         foreach (MeshCollider meshCollider in meshColliders) {
             meshCollider.convex = true;
