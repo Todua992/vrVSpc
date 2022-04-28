@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager> {
     [HideInInspector] public string playerName;
+    [HideInInspector] public int playerType;
 
     [Header("Button")]
     [SerializeField] private Button startServerButton;
@@ -17,8 +18,6 @@ public class UIManager : Singleton<UIManager> {
     [Header("InputField")]
     [SerializeField] private TMP_InputField joinCodeInputField;
     [SerializeField] private TMP_InputField playerNameInputField;
-
-    private bool hasServerStarted;
 
     private void Awake() => Cursor.visible = true;
 
@@ -42,6 +41,7 @@ public class UIManager : Singleton<UIManager> {
             }
                 
             if (NetworkManager.Singleton.StartHost()) {
+                playerType = 0;
                 RemoveNetworkUI();
                 Logger.Instance.LogInfo("Host started...");
             } else {
@@ -56,6 +56,7 @@ public class UIManager : Singleton<UIManager> {
             }   
 
             if (NetworkManager.Singleton.StartClient()) {
+                playerType = 1;
                 RemoveNetworkUI();
                 Logger.Instance.LogInfo("Client started...");
             } else {
@@ -67,9 +68,7 @@ public class UIManager : Singleton<UIManager> {
             Logger.Instance.LogInfo($"{id} just connected...");
         };
 
-        NetworkManager.Singleton.OnServerStarted += () => {
-            hasServerStarted = true;
-        };
+        NetworkManager.Singleton.OnServerStarted += () => { };
     }
 
     private void RemoveNetworkUI() {

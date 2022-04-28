@@ -1,7 +1,5 @@
-using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class PlayerType : NetworkBehaviour {
     [SerializeField] private NetworkVariable<int> networkPlayerType = new();
@@ -10,13 +8,16 @@ public class PlayerType : NetworkBehaviour {
     [SerializeField] private GameObject playerPC;
     [SerializeField] private GameObject playerVR;
 
-    public override void OnNetworkSpawn() {
-        if (Input.GetKeyDown(KeyCode.K)) {
-            List<InputDevice> devices = new();
-            InputDevices.GetDevices(devices);
+    private UIManager managerUI;
 
-            foreach (InputDevice device in devices) {
-                Debug.Log(device.name);
+    public override void OnNetworkSpawn() {
+        if (IsClient && IsOwner) {
+            managerUI = GameObject.Find("UIManager").GetComponent<UIManager>();
+
+            if (managerUI.playerType == 0) {
+                VRPlayer();
+            } else if (managerUI.playerType == 1) {
+                PCPlayer();
             }
         }
     }
