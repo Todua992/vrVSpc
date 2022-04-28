@@ -17,7 +17,6 @@ public class TreeRegrow : MonoBehaviour {
         startRotation = transform.rotation;
         startScale = transform.localScale;
 
-
         scaleSpeed = new Vector3(growSpeed * startScale.x, growSpeed * startScale.y, growSpeed * startScale.z);
     }
 
