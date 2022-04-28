@@ -840,7 +840,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.8
-  m_Radius: 0.25
+  m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.02
   m_SkinWidth: 0.08
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultInitialPosition: {x: -0.6, y: 0.7, z: -0.6}
-  walkSpeed: 5
+  walkSpeed: 0.1
   sprintSpeedMultiplier: 1.75
   sensitivityX: 50
   sensitivityY: 50
