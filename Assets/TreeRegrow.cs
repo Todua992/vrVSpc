@@ -9,7 +9,7 @@ public class TreeRegrow : NetworkBehaviour {
     
     [SerializeField] private float growSpeed;
 
-    private List<MeshCollider> meshColliders = new();
+    //private List<MeshCollider> meshColliders = new();
     private Rigidbody rb;
     public Grabbable grabbable;
 
@@ -20,9 +20,9 @@ public class TreeRegrow : NetworkBehaviour {
     private bool respawnTree = false;
 
    private void Start() {
-        foreach (MeshCollider meshCollider in GetComponentsInChildren<MeshCollider>()) {
-            meshColliders.Add(meshCollider);
-        }
+        //foreach (MeshCollider meshCollider in GetComponentsInChildren<MeshCollider>()) {
+        //    meshColliders.Add(meshCollider);
+        //}
         rb = GetComponent<Rigidbody>();
         grabbable = GetComponent<Grabbable>();
 
@@ -52,9 +52,9 @@ public class TreeRegrow : NetworkBehaviour {
         if (!IsHost) {
             if (rb.isKinematic != networkIsKinematic.Value) {
                 rb.isKinematic = networkIsKinematic.Value;
-                foreach(MeshCollider meshCollider in meshColliders) {
+                /*foreach(MeshCollider meshCollider in meshColliders) {
                     meshCollider.convex = !networkIsKinematic.Value;
-                }
+                }*/
             }
         }
 
@@ -64,9 +64,9 @@ public class TreeRegrow : NetworkBehaviour {
         transform.position = startPosition;
         transform.rotation = startRotation;
         transform.localScale = new Vector3(0f, 0f, 0f);
-        foreach (MeshCollider meshCollider in meshColliders) {
-            meshCollider.convex = false;
-        }
+        //foreach (MeshCollider meshCollider in meshColliders) {
+        //    meshCollider.convex = false;
+        //}
         rb.isKinematic = true;
         UpdateIsKinematicServerRpc(true);
         respawnTree = true;
@@ -74,9 +74,9 @@ public class TreeRegrow : NetworkBehaviour {
 
     public void IsKinematic () {
         rb.isKinematic = false;
-        foreach (MeshCollider meshCollider in meshColliders) {
-            meshCollider.convex = true;
-        }
+        //foreach (MeshCollider meshCollider in meshColliders) {
+        //    meshCollider.convex = true;
+        //}
         UpdateIsKinematicServerRpc(false);
     }
 
