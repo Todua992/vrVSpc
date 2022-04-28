@@ -3020,6 +3020,7 @@ GameObject:
   - component: {fileID: 1579022798542773663}
   - component: {fileID: 1579022798542773656}
   - component: {fileID: 1579022798542773657}
+  - component: {fileID: 2782551007345332967}
   m_Layer: 0
   m_Name: Highlight Projection (L)
   m_TagString: Untagged
@@ -3159,6 +3160,19 @@ MonoBehaviour:
   smoothReturnSpeed: 1
   poseIndex: 0
   ignoreMe1: 0
+--- !u!114 &2782551007345332967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579022798542773659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0a33df1ef72c34882459f4b18e0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enable: 0
 --- !u!1 &1579022798620725354
 GameObject:
   m_ObjectHideFlags: 0
@@ -4527,7 +4541,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a6e1f0e0e98b0146b10490d296af584, type: 2}
+  - {fileID: 2100000, guid: 432b7419d16f7014096cc18d136377bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4843,6 +4857,7 @@ GameObject:
   - component: {fileID: 1579022799104316316}
   - component: {fileID: 1579022799104316317}
   - component: {fileID: 1579022799104316318}
+  - component: {fileID: 615896859204393455}
   m_Layer: 0
   m_Name: Highlight Projection (R)
   m_TagString: Untagged
@@ -4982,6 +4997,19 @@ MonoBehaviour:
   smoothReturnSpeed: 1
   poseIndex: 0
   ignoreMe1: 0
+--- !u!114 &615896859204393455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579022799104316312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0a33df1ef72c34882459f4b18e0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enable: 0
 --- !u!1 &1579022799116101447
 GameObject:
   m_ObjectHideFlags: 0
@@ -18535,6 +18563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f0a33df1ef72c34882459f4b18e0f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enable: 0
 --- !u!1 &8925703659531158115
 GameObject:
   m_ObjectHideFlags: 0
