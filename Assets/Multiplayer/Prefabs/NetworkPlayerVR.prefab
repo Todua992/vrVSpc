@@ -625,6 +625,7 @@ GameObject:
   - component: {fileID: 4712540663913841761}
   - component: {fileID: 8925703659628088302}
   - component: {fileID: 3447991944051003728}
+  - component: {fileID: 7131596029786335444}
   m_Layer: 0
   m_Name: RobotHand (R)
   m_TagString: Untagged
@@ -955,6 +956,32 @@ MonoBehaviour:
   OnSmash:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7131596029786335444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240528369356632300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 0
+  SyncScaleY: 0
+  SyncScaleZ: 0
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1
 --- !u!1 &240528370569237695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,7 +2556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579022798454364071}
   - component: {fileID: 1579022798454364070}
-  - component: {fileID: 6662156992740214902}
+  - component: {fileID: 3112827265707020653}
   m_Layer: 0
   m_Name: OuterMesh
   m_TagString: Untagged
@@ -2626,7 +2653,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.08041836, y: -0.0032454282, z: -0.020966716}
     m_Extent: {x: 0.11415337, y: 0.07609155, z: 0.06161832}
   m_DirtyAABB: 0
---- !u!114 &6662156992740214902
+--- !u!114 &3112827265707020653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2635,7 +2662,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1579022798454364064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -2650,7 +2677,7 @@ MonoBehaviour:
   PositionThreshold: 0.001
   RotAngleThreshold: 0.01
   ScaleThreshold: 0.01
-  InLocalSpace: 1
+  InLocalSpace: 0
   Interpolate: 1
 --- !u!1 &1579022798464267268
 GameObject:
@@ -4498,7 +4525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579022798975754705}
   - component: {fileID: 1579022798975754704}
-  - component: {fileID: 137954735849372615}
+  - component: {fileID: 7782009592380498074}
   m_Layer: 0
   m_Name: OuterMesh
   m_TagString: Untagged
@@ -4595,7 +4622,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.08041836, y: -0.0032454282, z: -0.020966716}
     m_Extent: {x: 0.11415337, y: 0.07609155, z: 0.06161832}
   m_DirtyAABB: 0
---- !u!114 &137954735849372615
+--- !u!114 &7782009592380498074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4604,7 +4631,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1579022798975754706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -4619,7 +4646,7 @@ MonoBehaviour:
   PositionThreshold: 0.001
   RotAngleThreshold: 0.01
   ScaleThreshold: 0.01
-  InLocalSpace: 1
+  InLocalSpace: 0
   Interpolate: 1
 --- !u!1 &1579022798983398283
 GameObject:
@@ -5532,7 +5559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579022799220751610}
   - component: {fileID: 1579022799220751609}
-  - component: {fileID: 5932280293416725012}
+  - component: {fileID: 5251933796866418788}
   m_Layer: 0
   m_Name: InnerMesh
   m_TagString: Untagged
@@ -5629,7 +5656,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.09229668, y: -0.015225619, z: -0.018114224}
     m_Extent: {x: 0.080366306, y: 0.05974908, z: 0.04299726}
   m_DirtyAABB: 0
---- !u!114 &5932280293416725012
+--- !u!114 &5251933796866418788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5638,7 +5665,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1579022799220751611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -5653,7 +5680,7 @@ MonoBehaviour:
   PositionThreshold: 0.001
   RotAngleThreshold: 0.01
   ScaleThreshold: 0.01
-  InLocalSpace: 1
+  InLocalSpace: 0
   Interpolate: 1
 --- !u!1 &1579022799228484655
 GameObject:
@@ -9231,7 +9258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579022800559614982}
   - component: {fileID: 1579022800559614981}
-  - component: {fileID: 8159905171690519932}
+  - component: {fileID: 87125376493058361}
   m_Layer: 0
   m_Name: InnerMesh
   m_TagString: Untagged
@@ -9328,7 +9355,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.09229668, y: -0.015225619, z: -0.018114224}
     m_Extent: {x: 0.080366306, y: 0.05974908, z: 0.04299726}
   m_DirtyAABB: 0
---- !u!114 &8159905171690519932
+--- !u!114 &87125376493058361
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9337,7 +9364,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1579022800559614983}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -9352,7 +9379,7 @@ MonoBehaviour:
   PositionThreshold: 0.001
   RotAngleThreshold: 0.01
   ScaleThreshold: 0.01
-  InLocalSpace: 1
+  InLocalSpace: 0
   Interpolate: 1
 --- !u!1 &1611120382205907375
 GameObject:
@@ -11870,7 +11897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 349411591456488086}
   - component: {fileID: 4597289453745037794}
-  - component: {fileID: 4913789478042640827}
+  - component: {fileID: 8399241504981486605}
   m_Layer: 0
   m_Name: OuterMesh
   m_TagString: Untagged
@@ -11967,7 +11994,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.08041836, y: -0.0032454282, z: -0.020966716}
     m_Extent: {x: 0.11415337, y: 0.07609155, z: 0.06161832}
   m_DirtyAABB: 0
---- !u!114 &4913789478042640827
+--- !u!114 &8399241504981486605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11976,7 +12003,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3706016238707531688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -11991,7 +12018,7 @@ MonoBehaviour:
   PositionThreshold: 0.001
   RotAngleThreshold: 0.01
   ScaleThreshold: 0.01
-  InLocalSpace: 1
+  InLocalSpace: 0
   Interpolate: 1
 --- !u!1 &3706016239315123195
 GameObject:
@@ -12003,7 +12030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 349411592156470981}
   - component: {fileID: 4597289454746879409}
-  - component: {fileID: 4487277242628997536}
+  - component: {fileID: 5603016658237025944}
   m_Layer: 0
   m_Name: OuterMesh
   m_TagString: Untagged
@@ -12100,7 +12127,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.08041836, y: -0.0032454282, z: -0.020966716}
     m_Extent: {x: 0.11415337, y: 0.07609155, z: 0.06161832}
   m_DirtyAABB: 0
---- !u!114 &4487277242628997536
+--- !u!114 &5603016658237025944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12109,7 +12136,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3706016239315123195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -12124,7 +12151,7 @@ MonoBehaviour:
   PositionThreshold: 0.001
   RotAngleThreshold: 0.01
   ScaleThreshold: 0.01
-  InLocalSpace: 1
+  InLocalSpace: 0
   Interpolate: 1
 --- !u!1 &3750806744436487507
 GameObject:
@@ -18276,7 +18303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8925703659189448639}
-  - component: {fileID: 5907216711897816418}
+  - component: {fileID: 2695533719140377833}
   m_Layer: 0
   m_Name: TrackerOffsets
   m_TagString: Untagged
@@ -18310,7 +18337,7 @@ Transform:
   m_Father: {fileID: 8925703660537618456}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5907216711897816418
+--- !u!114 &2695533719140377833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18319,7 +18346,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8925703659189448638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -18334,7 +18361,7 @@ MonoBehaviour:
   PositionThreshold: 0.001
   RotAngleThreshold: 0.01
   ScaleThreshold: 0.01
-  InLocalSpace: 1
+  InLocalSpace: 0
   Interpolate: 1
 --- !u!1 &8925703659284078240
 GameObject:
@@ -20024,7 +20051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1376827154355109134}
   - component: {fileID: 5750224086959499631}
-  - component: {fileID: 18102927291573017}
+  - component: {fileID: 9112099028772717389}
   m_Layer: 0
   m_Name: InnerMesh
   m_TagString: Untagged
@@ -20121,7 +20148,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.09229668, y: -0.015225619, z: -0.018114224}
     m_Extent: {x: 0.080366306, y: 0.05974908, z: 0.04299726}
   m_DirtyAABB: 0
---- !u!114 &18102927291573017
+--- !u!114 &9112099028772717389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20130,7 +20157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9009536601741156331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -20145,7 +20172,7 @@ MonoBehaviour:
   PositionThreshold: 0.001
   RotAngleThreshold: 0.01
   ScaleThreshold: 0.01
-  InLocalSpace: 1
+  InLocalSpace: 0
   Interpolate: 1
 --- !u!1 &9009536603229551544
 GameObject:
@@ -20157,7 +20184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1376827155618175325}
   - component: {fileID: 5750224085746748732}
-  - component: {fileID: 4904946776388641897}
+  - component: {fileID: 4984411462363082208}
   m_Layer: 0
   m_Name: InnerMesh
   m_TagString: Untagged
@@ -20254,7 +20281,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.09229668, y: -0.015225619, z: -0.018114224}
     m_Extent: {x: 0.080366306, y: 0.05974908, z: 0.04299726}
   m_DirtyAABB: 0
---- !u!114 &4904946776388641897
+--- !u!114 &4984411462363082208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20263,7 +20290,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9009536603229551544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -20278,7 +20305,7 @@ MonoBehaviour:
   PositionThreshold: 0.001
   RotAngleThreshold: 0.01
   ScaleThreshold: 0.01
-  InLocalSpace: 1
+  InLocalSpace: 0
   Interpolate: 1
 --- !u!1 &9105793169444047371
 GameObject:
