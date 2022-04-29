@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -3327942743975658866}
   - component: {fileID: 4804989382617208427}
   - component: {fileID: -2086768746584480447}
+  - component: {fileID: -5837954281419341252}
   m_Layer: 0
   m_Name: Throwable Rock
   m_TagString: Untagged
@@ -256,3 +257,15 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &-5837954281419341252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9105943294348810507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
