@@ -11325,7 +11325,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6962963, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -24694,11 +24694,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
-    - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -26991,11 +26986,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTreeTall
-      objectReference: {fileID: 0}
-    - target: {fileID: 3093189844265541444, guid: 4990c2e6d645b464b9bfe1625bcf4375,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
         type: 3}
