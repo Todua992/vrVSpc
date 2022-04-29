@@ -1689,7 +1689,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.6962963, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6328,36 +6328,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355166549945}
     m_Modifications:
-    - target: {fileID: 2040539639462442845, guid: 07921d43c648fc344b0f2e580d5e8afe,
-        type: 3}
-      propertyPath: m_Layer
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 2633901705139974535, guid: 07921d43c648fc344b0f2e580d5e8afe,
-        type: 3}
-      propertyPath: m_Layer
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 3375945489946781262, guid: 07921d43c648fc344b0f2e580d5e8afe,
-        type: 3}
-      propertyPath: m_Layer
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 3786831278662091110, guid: 07921d43c648fc344b0f2e580d5e8afe,
-        type: 3}
-      propertyPath: m_Layer
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 4961646080723456800, guid: 07921d43c648fc344b0f2e580d5e8afe,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4961646080723456800, guid: 07921d43c648fc344b0f2e580d5e8afe,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5819043292048004106, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -6367,16 +6337,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTreeShort
-      objectReference: {fileID: 0}
-    - target: {fileID: 6740409828260073292, guid: 07921d43c648fc344b0f2e580d5e8afe,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6740409828260073292, guid: 07921d43c648fc344b0f2e580d5e8afe,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6878175472969916566, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
@@ -6432,21 +6392,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7455790382872900237, guid: 07921d43c648fc344b0f2e580d5e8afe,
-        type: 3}
-      propertyPath: m_Layer
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 7658268647715719549, guid: 07921d43c648fc344b0f2e580d5e8afe,
-        type: 3}
-      propertyPath: m_Layer
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 7904792472151218259, guid: 07921d43c648fc344b0f2e580d5e8afe,
-        type: 3}
-      propertyPath: m_Layer
-      value: 26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07921d43c648fc344b0f2e580d5e8afe, type: 3}

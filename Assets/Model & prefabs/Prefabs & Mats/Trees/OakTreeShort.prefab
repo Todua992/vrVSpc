@@ -55,7 +55,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!153 &8037624472205578892
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 7753265560431954435}
   - component: {fileID: 8182007038086994235}
   - component: {fileID: 3233584145872222511}
-  m_Layer: 27
+  m_Layer: 26
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2619464948158880154}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 3068695400138955561}
   - component: {fileID: 489200173063739349}
   - component: {fileID: 3466240139609013043}
-  m_Layer: 27
+  m_Layer: 26
   m_Name: Icosphere.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 7059686069395855212}
   - component: {fileID: 4242226035369881543}
   - component: {fileID: 1131913992382807187}
-  m_Layer: 26
+  m_Layer: 27
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3375945489946781262}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -691,7 +691,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3451138108313352449}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 1565552369919229419}
   - component: {fileID: 3363273820255120954}
   - component: {fileID: 63663542263785845}
-  m_Layer: 26
+  m_Layer: 27
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3786831278662091110}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -877,7 +877,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &4135280489577196577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6070817706357914156}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
@@ -893,8 +893,6 @@ MonoBehaviour:
   networkIsKinematic:
     m_InternalValue: 1
   growSpeed: 0.05
-  tree: {fileID: 7030338843586270433}
-  treeJoint: {fileID: 374149348317416304}
   grabbable: {fileID: 0}
 --- !u!114 &1824219996
 MonoBehaviour:
@@ -1073,7 +1071,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6439835885325049488}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1171,7 +1169,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6918883336041693727}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1270,7 +1268,7 @@ GameObject:
   - component: {fileID: 8758712491581086460}
   - component: {fileID: 6461777240025250251}
   - component: {fileID: 7016991530837842484}
-  m_Layer: 27
+  m_Layer: 26
   m_Name: Icosphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1549,7 +1547,7 @@ GameObject:
   - component: {fileID: 1335005889683930936}
   - component: {fileID: 4255077982218088866}
   - component: {fileID: 1803254835242505740}
-  m_Layer: 26
+  m_Layer: 27
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1586,7 +1584,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7658268647715719549}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1647,7 +1645,7 @@ GameObject:
   - component: {fileID: 368158605975696765}
   - component: {fileID: 6422332919521687277}
   - component: {fileID: 3679454171186021328}
-  m_Layer: 27
+  m_Layer: 26
   m_Name: Icosphere.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
