@@ -10,6 +10,7 @@ namespace Autohand.Demo {
     public class Smasher : NetworkBehaviour {
         public NetworkVariable<bool> networkDestory = new();
         public NetworkVariable<float> networkTimer = new();
+        public NetworkVariable<bool> networkKnockBack = new();
 
         [SerializeField] private Material handMaterial;
         [HideInInspector] public RockSpawn rock;
@@ -92,6 +93,10 @@ namespace Autohand.Demo {
                 }
             } if (!IsHost) {
                 Currenttime = networkTimer.Value;
+
+                if (networkKnockBack.Value) {
+                    knockBack();
+                }
             }
 
             if (blast == true) {
@@ -102,6 +107,8 @@ namespace Autohand.Demo {
                 }
             }
 
+
+
             if (networkDestory.Value) {
                 destroy();
             }
@@ -109,29 +116,26 @@ namespace Autohand.Demo {
 
 
         private void OnCollisionEnter(Collision collision) {
-           
+            if (IsHost) {
+                Smash smash;
+                if (blast == true) {
+                    if (GetMagnitude() > MinMag & Currenttime <= 0) {
+                        UpdateKnockBackServerRpc(true);
+                        knockBack();
+                        Currenttime = Starttime;
+                    }
+                }
 
-            Smash smash;
-            if (blast == true) {
-                ParticleSystem first = particle.GetComponent<ParticleSystem>();
-                if (GetMagnitude() > MinMag & Currenttime <= 0) {
-                    knockBack();
-                    Currenttime = Starttime;
-                    first.Stop();
+                if (collision.transform.CanGetComponent(out smash)) {
+
+                    if (GetMagnitude() >= smash.smashForce) {
+                        smash.DoSmash();
+                        OnSmashEvent?.Invoke(this, smash);
+
+
+                    }
                 }
             }
-
-            if (collision.transform.CanGetComponent(out smash)) {
-
-                if (GetMagnitude() >= smash.smashForce) {
-                    smash.DoSmash();
-                    OnSmashEvent?.Invoke(this, smash);
-
-
-                }
-            }
-
-           
         }
 
         private void OnCollisionStay(Collision collision) {
@@ -154,13 +158,13 @@ namespace Autohand.Demo {
         }
 
         void knockBack() {
+            ParticleSystem first = particle.GetComponent<ParticleSystem>();
+            first.Stop();
 
             Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
             foreach (Collider nearyby in colliders) {
                 Rigidbody rb = nearyby.GetComponent<Rigidbody>();
-                RagdollController controller = nearyby.GetComponent<RagdollController>();
-
-
+                RagdollController controller = nearyby.GetComponent<RagdollController>(); 
 
                 if (controller != null) {
                     controller.EnableRagdoll();
@@ -170,6 +174,9 @@ namespace Autohand.Demo {
                 if (rb != null) {
                     rb.AddExplosionForce(expForce, transform.position, radius, Upwordsblast);
                 }
+            }
+            if (IsHost) {
+                UpdateKnockBackServerRpc(false);
             }
         }
 
@@ -190,6 +197,11 @@ namespace Autohand.Demo {
 
         private float Map(float s, float a1, float a2, float b1, float b2) {
             return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
+        }
+
+        [ServerRpc]
+        public void UpdateKnockBackServerRpc(bool knockBack) {
+            networkKnockBack.Value = knockBack;
         }
 
         [ServerRpc]
