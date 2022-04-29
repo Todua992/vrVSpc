@@ -34986,6 +34986,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: -7333521102587525478, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 17731124835868213, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
         type: 3}
       propertyPath: m_RootOrder
@@ -35104,20 +35109,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: b72abf987c326fc4793a86b7e500b22f, type: 3}
---- !u!114 &732770646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342409757280778694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &732770647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35283,6 +35274,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 5819043292048004106, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -35460,6 +35456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!1001 &1131904535422213968
@@ -35554,6 +35552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
 --- !u!4 &9033832268503115309 stripped
@@ -35569,6 +35572,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4842311341314267007, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: m_Name
@@ -35693,20 +35701,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0b0ca8884f7cf8740ac7ed1698a02e9b, type: 3}
---- !u!114 &868479857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514109842640754611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &868479858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35976,6 +35970,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 5819043292048004106, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -36153,6 +36152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!1001 &1131904535559063466
@@ -36162,6 +36163,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 5819043292048004106, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -36339,6 +36345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!1001 &1131904535559412492
@@ -36533,6 +36541,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTreeTall
       objectReference: {fileID: 0}
+    - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
 --- !u!1 &2691009542859234829 stripped
@@ -36629,6 +36642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!4 &3320193370126533815 stripped
@@ -36728,6 +36743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PineTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
@@ -36914,6 +36934,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 7400610773195294126, guid: b9a927f25ece0144bb1a8d41e1296a90,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9a927f25ece0144bb1a8d41e1296a90, type: 3}
 --- !u!1 &4728806668661884539 stripped
@@ -36952,20 +36977,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 4e0c38a2d2a192a48bd2dc73c0bd2b58, type: 3}
---- !u!114 &1309153221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4728806668661884539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &1309153222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37116,6 +37127,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTreeTall
       objectReference: {fileID: 0}
+    - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
 --- !u!1 &2691009542927514241 stripped
@@ -37212,6 +37228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!4 &3320193370190585915 stripped
@@ -37522,6 +37540,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTreeTall
       objectReference: {fileID: 0}
+    - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
 --- !u!1 &2691009543094093783 stripped
@@ -37618,6 +37641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!4 &3320193370025827693 stripped
@@ -37633,6 +37658,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4842311341314267007, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: m_Name
@@ -37757,20 +37787,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0b0ca8884f7cf8740ac7ed1698a02e9b, type: 3}
---- !u!114 &343992544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514109842263389819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &343992545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37950,6 +37966,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 5819043292048004106, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -38117,6 +38138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!1001 &1131904535914432672
@@ -38201,6 +38224,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
 --- !u!4 &9033832267809370589 stripped
@@ -38216,6 +38244,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4842311341314267007, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: m_Name
@@ -38340,20 +38373,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0b0ca8884f7cf8740ac7ed1698a02e9b, type: 3}
---- !u!114 &27772599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514109843194712916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &27772600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38498,6 +38517,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTreeTall
       objectReference: {fileID: 0}
+    - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
 --- !u!1 &2691009542124733156 stripped
@@ -38594,6 +38618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!4 &3320193369912137822 stripped
@@ -38609,6 +38635,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 5819043292048004106, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -38771,6 +38802,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!1001 &1131904535941173262
@@ -38780,6 +38813,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 5819043292048004106, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -38947,6 +38985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!1001 &1131904535942120601
@@ -38956,6 +38996,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: -7333521102587525478, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 17731124835868213, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
         type: 3}
       propertyPath: m_RootOrder
@@ -39074,20 +39119,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: b72abf987c326fc4793a86b7e500b22f, type: 3}
---- !u!114 &409779044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342409756629319702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &409779045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39243,6 +39274,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 7400610773195294126, guid: b9a927f25ece0144bb1a8d41e1296a90,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9a927f25ece0144bb1a8d41e1296a90, type: 3}
 --- !u!1 &4728806668606681037 stripped
@@ -39281,20 +39317,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 4e0c38a2d2a192a48bd2dc73c0bd2b58, type: 3}
---- !u!114 &556354861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4728806668606681037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &556354862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39675,6 +39697,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
 --- !u!4 &9033832267947229521 stripped
@@ -39690,6 +39717,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4842311341314267007, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: m_Name
@@ -39814,20 +39846,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0b0ca8884f7cf8740ac7ed1698a02e9b, type: 3}
---- !u!114 &261917915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514109842992960655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &261917916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39981,6 +39999,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PineTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
@@ -40191,6 +40214,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PineTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
@@ -40427,6 +40455,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4842311341314267007, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: m_Name
@@ -40551,20 +40584,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0b0ca8884f7cf8740ac7ed1698a02e9b, type: 3}
---- !u!114 &160391948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514109842850359859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &160391949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40724,6 +40743,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4842311341314267007, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: m_Name
@@ -40848,20 +40872,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0b0ca8884f7cf8740ac7ed1698a02e9b, type: 3}
---- !u!114 &1472654307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514109841707667958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &1472654308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40931,6 +40941,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4842311341314267007, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: m_Name
@@ -41055,20 +41070,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0b0ca8884f7cf8740ac7ed1698a02e9b, type: 3}
---- !u!114 &1221654206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514109841680371604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &1221654207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41403,6 +41404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
 --- !u!4 &9033832269371352153 stripped
@@ -41477,6 +41483,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTreeTall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
@@ -41574,6 +41585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!4 &3320193369365159056 stripped
@@ -41589,6 +41602,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4842311341314267007, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: m_Name
@@ -41713,20 +41731,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0b0ca8884f7cf8740ac7ed1698a02e9b, type: 3}
---- !u!114 &1022215293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514109841489952601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &1022215294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41871,6 +41875,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTreeTall
       objectReference: {fileID: 0}
+    - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4990c2e6d645b464b9bfe1625bcf4375, type: 3}
 --- !u!1 &2691009541699339449 stripped
@@ -41967,6 +41976,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!4 &3320193369230892547 stripped
@@ -42066,6 +42077,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PineTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
@@ -42192,6 +42208,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4842311341314267007, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: m_Name
@@ -42316,20 +42337,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0b0ca8884f7cf8740ac7ed1698a02e9b, type: 3}
---- !u!114 &1344813894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514109841207183439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &1344813895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42399,6 +42406,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 5819043292048004106, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -42576,6 +42588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!1001 &1131904536891574120
@@ -42695,6 +42709,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 5819043292048004106, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -42872,6 +42891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!1001 &1131904536947493156
@@ -42951,6 +42972,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
 --- !u!4 &9033832268853997657 stripped
@@ -42966,6 +42992,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2274056355057001883}
     m_Modifications:
+    - target: {fileID: 5819043292048004106, guid: 07921d43c648fc344b0f2e580d5e8afe,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 6070817706357914156, guid: 07921d43c648fc344b0f2e580d5e8afe,
         type: 3}
       propertyPath: m_Name
@@ -43133,6 +43164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 0
   growSpeed: 0.5
   grabbable: {fileID: 1057093653}
 --- !u!1001 &1131904537021110732
@@ -43142,6 +43175,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4842311341314267007, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: m_Name
@@ -43266,20 +43304,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0b0ca8884f7cf8740ac7ed1698a02e9b, type: 3}
---- !u!114 &594050796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514109842088398515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &594050797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43439,6 +43463,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: -7333521102587525478, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 17731124835868213, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
         type: 3}
       propertyPath: m_RootOrder
@@ -43557,20 +43586,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: b72abf987c326fc4793a86b7e500b22f, type: 3}
---- !u!114 &1404796627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342409758035857378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &1404796628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43730,6 +43745,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PineTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4735705ad0c44c45a0caee66907a3a5, type: 3}
@@ -44236,6 +44256,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4842311341314267007, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: m_Name
@@ -44360,20 +44385,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0b0ca8884f7cf8740ac7ed1698a02e9b, type: 3}
---- !u!114 &535755495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6354466314311041711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &535755496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44443,6 +44454,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: -7333521102587525478, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 17731124835868213, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
         type: 3}
       propertyPath: m_RootOrder
@@ -44561,20 +44577,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: b72abf987c326fc4793a86b7e500b22f, type: 3}
---- !u!114 &2140218561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3838275010488715118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &2140218562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44650,6 +44652,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486942057780582}
     m_Modifications:
+    - target: {fileID: 3274449236391451074, guid: f93bd1b91d665f74abcfa9d9d55514ec,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 7369042438963423567, guid: f93bd1b91d665f74abcfa9d9d55514ec,
         type: 3}
       propertyPath: m_RootOrder
@@ -44774,20 +44781,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 18c96e981d4879e47a5ee33a7cf8f19b, type: 3}
---- !u!114 &1569423363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3148234665828232821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &1569423364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44937,6 +44930,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 7400610773195294126, guid: b9a927f25ece0144bb1a8d41e1296a90,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9a927f25ece0144bb1a8d41e1296a90, type: 3}
 --- !u!4 &2814756774189900225 stripped
@@ -44981,20 +44979,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 4e0c38a2d2a192a48bd2dc73c0bd2b58, type: 3}
---- !u!114 &1323211444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3196384703674776443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591f04d64f3a51a4da8966847a8ee720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growSpeed: 0.2
-  grabbable: {fileID: 1344813895}
 --- !u!114 &1323211445
 MonoBehaviour:
   m_ObjectHideFlags: 0
