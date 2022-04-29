@@ -10,6 +10,7 @@ public class Respawn : NetworkBehaviour {
     [SerializeField] private GameObject treeJoint;
 
     private List<MeshRenderer> meshRenderers = new();
+    private List<MeshCollider> treeCollider = new();
     private List<MeshCollider> meshColliders = new();
     private Rigidbody rb;
     public Grabbable grabbable;
@@ -22,6 +23,11 @@ public class Respawn : NetworkBehaviour {
     private bool isStarted = false;
 
    private void Start() {
+        foreach (MeshCollider meshCollider in tree.GetComponentsInChildren<MeshCollider>()) {
+            treeCollider.Add(meshCollider);
+            meshCollider.enabled = false;
+        }
+
         foreach (MeshRenderer meshRenderer in tree.GetComponentsInChildren<Renderer>()) {
             meshRenderers.Add(meshRenderer);
             meshRenderer.enabled = false;
@@ -53,7 +59,15 @@ public class Respawn : NetworkBehaviour {
             if (transform.localScale.x > startScale.x) {
                 respawn = false;
                 grabbable.enabled = true;
+                foreach (MeshRenderer meshRenderer in meshRenderers) {
+                    meshRenderer.enabled = false;
+                }
 
+                foreach (MeshCollider meshCollider in treeCollider) {
+                    meshCollider.enabled = false;
+                }
+
+                treeJoint.SetActive(true);
             }
         }
 
@@ -91,6 +105,10 @@ public class Respawn : NetworkBehaviour {
             meshCollider.convex = !networkIsKinematic.Value;
         }
 
+        foreach (MeshCollider meshCollider in treeCollider) {
+            meshCollider.enabled = !networkIsKinematic.Value;
+        }
+
         foreach (MeshRenderer meshRenderer in meshRenderers) {
             meshRenderer.enabled = !networkIsKinematic.Value;
         }
@@ -104,6 +122,10 @@ public class Respawn : NetworkBehaviour {
         rb.isKinematic = false;
 
         treeJoint.SetActive(false);
+
+        foreach (MeshCollider meshCollider in treeCollider) {
+            meshCollider.enabled = true;
+        }
 
         foreach (MeshRenderer meshRenderer in meshRenderers) {
             meshRenderer.enabled = true;
