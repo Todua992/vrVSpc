@@ -5399,6 +5399,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -5472,6 +5477,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PineTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
@@ -5671,6 +5681,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 7400610773195294126, guid: b9a927f25ece0144bb1a8d41e1296a90,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 2310626650
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9a927f25ece0144bb1a8d41e1296a90, type: 3}
 --- !u!1001 &1131904535575199772
@@ -5981,6 +5996,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PineTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
@@ -6497,6 +6517,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -6664,6 +6689,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTreeTall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093189844265541444, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
         type: 3}
@@ -7104,6 +7134,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTreeTall
       objectReference: {fileID: 0}
+    - target: {fileID: 3093189844265541444, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -7178,6 +7213,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -7251,6 +7291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTreeTall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093189844265541444, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
         type: 3}
@@ -7747,6 +7792,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 7400610773195294126, guid: b9a927f25ece0144bb1a8d41e1296a90,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 2632928590
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9a927f25ece0144bb1a8d41e1296a90, type: 3}
 --- !u!1001 &1131904536028772327
@@ -7815,6 +7865,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTreeTall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093189844265541444, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
         type: 3}
@@ -8067,6 +8122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PineTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
@@ -8948,6 +9008,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -9512,6 +9577,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -9759,6 +9829,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -9936,6 +10011,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTreeTall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093189844265541444, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
         type: 3}
@@ -10382,6 +10462,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTreeTall
       objectReference: {fileID: 0}
+    - target: {fileID: 3093189844265541444, guid: 4990c2e6d645b464b9bfe1625bcf4375,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3320193369915821913, guid: 4990c2e6d645b464b9bfe1625bcf4375,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -10623,6 +10708,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PineTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764034650518070215, guid: c4735705ad0c44c45a0caee66907a3a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9033832268742309508, guid: c4735705ad0c44c45a0caee66907a3a5,
         type: 3}
@@ -20287,6 +20377,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 7400610773195294126, guid: b9a927f25ece0144bb1a8d41e1296a90,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 3869746733
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9a927f25ece0144bb1a8d41e1296a90, type: 3}
 --- !u!33 &7102590869351944993

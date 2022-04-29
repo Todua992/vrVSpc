@@ -5,9 +5,11 @@ using System.Collections.Generic;
 
 public class Respawn : NetworkBehaviour {
     [SerializeField] private NetworkVariable<bool> networkIsKinematic = new();
-    
     [SerializeField] private float growSpeed;
+    [SerializeField] private GameObject tree;
+    [SerializeField] private GameObject treeJoint;
 
+    private List<MeshRenderer> meshRenderers = new();
     private List<MeshCollider> meshColliders = new();
     private Rigidbody rb;
     public Grabbable grabbable;
@@ -20,9 +22,14 @@ public class Respawn : NetworkBehaviour {
     private bool isStarted = false;
 
    private void Start() {
+        foreach (MeshRenderer meshRenderer in tree.GetComponentsInChildren<Renderer>()) {
+            meshRenderers.Add(meshRenderer);
+        }
+
         foreach (MeshCollider meshCollider in GetComponentsInChildren<MeshCollider>()) {
             meshColliders.Add(meshCollider);
         }
+
         rb = GetComponent<Rigidbody>();
         grabbable = GetComponent<Grabbable>();
 
@@ -82,11 +89,25 @@ public class Respawn : NetworkBehaviour {
         foreach (MeshCollider meshCollider in meshColliders) {
             meshCollider.convex = !networkIsKinematic.Value;
         }
+
+        foreach (MeshRenderer meshRenderer in meshRenderers) {
+            meshRenderer.enabled = !networkIsKinematic.Value;
+        }
+
+        treeJoint.SetActive(networkIsKinematic.Value);
+
         rb.isKinematic = networkIsKinematic.Value;
     }
 
     public void IsKinematic () {
         rb.isKinematic = false;
+
+        treeJoint.SetActive(false);
+
+        foreach (MeshRenderer meshRenderer in meshRenderers) {
+            meshRenderer.enabled = true;
+        }
+
         if (IsHost) {
             UpdateIsKinematicServerRpc(true);
         }
