@@ -31,8 +31,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - TreeJoint
+  - Tree
   - HandPlayer
   - Hand
   - Grabbable
