@@ -102,8 +102,6 @@ public class Respawn : NetworkBehaviour {
     }
 
     private void ChangeKinematic() {
-        print("Hello");
-
         foreach (MeshCollider meshCollider in meshColliders) {
             meshCollider.convex = !networkIsKinematic.Value;
         }
