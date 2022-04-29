@@ -102,6 +102,8 @@ public class Respawn : NetworkBehaviour {
     }
 
     private void ChangeKinematic() {
+        print("Hello");
+
         foreach (MeshCollider meshCollider in meshColliders) {
             meshCollider.convex = !networkIsKinematic.Value;
         }
@@ -132,9 +134,7 @@ public class Respawn : NetworkBehaviour {
             meshRenderer.enabled = true;
         }
 
-        if (IsHost) {
-            UpdateIsKinematicServerRpc(true);
-        }
+        UpdateIsKinematicServerRpc(true);
     }
 
     [ServerRpc]
