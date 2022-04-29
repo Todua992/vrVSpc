@@ -17,6 +17,7 @@ public class Respawn : NetworkBehaviour {
     private Vector3 startScale;
     private Vector3 scaleSpeed;
     private bool respawn = false;
+    private bool isStarted = false;
 
    private void Start() {
         foreach (MeshCollider meshCollider in GetComponentsInChildren<MeshCollider>()) {
@@ -31,10 +32,6 @@ public class Respawn : NetworkBehaviour {
 
         scaleSpeed = new Vector3(growSpeed * startScale.x, growSpeed * startScale.y, growSpeed * startScale.z);
         rb.mass = Map(startScale.x * startScale.y * startScale.z, 0.125f, 3.375f, 10f, 40f);
-
-        if (!IsHost) {
-            ChangeKinematic();
-        }
     }
 
     private void Update() {
@@ -52,10 +49,16 @@ public class Respawn : NetworkBehaviour {
             }
         }
 
-        if (!IsHost) {
+        if (isStarted && !IsHost) {
             if (rb.isKinematic != networkIsKinematic.Value) {
                 ChangeKinematic();
             }
+        }
+    }
+
+    public override void OnNetworkSpawn() {
+        if (!IsHost) {
+            ChangeKinematic();
         }
     }
 
