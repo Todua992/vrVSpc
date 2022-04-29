@@ -71,7 +71,7 @@ public class Respawn : NetworkBehaviour {
             }
         }
 
-        if (isStarted && !IsHost && !IsServer) {
+        if (isStarted && !IsHost) {
             if (rb.isKinematic != networkIsKinematic.Value) {
                 ChangeKinematic();
             }
@@ -79,8 +79,9 @@ public class Respawn : NetworkBehaviour {
     }
 
     public override void OnNetworkSpawn() {
-        if (!IsHost && !IsServer) {
-            isStarted = true;
+        isStarted = true;
+
+        if (!IsHost) {
             ChangeKinematic();
         }
     }
