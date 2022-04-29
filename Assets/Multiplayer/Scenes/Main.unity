@@ -1689,7 +1689,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.6962963, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11042,7 +11042,7 @@ GameObject:
   - component: {fileID: 7214643815474074202}
   - component: {fileID: 7214643815474074204}
   - component: {fileID: 7214643815474074203}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cylinder.034
   m_TagString: Untagged
   m_Icon: {fileID: 0}

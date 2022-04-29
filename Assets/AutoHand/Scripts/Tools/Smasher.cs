@@ -122,7 +122,7 @@ namespace Autohand.Demo {
 
         private void OnCollisionStay(Collision collision)
         {
-            if (CanExplode == true && collision.gameObject.layer != 17 && collision.gameObject.layer != 16)
+            if (CanExplode == true && collision.gameObject.layer != 17 && collision.gameObject.layer != 30)
             {
                 if (GetMagnitude() > MinMag)
                 {
