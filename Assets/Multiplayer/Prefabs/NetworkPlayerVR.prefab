@@ -14302,12 +14302,12 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  allowClimbing: 1
+  allowClimbing: 0
   allowClimbingMovement: 1
   climbingStrength: {x: 20, y: 20, z: 20}
   climbingAcceleration: 30
   climbingDrag: 5
-  allowBodyPushing: 1
+  allowBodyPushing: 0
   pushingStrength: {x: 10, y: 20, z: 10}
   pushingAcceleration: 10
   pushingDrag: 1
