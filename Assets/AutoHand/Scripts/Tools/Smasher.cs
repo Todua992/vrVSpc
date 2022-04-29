@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR;
+using Unity.Netcode;
+
 namespace Autohand.Demo {
     public delegate void SmashEvent(Smasher smasher, Smash smashable);
 
     [RequireComponent(typeof(Rigidbody))]
-    public class Smasher : MonoBehaviour {
+    public class Smasher : NetworkBehaviour {
+        public NetworkVariable<bool> networkDestory = new();
 
         [SerializeField] private Material handMaterial;
         [HideInInspector] public RockSpawn rock;
@@ -64,8 +67,6 @@ namespace Autohand.Demo {
 
 
         void FixedUpdate() {
-
-
             targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue);
 
             if (gripValue > 0f) {
@@ -90,6 +91,10 @@ namespace Autohand.Demo {
                 first.Play();
 
             }
+            }
+
+            if (networkDestory.Value) {
+                destroy();
             }
         }
 
@@ -120,14 +125,13 @@ namespace Autohand.Demo {
            
         }
 
-        private void OnCollisionStay(Collision collision)
-        {
-            if (CanExplode == true && collision.gameObject.layer != 17 && collision.gameObject.layer != 30)
-            {
-                if (GetMagnitude() > MinMag)
-                {
-                    destroy();
-
+        private void OnCollisionStay(Collision collision) {
+            if (IsHost) {
+                if (CanExplode == true && collision.gameObject.layer != 17 && collision.gameObject.layer != 30) {
+                    if (GetMagnitude() > MinMag) {
+                        destroy();
+                        UpdateDestoryServerRpc();
+                    }
                 }
             }
         }
@@ -171,12 +175,15 @@ namespace Autohand.Demo {
             }
             
             Destroy(gameObject);
-
-
         }
 
         private float Map(float s, float a1, float a2, float b1, float b2) {
             return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
+        }
+
+        [ServerRpc]
+        public void UpdateDestoryServerRpc() {
+            networkDestory.Value = true;
         }
     }
 
