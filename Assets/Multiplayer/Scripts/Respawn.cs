@@ -24,6 +24,7 @@ public class Respawn : NetworkBehaviour {
    private void Start() {
         foreach (MeshRenderer meshRenderer in tree.GetComponentsInChildren<Renderer>()) {
             meshRenderers.Add(meshRenderer);
+            meshRenderer.enabled = false;
         }
 
         foreach (MeshCollider meshCollider in GetComponentsInChildren<MeshCollider>()) {

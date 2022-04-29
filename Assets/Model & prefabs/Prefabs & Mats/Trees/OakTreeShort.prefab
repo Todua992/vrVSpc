@@ -893,6 +893,8 @@ MonoBehaviour:
   networkIsKinematic:
     m_InternalValue: 1
   growSpeed: 0.05
+  tree: {fileID: 7030338843586270433}
+  treeJoint: {fileID: 374149348317416304}
   grabbable: {fileID: 0}
 --- !u!114 &1824219996
 MonoBehaviour:
