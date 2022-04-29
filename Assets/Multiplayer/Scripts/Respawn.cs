@@ -134,7 +134,9 @@ public class Respawn : NetworkBehaviour {
             meshRenderer.enabled = true;
         }
 
-        UpdateIsKinematicServerRpc(true);
+        if (IsHost) {
+            UpdateIsKinematicServerRpc(false);
+        }
     }
 
     [ServerRpc]
