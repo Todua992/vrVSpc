@@ -170,6 +170,7 @@ namespace Autohand.Demo {
         void destroy() {
             rock.Currentrocks--;
             GameObject frac = Instantiate(fractured, transform.position, transform.rotation);
+            frac.GetComponent<NetworkObject>().Spawn();
             foreach (Rigidbody rb in frac.GetComponentsInChildren<Rigidbody>()){
                 CopyVelocity(this.rb, rb);
             }
