@@ -1,7 +1,7 @@
+using Unity.Netcode;
 using UnityEngine;
-using System.Threading.Tasks;
 
-public class RockSpawn : MonoBehaviour {
+public class RockSpawn : NetworkBehaviour {
     [SerializeField] private Transform SpawnPoint;
     [SerializeField] private GameObject Prefab;
     [SerializeField] private int Maxrocks;
@@ -10,17 +10,20 @@ public class RockSpawn : MonoBehaviour {
     private float CurrentTime;
 
     private void Update() {
-        if (Currentrocks < Maxrocks) {
-            CurrentTime -= Time.deltaTime;
-            if (CurrentTime <= 0f) {
-                Currentrocks++;
-                Spawn();
-                CurrentTime = TimeTillSpawn;
+        if (IsHost) {
+            if (Currentrocks < Maxrocks) {
+                CurrentTime -= Time.deltaTime;
+                if (CurrentTime <= 0f) {
+                    Currentrocks++;
+                    Spawn();
+                    CurrentTime = TimeTillSpawn;
+                }
             }
         }
     }
 
     private void Spawn() {
-        Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation);
+        GameObject rock = Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation);
+        rock.GetComponent<NetworkObject>().Spawn();
     }
 }
