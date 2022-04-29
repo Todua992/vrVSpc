@@ -59,15 +59,6 @@ public class Respawn : NetworkBehaviour {
             if (transform.localScale.x > startScale.x) {
                 respawn = false;
                 grabbable.enabled = true;
-                foreach (MeshRenderer meshRenderer in meshRenderers) {
-                    meshRenderer.enabled = false;
-                }
-
-                foreach (MeshCollider meshCollider in treeCollider) {
-                    meshCollider.enabled = false;
-                }
-
-                treeJoint.SetActive(true);
             }
         }
 
@@ -91,6 +82,15 @@ public class Respawn : NetworkBehaviour {
         transform.rotation = startRotation;
         transform.localScale = new Vector3(0f, 0f, 0f);
         rb.isKinematic = true;
+        foreach (MeshRenderer meshRenderer in meshRenderers) {
+            meshRenderer.enabled = false;
+        }
+
+        foreach (MeshCollider meshCollider in treeCollider) {
+            meshCollider.enabled = false;
+        }
+
+        treeJoint.SetActive(true);
         if (IsHost) {
             UpdateIsKinematicServerRpc(true);
         }
