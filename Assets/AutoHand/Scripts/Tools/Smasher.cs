@@ -9,6 +9,7 @@ namespace Autohand.Demo {
     [RequireComponent(typeof(Rigidbody))]
     public class Smasher : NetworkBehaviour {
         public NetworkVariable<bool> networkDestory = new();
+        public NetworkVariable<float> networkTimer = new();
 
         [SerializeField] private Material handMaterial;
         [HideInInspector] public RockSpawn rock;
@@ -81,16 +82,24 @@ namespace Autohand.Demo {
             lastPos = centerOfMassPoint ? centerOfMassPoint.position : rb.position;
 
             handMaterial.color = new Color(Map(Currenttime, 0f, Starttime, 0f, 1f), Map(Currenttime, 0f, Starttime, 0.5f, 0f), Map(Currenttime, 0f, Starttime, 1f, 0f));
+
+
             // Timer ####
-            if (Currenttime > 0) {
-                Currenttime -= Time.deltaTime;
+            if (IsHost) {
+                if (Currenttime > 0) {
+                    Currenttime -= Time.deltaTime;
+                    UpdateTimerServerRpc(Currenttime);
+                }
+            } if (!IsHost) {
+                Currenttime = networkTimer.Value;
             }
+
             if (blast == true) {
                 if (Currenttime <= 0) {
-                ParticleSystem first = particle.GetComponent<ParticleSystem>();
-                first.Play();
+                    ParticleSystem first = particle.GetComponent<ParticleSystem>();
+                    first.Play();
 
-            }
+                }
             }
 
             if (networkDestory.Value) {
@@ -143,6 +152,7 @@ namespace Autohand.Demo {
 
             return (velocity.magnitude / velocityOverTime.Length) * forceMulti * 10;
         }
+
         void knockBack() {
 
             Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
@@ -180,6 +190,11 @@ namespace Autohand.Demo {
 
         private float Map(float s, float a1, float a2, float b1, float b2) {
             return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
+        }
+
+        [ServerRpc]
+        public void UpdateTimerServerRpc(float currentTime) {
+            networkTimer.Value = currentTime;
         }
 
         [ServerRpc]
