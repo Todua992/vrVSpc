@@ -1695,7 +1695,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.6962963, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2875,7 +2875,7 @@ MonoBehaviour:
   Prefab: {fileID: 9105943294348810507, guid: f1653f52aa61ce841a6115f7f652df17, type: 3}
   Maxrocks: 4
   TimeTillSpawn: 12
-  Currentrocks: 1
+  Currentrocks: 0
 --- !u!1 &1641344193
 GameObject:
   m_ObjectHideFlags: 0
@@ -19025,7 +19025,7 @@ GameObject:
   - component: {fileID: 2626322447751581095}
   - component: {fileID: 5613824458602084753}
   - component: {fileID: 5613824458602084752}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cube.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
