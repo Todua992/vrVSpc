@@ -1758,7 +1758,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.5329949, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5210,6 +5210,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486941142402884}
     m_Modifications:
+    - target: {fileID: 2257959311078833572, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -5304,6 +5309,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486941142402884}
     m_Modifications:
+    - target: {fileID: 2257959311078833572, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -5740,6 +5750,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 6373587412356837312, guid: b9a927f25ece0144bb1a8d41e1296a90,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9a927f25ece0144bb1a8d41e1296a90, type: 3}
 --- !u!1001 &1131904535575199772
@@ -5982,6 +5997,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 3472444462367081631, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d48e1b800b3c1a4c80f006ea9663f80, type: 3}
 --- !u!1001 &1131904535599720974
@@ -6525,6 +6545,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486941142402884}
     m_Modifications:
+    - target: {fileID: 2257959311078833572, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -6964,6 +6989,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486941142402884}
     m_Modifications:
+    - target: {fileID: 2257959311078833572, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -7746,6 +7776,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 6373587412356837312, guid: b9a927f25ece0144bb1a8d41e1296a90,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9a927f25ece0144bb1a8d41e1296a90, type: 3}
 --- !u!1001 &1131904536028772327
@@ -7913,6 +7948,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486941142402884}
     m_Modifications:
+    - target: {fileID: 2257959311078833572, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -8324,6 +8364,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 3472444462367081631, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d48e1b800b3c1a4c80f006ea9663f80, type: 3}
 --- !u!1001 &1131904536257020472
@@ -8878,6 +8923,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 3472444462367081631, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d48e1b800b3c1a4c80f006ea9663f80, type: 3}
 --- !u!1001 &1131904536590789473
@@ -8961,6 +9011,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486941142402884}
     m_Modifications:
+    - target: {fileID: 2257959311078833572, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -9564,6 +9619,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486941142402884}
     m_Modifications:
+    - target: {fileID: 2257959311078833572, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -9910,6 +9970,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486941142402884}
     m_Modifications:
+    - target: {fileID: 2257959311078833572, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -10004,6 +10069,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486941142402884}
     m_Modifications:
+    - target: {fileID: 2257959311078833572, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -10187,6 +10257,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486941142402884}
     m_Modifications:
+    - target: {fileID: 2257959311078833572, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -11160,6 +11235,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17486941142402884}
     m_Modifications:
+    - target: {fileID: 2257959311078833572, guid: adfae6ae1bad9b949a4eb085af1b413e,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4712722653205130618, guid: adfae6ae1bad9b949a4eb085af1b413e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -17914,6 +17994,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 3472444462367081631, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5162002942682336660, guid: 4d48e1b800b3c1a4c80f006ea9663f80,
         type: 3}
       propertyPath: jointBreakForce
@@ -18145,6 +18230,11 @@ PrefabInstance:
         type: 3}
       propertyPath: GlobalObjectIdHash
       value: 451797969
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039773004787975808, guid: f93bd1b91d665f74abcfa9d9d55514ec,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7369042438963423567, guid: f93bd1b91d665f74abcfa9d9d55514ec,
         type: 3}
@@ -20246,6 +20336,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c3feb1e099e6574eb5419fc32ccebfa, type: 2}
+    - target: {fileID: 6373587412356837312, guid: b9a927f25ece0144bb1a8d41e1296a90,
+        type: 3}
+      propertyPath: networkIsKinematic.m_InternalValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9a927f25ece0144bb1a8d41e1296a90, type: 3}
 --- !u!33 &7102590869351944993
