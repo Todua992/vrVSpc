@@ -172,7 +172,7 @@ MonoBehaviour:
   CopySettings: {fileID: 0}
   singleHandOnly: 0
   allowHeldSwapping: 1
-  instantGrab: 1
+  instantGrab: 0
   ignoreWeight: 1
   maintainGrabOffset: 0
   parentOnGrab: 0
