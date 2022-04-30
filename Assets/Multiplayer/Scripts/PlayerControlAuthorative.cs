@@ -1,7 +1,8 @@
+using System;
 using Unity.Netcode;
 using Unity.Netcode.Samples;
 using UnityEngine;
-
+using MissileControll;
 [RequireComponent(typeof(NetworkObject))]
 [RequireComponent(typeof(ClientNetworkTransform))]
 public class PlayerControlAuthorative : NetworkBehaviour {
@@ -40,6 +41,13 @@ public class PlayerControlAuthorative : NetworkBehaviour {
     private float inputVertical;
     private Vector3 movement;
 
+    //Plane Test
+
+    protected MeshRenderer Renderer;
+
+    protected MissileController missileController;
+
+
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
@@ -47,21 +55,56 @@ public class PlayerControlAuthorative : NetworkBehaviour {
 
     private void Start() {
         Cursor.lockState = CursorLockMode.Locked;
-
+        Renderer = GetComponentInChildren<MeshRenderer>();
         if (IsClient && IsOwner) {
             transform.position = defaultInitialPosition;
             PlayerCameraFollow.Instance.FollowPlayer(transform.Find("CameraRotate").Find("PlayerCameraRoot"));
         }
     }
 
-    private void Update() {
+    private void Update() { 
         if (IsClient && IsOwner) {
+            if(missileController == null) { 
             ClientMovement();
             ClientRotation();
+        } else {
+                MissileUpdate();
+            }
+         
         }
 
         ClientVisuals();
     }
+
+    private void MissileUpdate() {
+        if (missileController == null) {
+
+            //Check if player wants to get into a car
+            if (Input.GetKey("E")) {
+                var colliders = Physics.OverlapSphere(transform.position, 2f);
+                foreach (var collider in colliders) {
+                    if (collider != null) {
+                        var missile = collider.GetComponent<MissileController>();
+                        if (missile != null) {
+                            missileController = missile;
+                            Renderer.gameObject.SetActive(false);
+                        }
+                }
+                }
+            }
+            else {
+                transform.position = missileController.transform.position;
+                if(Input.GetAxis("Vertical") != 0) {
+                missileController.MissilePitch();
+                    if (Input.GetAxis("Horizontal") != 0) {
+                        missileController.MissileYaw();
+                    }
+                }
+    }
+        }
+    }
+
+ 
 
     private void ClientVisuals() {
         if (oldPlayerJumping != networkPlayerJumping.Value || oldPlayerSprinting != networkPlayerSprinting.Value || oldPlayerHorizontal != networkPlayerHorizontal.Value || oldPlayerVertical != networkPlayerVertical.Value) {

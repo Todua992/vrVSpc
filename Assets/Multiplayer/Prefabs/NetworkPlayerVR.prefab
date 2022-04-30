@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 8925703659628088302}
   - component: {fileID: 3447991944051003728}
   - component: {fileID: 7131596029786335444}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: RobotHand (R)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -940,6 +940,9 @@ MonoBehaviour:
     m_InternalValue: 0
   networkTimer:
     m_InternalValue: 0
+  handbase: {fileID: 319038198794077285}
+  link: {fileID: 8925703659628088302}
+  button: 0
   handMaterial: {fileID: 2100000, guid: 432b7419d16f7014096cc18d136377bb, type: 2}
   rock: {fileID: 0}
   smashableLayers:
@@ -1004,7 +1007,7 @@ GameObject:
   - component: {fileID: 8925703661082931133}
   - component: {fileID: 3447991943913489525}
   - component: {fileID: 8349597021223397860}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: RobotHand (L)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1315,6 +1318,9 @@ MonoBehaviour:
     m_InternalValue: 0
   networkTimer:
     m_InternalValue: 0
+  handbase: {fileID: 319038200040382518}
+  link: {fileID: 8925703661082931133}
+  button: 0
   handMaterial: {fileID: 2100000, guid: 155d822d50befe34985b48796ffef8a5, type: 2}
   rock: {fileID: 0}
   smashableLayers:
