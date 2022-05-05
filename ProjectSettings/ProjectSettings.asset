@@ -148,6 +148,8 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 1ba9b875003eb22479fe9ac832e7f415, type: 2}
   - {fileID: -3650109648880779204, guid: 3bfefc867ea2e464a8541d8ad7f0c75e, type: 2}
   - {fileID: 6677384553957571852, guid: 498cd18a1ac11f84298c557df62a19c3, type: 2}
@@ -889,11 +891,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 2
-  cloudProjectId: ed220071-4b9b-4d0d-9d26-868599e69a8d
+  cloudProjectId: 34fecabe-37bb-46d2-b038-c17e79283e72
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: DDU Eksamen
-  organizationId: todualuka992
+  organizationId: todua992
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

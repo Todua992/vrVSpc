@@ -1,74 +1,26 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace MissileControll { 
 public class MissileController : MonoBehaviour {
-    [Header("REFERENCES")]
-    [SerializeField] private Rigidbody _rb;
-    [SerializeField] private GameObject particle;
-    [Header("AircraftControll")]
-    [SerializeField] private float FlySpeed = 5;
-
+    [SerializeField] private float flySpeed;
+    [SerializeField] private float rotateSpeed;
     private bool launch = false;
 
+    private void Update() {
 
-    public float YawAmount = 120;
-    public float PitchAmout = 120;
-
-
-    private float Yaw;
-    private float Pitch;
-    private Quaternion Worldrotation;
-
-
-
-    void Start() {
-        Worldrotation = transform.rotation;
-    }
-
-    private void FixedUpdate() {
-
-
-
-    }
-
-        public void  MissileYaw() {
-            float horizontalInput = Input.GetAxis("Horizontal");
-            Yaw += horizontalInput * YawAmount * Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            launch = true;
         }
-
-        public void MissilePitch() {
+        if (launch) {
+            transform.position += transform.forward * flySpeed * Time.deltaTime;
+            float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
 
-            //Axis
-
-            Pitch += verticalInput * PitchAmout * Time.deltaTime;
-        }
-
-        public void Motion() {
-            Worldrotation = Quaternion.Euler(Vector3.up * Yaw + Vector3.forward * Pitch);
-        }
-
-
-        public void MooveForward() {
-
-            if (Input.GetKey("space")) {
-                launch = true;
-            }
-
-            if (launch == true) {
-                //Move Forward
-                transform.position += transform.forward * FlySpeed * Time.deltaTime;
-
-            }
+            transform.Rotate(verticalInput * rotateSpeed * Time.deltaTime, horizontalInput * rotateSpeed * Time.deltaTime, 0, Space.Self);
         }
 
 
 
-            private void OnCollisionEnter(Collision collision) {
-        ParticleSystem first = particle.GetComponent<ParticleSystem>();
-        first.Play();
-        Destroy(gameObject);
     }
-}
 }

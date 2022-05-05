@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class MissileMechanics : MonoBehaviour {
@@ -36,6 +37,7 @@ public class MissileMechanics : MonoBehaviour {
 
 
     private float currentTime;
+    private float rocketCurrentTime;
 
     void Start() {
         Setup();
@@ -49,17 +51,15 @@ public class MissileMechanics : MonoBehaviour {
         if (currentTime < time) {
             OpenMissile();
         }
+
+        if( currentTime < 2 * time) {
+            LiftMissile();
+        }
     }
 
     private void OpenMissile(){
-
-        //Rocket
-        Rocketpos.y = Mathf.Lerp(RocketstartY, endY, currentTime / time);
-        Rocket.transform.position = Rocketpos;
-
-        //Stólbe
-        Stolbpos.y = Mathf.Lerp(StolbstartY, endY, currentTime / time);
-        Stolb.transform.position = Stolbpos;
+   
+        
 
         //RightDoor
         RightDoorPos.z = Mathf.Lerp(RightDoorStartZ, RightendZ, currentTime / time);
@@ -68,7 +68,16 @@ public class MissileMechanics : MonoBehaviour {
         //LeftDoor
         LeftDoorPos.z = Mathf.Lerp(LeftDoorStartZ, LeftendZ, currentTime / time);
         LeftDoor.transform.position = LeftDoorPos;
+    }
 
+    private void LiftMissile() {
+        //Stólbe
+        Stolbpos.y = Mathf.Lerp(StolbstartY, endY,(currentTime - time) / time);
+        Stolb.transform.position = Stolbpos;
+
+        //Rocket
+        Rocketpos.y = Mathf.Lerp(RocketstartY, endY, (currentTime - time) / time);
+        Rocket.transform.position = Rocketpos;
     }
 
 

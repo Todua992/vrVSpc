@@ -5,9 +5,6 @@ using Unity.Netcode;
 
 
 
-using Autohand;
-
-
 namespace Autohand.Demo {
     public delegate void SmashEvent(Smasher smasher, Smash smashable);
     
@@ -125,12 +122,6 @@ namespace Autohand.Demo {
             }
         }
 
-
-        private void OnCollision(Collision collision) {
-           
-
-          
-        }
 
         private void OnCollisionStay(Collision collision) {
             //Blast Function
