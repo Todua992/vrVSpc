@@ -21,10 +21,8 @@ public class CannonMovement : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider collider) {
-        if (collider.CompareTag("Platform")) {
-            cloud.SetActive(false);
-            rb.drag = 1f;
-            track = true;
-        }
+        cloud.SetActive(false);
+        rb.drag = 1f;
+        track = true;
     }
 }
