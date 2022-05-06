@@ -6159,7 +6159,7 @@ MonoBehaviour:
   networkIndex:
     m_InternalValue: 0
   holdTime: 1
-  shootSpeed: 10
+  shootSpeed: 9
   cannonBallSpawn: {fileID: 6364459234655574777}
   cannonBallPrefab: {fileID: 1105128207619160928, guid: 3fc64a66441b5df4d95baf818001cc1f,
     type: 3}
