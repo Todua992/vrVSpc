@@ -11831,6 +11831,7 @@ GameObject:
   - component: {fileID: 7828863623703056450}
   - component: {fileID: -5164922842940904351}
   - component: {fileID: 751746465}
+  - component: {fileID: 7304523440162834250}
   m_Layer: 9
   m_Name: NetworkCannon
   m_TagString: Untagged
@@ -11867,10 +11868,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f85c75773c91e46be2780252c04822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  time: 3
-  speed: 0
-  targetRotation: {x: 0, y: 0, z: 0, w: 0}
+  cloud: {fileID: 420942430524975465}
+  rb: {fileID: 7828863623703056450}
+  speed: 1
 --- !u!114 &6364459236000594725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11953,6 +11953,19 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &7304523440162834250
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6364459236000594721}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6971323350263815130
 GameObject:
