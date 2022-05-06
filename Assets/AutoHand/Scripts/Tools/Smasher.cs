@@ -169,13 +169,10 @@ namespace Autohand.Demo {
         }
 
         void knockBack() {
-
             Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
             foreach (Collider nearyby in colliders) {
                 Rigidbody rb = nearyby.GetComponent<Rigidbody>();
                 RagdollController controller = nearyby.GetComponent<RagdollController>();
-
-
 
                 if (controller != null) {
                     controller.EnableRagdoll();
