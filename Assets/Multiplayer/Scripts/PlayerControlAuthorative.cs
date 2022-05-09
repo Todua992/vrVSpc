@@ -14,6 +14,7 @@ public class PlayerControlAuthorative : NetworkBehaviour {
     [SerializeField] private float sprintSpeedMultiplier;
     [SerializeField] private float gravity;
     [SerializeField] private float jumpHeight;
+    [SerializeField] private float groundForce;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private float groundDistance;
@@ -101,7 +102,7 @@ public class PlayerControlAuthorative : NetworkBehaviour {
         bool isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && ySpeed < 0f) {
-            ySpeed = -gravity / 10;
+            ySpeed = -groundForce;
         }
 
         if (isGrounded && inputJump) {

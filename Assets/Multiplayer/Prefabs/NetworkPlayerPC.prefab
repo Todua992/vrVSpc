@@ -998,6 +998,7 @@ MonoBehaviour:
   sprintSpeedMultiplier: 1.75
   gravity: 0.5
   jumpHeight: 0.275
+  groundForce: 0.05
   groundCheck: {fileID: 27677635571142801}
   groundMask:
     serializedVersion: 2
