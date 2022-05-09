@@ -10,10 +10,11 @@ public class InteractUI : NetworkBehaviour {
     
     private void Start() {
         interactUI = GameObject.Find("Canvas").transform.Find("Interact").gameObject;
+        interactObject = null;
     }
 
     private void Update() {
-        if (interactObject = null) {
+        if (interactObject == null) {
             isActive = false;
         }
 
@@ -25,9 +26,10 @@ public class InteractUI : NetworkBehaviour {
 
     private void OnTriggerEnter(Collider collider) {
         if (collider.CompareTag("Airdrop")) {
-            interactObject = collider.gameObject;
-
-            Debug.Log(collider.gameObject.name);
+            
+            if (interactObject == null) {
+                interactObject = collider.gameObject;
+            }
 
             if (IsOwner) {
                 isActive = true;
