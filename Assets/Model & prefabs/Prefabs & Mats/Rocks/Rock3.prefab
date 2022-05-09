@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: -3509206238617589493}
   - component: {fileID: -8222562599929074416}
   - component: {fileID: 5905786116286095732}
-  - component: {fileID: 5039773004787975808}
   - component: {fileID: 3274449236391451074}
   - component: {fileID: 4941413594398380819}
   - component: {fileID: 5532299647042053974}
+  - component: {fileID: 4628573822527606459}
   m_Layer: 0
   m_Name: Rock3
   m_TagString: Untagged
@@ -162,8 +162,8 @@ MonoBehaviour:
   onGrab:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5039773004787975808}
-        m_TargetAssemblyTypeName: Respawn, Assembly-CSharp
+      - m_Target: {fileID: 4628573822527606459}
+        m_TargetAssemblyTypeName: RespawnRock, Assembly-CSharp
         m_MethodName: IsKinematic
         m_Mode: 1
         m_Arguments:
@@ -194,22 +194,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   lockHandOnGrab: 0
---- !u!114 &5039773004787975808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7858721575485387765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  networkIsKinematic:
-    m_InternalValue: 0
-  growSpeed: 0.05
-  grabbable: {fileID: 0}
 --- !u!114 &3274449236391451074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,3 +248,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4628573822527606459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858721575485387765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2130a8bd8063fe047898dcf5b2e5f934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 1
+  growSpeed: 0.05
+  grabbable: {fileID: 0}

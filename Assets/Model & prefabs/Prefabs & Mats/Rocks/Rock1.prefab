@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 6105164486223581799}
   - component: {fileID: 782649016426422523}
   - component: {fileID: 5162002942682336660}
-  - component: {fileID: 3472444462367081631}
   - component: {fileID: -7333521102587525478}
   - component: {fileID: 3419532265809502530}
   - component: {fileID: -6051153399389530624}
+  - component: {fileID: 6394365949082205179}
   m_Layer: 0
   m_Name: Rock1
   m_TagString: Untagged
@@ -162,8 +162,8 @@ MonoBehaviour:
   onGrab:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3472444462367081631}
-        m_TargetAssemblyTypeName: Respawn, Assembly-CSharp
+      - m_Target: {fileID: 6394365949082205179}
+        m_TargetAssemblyTypeName: RespawnRock, Assembly-CSharp
         m_MethodName: IsKinematic
         m_Mode: 1
         m_Arguments:
@@ -194,22 +194,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   lockHandOnGrab: 0
---- !u!114 &3472444462367081631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825617722267075727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 208dce114b76dd04396914da941e4d1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  networkIsKinematic:
-    m_InternalValue: 0
-  growSpeed: 0.05
-  grabbable: {fileID: 0}
 --- !u!114 &-7333521102587525478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,3 +248,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6394365949082205179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825617722267075727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2130a8bd8063fe047898dcf5b2e5f934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkIsKinematic:
+    m_InternalValue: 1
+  growSpeed: 0.05
+  grabbable: {fileID: 0}
