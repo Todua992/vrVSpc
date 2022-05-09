@@ -14,34 +14,31 @@ public class InteractUI : NetworkBehaviour {
     }
 
     private void Update() {
-        if (interactObject == null) {
-            isActive = false;
-        }
+        if (IsOwner) {
+            if (interactObject == null) {
+                isActive = false;
+            }
 
-        if (isActive != oldIsActive) {
-            interactUI.SetActive(isActive);
-            oldIsActive = isActive;
+            if (isActive != oldIsActive) {
+                interactUI.SetActive(isActive);
+                oldIsActive = isActive;
+            }
         }
     }
 
     private void OnTriggerEnter(Collider collider) {
-        if (collider.CompareTag("Airdrop")) {
-            
+        if (collider.CompareTag("Airdrop") && IsOwner) {
             if (interactObject == null) {
                 interactObject = collider.gameObject;
             }
 
-            if (IsOwner) {
-                isActive = true;
-            }
+            isActive = true;
         }
     }
 
     private void OnTriggerExit(Collider collider) {
-        if (collider.CompareTag("Airdrop")) {
-            if (IsOwner) {
-                isActive = false;
-            }
+        if (collider.CompareTag("Airdrop") && IsOwner) {
+            isActive = false;
         }
     }
 }
