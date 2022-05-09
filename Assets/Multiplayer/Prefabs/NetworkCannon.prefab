@@ -6107,7 +6107,7 @@ GameObject:
   - component: {fileID: 1439249826464398810}
   m_Layer: 9
   m_Name: Cannon
-  m_TagString: Untagged
+  m_TagString: Airdrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6163,7 +6163,6 @@ MonoBehaviour:
   cannonBallSpawn: {fileID: 6364459234655574777}
   cannonBallPrefab: {fileID: 1105128207619160928, guid: 3fc64a66441b5df4d95baf818001cc1f,
     type: 3}
-  explosionSound: {fileID: 0}
   explosionVFX: {fileID: 3781984733252510961}
   cannonSpawn: {fileID: 0}
 --- !u!135 &1439249826464398809

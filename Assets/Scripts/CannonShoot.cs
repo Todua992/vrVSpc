@@ -11,7 +11,7 @@ public class CannonShoot : NetworkBehaviour {
     [SerializeField] private Transform cannonBallSpawn;
     [SerializeField] private GameObject cannonBallPrefab;
     [SerializeField] private ParticleSystem explosionVFX;
-    [SerializeField] private GameObject interactUI;
+    //[SerializeField] private GameObject interactUI;
 
     private bool colliding = false;
     private bool shoot = false;
@@ -23,7 +23,7 @@ public class CannonShoot : NetworkBehaviour {
     private void Start() {
         timer = holdTime;
 
-        interactUI = GameObject.Find("Canvas").transform.Find("Interact").gameObject;
+        //interactUI = GameObject.Find("Canvas").transform.Find("Interact").gameObject;
 
         if (IsHost) {
             UpdateIndexServerRpc(index);
@@ -63,7 +63,7 @@ public class CannonShoot : NetworkBehaviour {
         explosionVFX.Play();
         foreach (PlayerShoot selected in playerShoots) {
             if (selected.gameObject.GetComponent<NetworkObject>().IsOwner) {
-                interactUI.SetActive(false);
+                //interactUI.SetActive(false);
             }
         }
 
@@ -93,7 +93,7 @@ public class CannonShoot : NetworkBehaviour {
     private void OnTriggerEnter(Collider collider) {
         if (collider.CompareTag("Player")) {
             if (collider.gameObject.GetComponent<NetworkObject>().IsOwner) {
-                interactUI.SetActive(true);
+                //interactUI.SetActive(true);
             }
 
             playerShoots.Add(collider.GetComponent<PlayerShoot>());
@@ -104,7 +104,7 @@ public class CannonShoot : NetworkBehaviour {
     private void OnTriggerExit(Collider collider) {
         if (collider.CompareTag("Player")) {
             if (collider.gameObject.GetComponent<NetworkObject>().IsOwner) {
-                interactUI.SetActive(false);
+                //interactUI.SetActive(false);
             }
 
             playerShoots.Remove(collider.GetComponent<PlayerShoot>());
