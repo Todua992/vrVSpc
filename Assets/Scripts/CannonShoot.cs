@@ -61,11 +61,7 @@ public class CannonShoot : NetworkBehaviour {
 
     private void Shoot() {
         explosionVFX.Play();
-        foreach (PlayerShoot selected in playerShoots) {
-            if (selected.gameObject.GetComponent<NetworkObject>().IsOwner) {
-                interactUI.SetActive(false);
-            }
-        }
+        interactUI.SetActive(false);
 
         if (IsHost) {
             GameObject cannonBall = Instantiate(cannonBallPrefab, cannonBallSpawn.position, cannonBallSpawn.rotation);
