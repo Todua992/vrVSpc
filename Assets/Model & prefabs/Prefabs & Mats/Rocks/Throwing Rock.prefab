@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1124951483165408804}
   - component: {fileID: 4049715715397153153}
   - component: {fileID: 2294458344963867979}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Throwing Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
