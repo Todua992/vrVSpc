@@ -1,7 +1,6 @@
-using Unity.Netcode;
 using UnityEngine;
 
-public class MissileController : NetworkBehaviour {
+public class MissileController : MonoBehaviour {
     [SerializeField] private float flySpeed;
     [SerializeField] private float rotateSpeed;
     private bool launch = false;

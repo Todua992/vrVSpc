@@ -10,8 +10,8 @@ public class CannonShoot : NetworkBehaviour {
     [SerializeField] private float shootSpeed;
     [SerializeField] private Transform cannonBallSpawn;
     [SerializeField] private GameObject cannonBallPrefab;
-    [SerializeField] private AudioSource explosionSound;
     [SerializeField] private ParticleSystem explosionVFX;
+    [SerializeField] private GameObject interactUI;
 
     private bool colliding = false;
     private bool shoot = false;
@@ -22,6 +22,8 @@ public class CannonShoot : NetworkBehaviour {
 
     private void Start() {
         timer = holdTime;
+
+        interactUI = GameObject.Find("Canvas").transform.Find("Interact").gameObject;
 
         if (IsHost) {
             UpdateIndexServerRpc(index);
@@ -58,8 +60,12 @@ public class CannonShoot : NetworkBehaviour {
     }
 
     private void Shoot() {
-        //explosionSound.Play();
         explosionVFX.Play();
+        foreach (PlayerShoot selected in playerShoots) {
+            if (selected.gameObject.GetComponent<NetworkObject>().IsOwner) {
+                interactUI.SetActive(false);
+            }
+        }
 
         if (IsHost) {
             GameObject cannonBall = Instantiate(cannonBallPrefab, cannonBallSpawn.position, cannonBallSpawn.rotation);
@@ -86,6 +92,10 @@ public class CannonShoot : NetworkBehaviour {
 
     private void OnTriggerEnter(Collider collider) {
         if (collider.CompareTag("Player")) {
+            if (collider.gameObject.GetComponent<NetworkObject>().IsOwner) {
+                interactUI.SetActive(true);
+            }
+
             playerShoots.Add(collider.GetComponent<PlayerShoot>());
             colliding = true;
         }
@@ -93,6 +103,10 @@ public class CannonShoot : NetworkBehaviour {
 
     private void OnTriggerExit(Collider collider) {
         if (collider.CompareTag("Player")) {
+            if (collider.gameObject.GetComponent<NetworkObject>().IsOwner) {
+                interactUI.SetActive(false);
+            }
+
             playerShoots.Remove(collider.GetComponent<PlayerShoot>());
             colliding = false;
         }
