@@ -1002,7 +1002,7 @@ MonoBehaviour:
   groundCheck: {fileID: 27677635571142801}
   groundMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 201392384
   groundDistance: 0.01
   sensitivityX: 50
   sensitivityY: 50

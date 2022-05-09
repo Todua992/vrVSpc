@@ -14317,7 +14317,7 @@ MonoBehaviour:
   maxStepAngle: 0
   groundLayerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1024
   allowClimbing: 0
   allowClimbingMovement: 1
   climbingStrength: {x: 20, y: 20, z: 20}

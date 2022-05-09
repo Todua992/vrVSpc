@@ -16721,7 +16721,7 @@ GameObject:
   - component: {fileID: 1154864087}
   - component: {fileID: 1154864086}
   - component: {fileID: 1154864085}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: VRGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
