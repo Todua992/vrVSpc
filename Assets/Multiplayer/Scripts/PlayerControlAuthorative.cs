@@ -13,6 +13,10 @@ public class PlayerControlAuthorative : NetworkBehaviour {
     [SerializeField] private float walkSpeed;
     [SerializeField] private float sprintSpeedMultiplier;
     [SerializeField] private float gravity;
+    [SerializeField] private float jumpHeight;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundMask;
+    [SerializeField] private float groundDistance;
 
     [Header("Rotation Variables")]
     [SerializeField] private float sensitivityX;
@@ -40,13 +44,9 @@ public class PlayerControlAuthorative : NetworkBehaviour {
     private float inputHorizontal;
     private float inputVertical;
     private Vector3 movement;
-
-    //Plane Test
+    private float ySpeed;
 
     protected MeshRenderer Renderer;
-
-   
-
 
     private void Awake() {
         characterController = GetComponent<CharacterController>();
@@ -66,16 +66,10 @@ public class PlayerControlAuthorative : NetworkBehaviour {
         if (IsClient && IsOwner) {
             ClientMovement();
             ClientRotation();
-
-         
         }
 
         ClientVisuals();
     }
-
-
-
- 
 
     private void ClientVisuals() {
         if (oldPlayerJumping != networkPlayerJumping.Value || oldPlayerSprinting != networkPlayerSprinting.Value || oldPlayerHorizontal != networkPlayerHorizontal.Value || oldPlayerVertical != networkPlayerVertical.Value) {
@@ -102,20 +96,32 @@ public class PlayerControlAuthorative : NetworkBehaviour {
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
 
-        movement = (transform.TransformDirection(Vector3.forward) * inputVertical + transform.TransformDirection(Vector3.right) * inputHorizontal).normalized;
+        movement = (transform.TransformDirection(Vector3.forward) * inputVertical + transform.TransformDirection(Vector3.right) * inputHorizontal).normalized * walkSpeed;
+
+        bool isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if (isGrounded && ySpeed < 0f) {
+            ySpeed = -gravity / 10;
+        }
+
+        if (isGrounded && inputJump) {
+            ySpeed = jumpHeight;
+        }
+        
+        ySpeed -= gravity * Time.deltaTime;
 
         if (inputSprint) {
             movement *= sprintSpeedMultiplier;
         }
 
-        movement += Vector3.up * gravity;
+        movement.y = ySpeed;
 
         animator.SetBool("Jumping", inputJump);
         animator.SetBool("Sprinting", inputSprint);
         animator.SetFloat("Horizontal", inputHorizontal);
         animator.SetFloat("Vertical", inputVertical);
 
-        characterController.Move(movement * walkSpeed * Time.deltaTime);
+        characterController.Move(movement * Time.deltaTime);
         UpdatePlayerVisualsServerRpc(inputJump, inputSprint, inputHorizontal, inputVertical);
     }
 
