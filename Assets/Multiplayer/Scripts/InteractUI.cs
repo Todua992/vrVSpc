@@ -27,7 +27,7 @@ public class InteractUI : NetworkBehaviour {
         if (collider.CompareTag("Airdrop")) {
             interactObject = collider.gameObject;
 
-            Debug.Log(collider.gameObject);
+            Debug.Log(collider.gameObject.name);
 
             if (IsOwner) {
                 isActive = true;
