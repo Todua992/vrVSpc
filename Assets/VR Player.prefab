@@ -625,6 +625,7 @@ GameObject:
   - component: {fileID: 4712540663913841761}
   - component: {fileID: 8925703659628088302}
   - component: {fileID: 3447991944051003728}
+  - component: {fileID: 3599325033869326988}
   m_Layer: 0
   m_Name: RobotHand (R)
   m_TagString: Untagged
@@ -935,6 +936,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad2f22fe18c2bf46b033941144afa2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkDestory:
+    m_InternalValue: 0
+  networkTimer:
+    m_InternalValue: 0
+  networkForce:
+    m_InternalValue: {x: 0, y: 0, z: 0}
+  handbase: {fileID: 0}
+  link: {fileID: 0}
+  button: 0
   handMaterial: {fileID: 2100000, guid: 432b7419d16f7014096cc18d136377bb, type: 2}
   rock: {fileID: 0}
   smashableLayers:
@@ -955,6 +965,22 @@ MonoBehaviour:
   OnSmash:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3599325033869326988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240528369356632300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &240528370569237695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,6 +1305,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad2f22fe18c2bf46b033941144afa2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkDestory:
+    m_InternalValue: 0
+  networkTimer:
+    m_InternalValue: 0
+  networkForce:
+    m_InternalValue: {x: 0, y: 0, z: 0}
+  handbase: {fileID: 0}
+  link: {fileID: 0}
+  button: 0
   handMaterial: {fileID: 2100000, guid: 155d822d50befe34985b48796ffef8a5, type: 2}
   rock: {fileID: 0}
   smashableLayers:

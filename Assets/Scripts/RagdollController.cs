@@ -19,6 +19,14 @@ public class RagdollController : NetworkBehaviour
         DisableRagdoll();
     }
 
+
+
+    private void OnCollisionEnter(Collision collision) {
+        if(collision.gameObject.layer == 13) {
+            EnableRagdoll();
+        }
+    }
+
     public async void EnableRagdoll()
     {
         if (!isRagdool) {
