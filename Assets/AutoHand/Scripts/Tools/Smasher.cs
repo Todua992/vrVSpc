@@ -12,7 +12,9 @@ namespace Autohand.Demo {
     public class Smasher : NetworkBehaviour {
         public NetworkVariable<bool> networkDestory = new();
         public NetworkVariable<float> networkTimer = new();
+        public NetworkVariable<Vector3> networkForce = new();
 
+        private Vector3 oldForce;
 
         [Header("Test")]
 
@@ -120,6 +122,14 @@ namespace Autohand.Demo {
             if (networkDestory.Value) {
                 destroy();
             }
+
+            if (!IsHost) {
+                if (networkForce.Value != oldForce) {
+                    oldForce = networkForce.Value;
+
+                    knockBack(networkForce.Value);
+                }
+            }
         }
 
 
@@ -127,11 +137,12 @@ namespace Autohand.Demo {
             //Blast Function
             if (blast == true) {
                 ParticleSystem first = particle.GetComponent<ParticleSystem>();
-                if (handbase.holdingObj == null) {
+                if (handbase.holdingObj == null && IsHost) {
                     if (GetMagnitude() > MinMag & Currenttime <= 0 && link.ButtonPressed(button)) {
-                        knockBack();
+                        knockBack(transform.position);
                         Currenttime = Starttime;
                         first.Stop();
+                        UpdateForceServerRpc(transform.position);
                     }
                     else {
                     Vector3 velocity = Vector3.zero;
@@ -168,19 +179,19 @@ namespace Autohand.Demo {
             return (velocity.magnitude / velocityOverTime.Length) * forceMulti * 10;
         }
 
-        void knockBack() {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+        void knockBack(Vector3 force) {
+            Collider[] colliders = Physics.OverlapSphere(force, radius);
             foreach (Collider nearyby in colliders) {
                 Rigidbody rb = nearyby.GetComponent<Rigidbody>();
                 RagdollController controller = nearyby.GetComponent<RagdollController>();
 
                 if (controller != null) {
                     controller.EnableRagdoll();
-                    nearyby.GetComponentInChildren<Rigidbody>().AddExplosionForce(expForce, transform.position, radius, Upwordsblast);
+                    nearyby.GetComponentInChildren<Rigidbody>().AddExplosionForce(expForce, force, radius, Upwordsblast);
                 }
 
                 if (rb != null) {
-                    rb.AddExplosionForce(expForce, transform.position, radius, Upwordsblast);
+                    rb.AddExplosionForce(expForce, force, radius, Upwordsblast);
                 }
             }
         }
@@ -202,6 +213,11 @@ namespace Autohand.Demo {
 
         private float Map(float s, float a1, float a2, float b1, float b2) {
             return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
+        }
+
+        [ServerRpc]
+        public void UpdateForceServerRpc(Vector3 force) {
+            networkForce.Value = force;
         }
 
         [ServerRpc]
