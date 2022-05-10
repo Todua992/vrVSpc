@@ -186,8 +186,11 @@ namespace Autohand.Demo {
                 RagdollController controller = nearyby.GetComponent<RagdollController>();
 
                 if (controller != null) {
-                    controller.EnableRagdoll(nearyby, expForce, force, radius, Upwordsblast);
+                    controller.EnableRagdoll();
                     
+                    if (controller.isRagdool) {
+                        nearyby.GetComponentInChildren<Rigidbody>().AddExplosionForce(expForce, force, radius, Upwordsblast);
+                    }
                 }
 
                 if (rb != null) {
