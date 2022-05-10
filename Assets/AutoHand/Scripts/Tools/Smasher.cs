@@ -188,9 +188,9 @@ namespace Autohand.Demo {
                 if (controller != null) {
                     controller.EnableRagdoll();
 
-                    nearyby.GetComponentInChildren<Rigidbody>().AddExplosionForce(expForce, force, radius, Upwordsblast);
+                    
 
-                    Debug.Log(nearyby.GetComponentsInChildren<Rigidbody>());
+                    nearyby.GetComponentInChildren<Rigidbody>().AddExplosionForce(expForce * 1000, force, radius, Upwordsblast);
                 }
 
                 if (rb != null) {
