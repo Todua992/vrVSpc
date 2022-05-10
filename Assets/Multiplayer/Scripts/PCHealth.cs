@@ -10,6 +10,7 @@ public class PCHealth : NetworkBehaviour {
 
     [SerializeField] private List<Transform> spawnPositions = new();
     [SerializeField] private int maxHealth;
+    [SerializeField] private bool dead;
     
     private int health;
 
@@ -30,21 +31,20 @@ public class PCHealth : NetworkBehaviour {
     }
 
     private async void Update() {
-        if (IsOwner) {
+        if (IsOwner && health > 0) {
             if (transform.position.y < -0.5f) {
-                if (health > 0) {
-                    transform.position = spawnPositions[Random.Range(0, spawnPositions.Count)].position;
-                    health--;
+                transform.position = spawnPositions[Random.Range(0, spawnPositions.Count)].position;
+                health--;
 
-                    await Task.Delay(1000);
-                } else {
-                    PCGameOver();
-                }
+                await Task.Delay(1000);
             }
+        } else if (!dead) {
+            PCGameOver();
         }
     }
 
     private void PCGameOver() {
+        dead = true;
         pcCamera.enabled = false;
         vrCamera.enabled = true;
         face.SetActive(false);
