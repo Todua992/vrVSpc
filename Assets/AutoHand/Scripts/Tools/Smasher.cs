@@ -179,15 +179,15 @@ namespace Autohand.Demo {
             return (velocity.magnitude / velocityOverTime.Length) * forceMulti * 10;
         }
 
-        void knockBack(Vector3 force) {
+       void knockBack(Vector3 force) {
             Collider[] colliders = Physics.OverlapSphere(force, radius);
             foreach (Collider nearyby in colliders) {
                 Rigidbody rb = nearyby.GetComponent<Rigidbody>();
                 RagdollController controller = nearyby.GetComponent<RagdollController>();
 
                 if (controller != null) {
-                    controller.EnableRagdoll();
-                    nearyby.GetComponentInChildren<Rigidbody>().AddExplosionForce(expForce, force, radius, Upwordsblast);
+                    controller.EnableRagdoll(nearyby, expForce, force, radius, Upwordsblast);
+                    
                 }
 
                 if (rb != null) {

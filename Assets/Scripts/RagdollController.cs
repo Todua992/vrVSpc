@@ -18,7 +18,7 @@ public class RagdollController : MonoBehaviour
         DisableRagdoll();
     }
 
-    public async void EnableRagdoll()
+    public async void EnableRagdoll(Collider collider, float expForce, Vector3 force, float radius, float Upwordsblast)
     {
         if (!isRagdool) {
             isRagdool = true;
@@ -31,6 +31,10 @@ public class RagdollController : MonoBehaviour
 
             animator.enabled = false;
             controller.enabled = false;
+
+            await Task.Delay(10);
+
+            collider.GetComponentInChildren<Rigidbody>().AddExplosionForce(expForce, force, radius, Upwordsblast);
 
 
             await Task.Delay(RegDollTime);
