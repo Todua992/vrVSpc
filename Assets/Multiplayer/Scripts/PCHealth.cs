@@ -16,6 +16,7 @@ public class PCHealth : NetworkBehaviour {
             pcCamera = GameObject.Find("MainCamera").GetComponent<Camera>();
             vrCamera = GameObject.Find("Camera (head)").GetComponent<Camera>();
             face = GameObject.Find("Face");
+            spawnPositions = GameObject.Find("CannonSpawnpoints").GetComponentsInChildren<Transform>();
         }
 
         health = maxHealth;
