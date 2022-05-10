@@ -15,6 +15,8 @@ public class PCHealth : NetworkBehaviour {
         if (IsOwner) {
             mainCamera = GameObject.Find("MainCamera").transform;
             vrHead = GameObject.Find("Camera (head)").transform;
+
+            cameraFollow = mainCamera.GetComponent<PlayerCameraFollow>();
         }
 
         health = maxHealth;
