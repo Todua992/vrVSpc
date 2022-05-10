@@ -34,8 +34,12 @@ public class PCHealth : NetworkBehaviour {
     private void Update() {
         if (IsOwner && health > 0) {
             if (transform.position.y < -0.5f && !below) {
-                transform.position = spawnPositions[Random.Range(0, spawnPositions.Count)].position;
                 health--;
+
+                if (health > 0) {
+                    transform.position = spawnPositions[Random.Range(0, spawnPositions.Count)].position;
+                }
+                
                 below = true;
             } else if (transform.position.y > -0.5f && below) {
                 below = false;
