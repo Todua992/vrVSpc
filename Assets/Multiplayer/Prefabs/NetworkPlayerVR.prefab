@@ -960,7 +960,7 @@ MonoBehaviour:
   Upwordsblast: 0.05
   particle: {fileID: 2034393824366308279}
   exp: {fileID: 6433708800736744368, guid: ef40c01bfc11f5748806ade735d391d5, type: 3}
-  expForce: 1400
+  expForce: 300
   radius: 0.5
   OnSmash:
     m_PersistentCalls:
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   Upwordsblast: 0.05
   particle: {fileID: 2034393826028446372}
   exp: {fileID: 6433708800736744368, guid: ef40c01bfc11f5748806ade735d391d5, type: 3}
-  expForce: 1400
+  expForce: 300
   radius: 0.5
   OnSmash:
     m_PersistentCalls:
