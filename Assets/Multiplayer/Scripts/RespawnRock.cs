@@ -35,7 +35,7 @@ public class RespawnRock : NetworkBehaviour {
     }
 
     private void Update() {
-        if (transform.position.y <= -10f) {
+        if (transform.position.y <= -2f) {
             RespawnObject();
             grabbable.enabled = false;
         }
