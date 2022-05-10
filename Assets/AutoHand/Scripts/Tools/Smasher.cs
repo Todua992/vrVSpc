@@ -190,7 +190,7 @@ namespace Autohand.Demo {
 
                     Debug.Log(nearyby.transform.Find("mixamorig:Hips"));
 
-                    nearyby.transform.Find("mixamorig:Hips").GetComponent<Rigidbody>().AddExplosionForce(expForce, force, radius, Upwordsblast, ForceMode.Impulse);
+                    nearyby.transform.Find("mixamorig:Hips").GetComponent<Rigidbody>().AddExplosionForce(expForce * 25, force, radius, Upwordsblast * 2, ForceMode.Impulse);
                 }
 
                 if (rb != null) {
