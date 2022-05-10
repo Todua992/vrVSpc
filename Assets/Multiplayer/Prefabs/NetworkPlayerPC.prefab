@@ -2587,10 +2587,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857120bd1ded18f4c98a947a2f0e763a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  vrHead: {fileID: 0}
+  pcCamera: {fileID: 0}
+  vrCamera: {fileID: 0}
+  face: {fileID: 0}
   spawnPositions: []
-  maxHealth: 0
+  maxHealth: 3
 --- !u!1 &5525554799805595219
 GameObject:
   m_ObjectHideFlags: 0
