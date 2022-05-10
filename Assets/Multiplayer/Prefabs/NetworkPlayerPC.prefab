@@ -506,6 +506,8 @@ GameObject:
   - component: {fileID: 2584059937603967874}
   - component: {fileID: 9173874601787706807}
   - component: {fileID: 1581468430240888799}
+  - component: {fileID: 6688357600008762999}
+  - component: {fileID: 9159270588179445767}
   m_Layer: 23
   m_Name: mixamorig:Hips
   m_TagString: Player
@@ -560,6 +562,44 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &6688357600008762999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156723953482768003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1bfcfb5a82e5849bef8189ae8e73e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 0
+  SyncScaleY: 0
+  SyncScaleZ: 0
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1
+--- !u!114 &9159270588179445767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156723953482768003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1401248458815703884
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,6 +2570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1288f35318c94a84b98de05076d9f261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRagdool: 0
   RegDollTime: 2500
   hips: {fileID: 2584059937603967874}
   controller: {fileID: 7720272093076082956}
