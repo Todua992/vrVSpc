@@ -4,7 +4,6 @@ using UnityEngine;
 public class PCHealth : NetworkBehaviour {
     [SerializeField] private Transform mainCamera;
     [SerializeField] private Transform vrHead;
-    [SerializeField] private PlayerCameraFollow cameraFollow;
 
     [SerializeField] private Transform[] spawnPositions;
     [SerializeField] private int maxHealth;
@@ -15,8 +14,6 @@ public class PCHealth : NetworkBehaviour {
         if (IsOwner) {
             mainCamera = GameObject.Find("MainCamera").transform;
             vrHead = GameObject.Find("Camera (head)").transform;
-
-            cameraFollow = mainCamera.GetComponent<PlayerCameraFollow>();
         }
 
         health = maxHealth;
@@ -35,7 +32,7 @@ public class PCHealth : NetworkBehaviour {
     }
 
     private void PCGameOver() {
-        cameraFollow.enabled = false;
+        PlayerCameraFollow.Instance.FollowPlayer(mainCamera);
         mainCamera.position = new Vector3(0f, 0f, 0f);
         mainCamera.SetParent(vrHead);
     }
