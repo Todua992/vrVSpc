@@ -22490,8 +22490,8 @@ MonoBehaviour:
   - {fileID: 213999420}
   cannonPrefab: {fileID: 6364459236000594721, guid: 78c8964a59ca8fb47be36ad001339242,
     type: 3}
-  spawnTime: 15
-  maxCannonCount: 2
+  spawnTime: 5
+  maxCannonCount: 1
 --- !u!4 &1627996177
 Transform:
   m_ObjectHideFlags: 0
