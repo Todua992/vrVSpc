@@ -11,6 +11,9 @@ public class PCHealth : NetworkBehaviour {
     private int health;
 
     private void Start() {
+        mainCamera = GameObject.Find("MainCamera").transform;
+        vrHead = GameObject.Find("Camera (head)").transform;
+
         health = maxHealth;
     }
 
@@ -27,7 +30,6 @@ public class PCHealth : NetworkBehaviour {
     }
 
     private void PCGameOver() {
-        // Set camera to VR
         mainCamera.SetParent(vrHead);
     }
 }
