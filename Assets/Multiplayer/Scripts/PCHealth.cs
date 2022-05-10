@@ -11,6 +11,7 @@ public class PCHealth : NetworkBehaviour {
     [SerializeField] private List<Transform> spawnPositions = new();
     [SerializeField] private int maxHealth;
     [SerializeField] private bool dead;
+    [SerializeField] private bool below;
     
     private int health;
 
@@ -25,20 +26,21 @@ public class PCHealth : NetworkBehaviour {
             }
 
             spawnPositions.RemoveAt(0);
-        }
 
-        health = maxHealth;
+            health = maxHealth;
+        }
     }
 
-    private async void Update() {
+    private void Update() {
         if (IsOwner && health > 0) {
-            if (transform.position.y < -0.5f) {
+            if (transform.position.y < -0.5f && !below) {
                 transform.position = spawnPositions[Random.Range(0, spawnPositions.Count)].position;
                 health--;
-
-                await Task.Delay(1000);
+                below = true;
+            } else if (transform.position.y > -0.5f && below) {
+                below = false;
             }
-        } else if (!dead) {
+        } else if (!dead && IsOwner) {
             PCGameOver();
         }
     }
