@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -28,12 +29,14 @@ public class PCHealth : NetworkBehaviour {
         health = maxHealth;
     }
 
-    private void Update() {
+    private async void Update() {
         if (IsOwner) {
             if (transform.position.y < -0.5f) {
                 if (health > 0) {
                     transform.position = spawnPositions[Random.Range(0, spawnPositions.Count)].position;
                     health--;
+
+                    await Task.Delay(50);
                 } else {
                     PCGameOver();
                 }
