@@ -70,14 +70,14 @@ public class RespawnTree : NetworkBehaviour {
     }
 
     private void OnCollisionEnter(Collision collision) {
-        if(collision.collider.gameObject.layer == LayerMask.NameToLayer("Player") && collision.collider.gameObject.layer == LayerMask.NameToLayer("Platform")){
+        if(collision.collider.gameObject.layer == LayerMask.NameToLayer("PC-Player") && collision.collider.gameObject.layer == LayerMask.NameToLayer("Platform")){
 
             rb.isKinematic = true;
         }
     }
 
     private void OnCollisionExit(Collision collision) {
-        if (collision.collider.gameObject.layer != LayerMask.NameToLayer("Player") && collision.collider.gameObject.layer != LayerMask.NameToLayer("Platform")) {
+        if (collision.collider.gameObject.layer != LayerMask.NameToLayer("PC-Player") && collision.collider.gameObject.layer != LayerMask.NameToLayer("Platform")) {
 
             rb.isKinematic = false;
         }
