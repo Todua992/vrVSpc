@@ -36,7 +36,7 @@ public class PCHealth : NetworkBehaviour {
                     transform.position = spawnPositions[Random.Range(0, spawnPositions.Count)].position;
                     health--;
 
-                    await Task.Delay(50);
+                    await Task.Delay(1000);
                 } else {
                     PCGameOver();
                 }
