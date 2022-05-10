@@ -8,6 +8,7 @@ public class RagdollController : MonoBehaviour
     private bool isRagdool = false;
     [SerializeField] private int RegDollTime;
     [SerializeField] private Transform hips;
+    [SerializeField] private PlayerControlAuthorative controller;
 
 
 
@@ -17,16 +18,9 @@ public class RagdollController : MonoBehaviour
         DisableRagdoll();
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.R)) {
-            EnableRagdoll();
-        }
-    }
-
     public async void EnableRagdoll()
     {
-        if (!isRagdool)
-        {
+        if (!isRagdool) {
             isRagdool = true;
 
             foreach (Rigidbody selected in rb)
@@ -36,6 +30,8 @@ public class RagdollController : MonoBehaviour
             }
 
             animator.enabled = false;
+            controller.enabled = false;
+
 
             await Task.Delay(RegDollTime);
 
@@ -45,6 +41,7 @@ public class RagdollController : MonoBehaviour
 
     private void DisableRagdoll()
     {
+        
         isRagdool = false;
 
         foreach (Rigidbody selected in rb)
@@ -56,5 +53,6 @@ public class RagdollController : MonoBehaviour
 
         transform.position = hips.position;
         animator.enabled = true;
+        controller.enabled = true;
     }
 }
