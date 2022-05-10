@@ -1884,7 +1884,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f47d396b5463cb4ca56c49daafe62ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userNameText: {fileID: 0}
+  playerCanvas: {fileID: 0}
+  playerNameText: {fileID: 0}
+  networkPlayerNameSet:
+    m_InternalValue: 0
 --- !u!114 &5134630521083282495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1910,9 +1913,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9df045a324281cb4896db3f0605be804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultInitialPositionOnPlane: {x: 25, y: 0, z: 25}
+  defaultInitialPosition: {x: 0, y: 0, z: 0}
   walkSpeed: 5
   sprintSpeedMultiplier: 1.75
+  gravity: 0
+  jumpHeight: 0
+  groundForce: 0
+  groundCheck: {fileID: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  groundDistance: 0
   sensitivityX: 50
   sensitivityY: 50
   clamp: {x: -50, y: 50}
