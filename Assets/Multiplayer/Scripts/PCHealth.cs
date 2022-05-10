@@ -12,8 +12,10 @@ public class PCHealth : NetworkBehaviour {
     private int health;
 
     private void Start() {
-        mainCamera = GameObject.Find("MainCamera").transform;
-        vrHead = GameObject.Find("Camera (head)").transform;
+        if (IsOwner) {
+            mainCamera = GameObject.Find("MainCamera").transform;
+            vrHead = GameObject.Find("Camera (head)").transform;
+        }
 
         health = maxHealth;
     }
