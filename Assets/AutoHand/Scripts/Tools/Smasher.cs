@@ -190,7 +190,7 @@ namespace Autohand.Demo {
 
                     
 
-                    nearyby.GetComponentInChildren<Rigidbody>().AddExplosionForce(expForce * 100, force, radius, Upwordsblast);
+                    nearyby.GetComponentInChildren<Rigidbody>().AddExplosionForce(expForce * 100, force, radius, Upwordsblast * 100);
                 }
 
                 if (rb != null) {
