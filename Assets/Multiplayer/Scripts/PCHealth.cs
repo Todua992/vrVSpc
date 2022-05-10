@@ -56,5 +56,7 @@ public class PCHealth : NetworkBehaviour {
         pcCamera.enabled = false;
         vrCamera.enabled = true;
         face.SetActive(false);
+        transform.position = new Vector3(100, 100, 100);
+        GetComponent<PlayerControlAuthorative>().enabled = false;
     }
 }
