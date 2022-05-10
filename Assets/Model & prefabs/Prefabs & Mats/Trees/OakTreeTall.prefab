@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 3320193369915821908}
   - component: {fileID: 3320193369915821913}
   - component: {fileID: 2281179751795150989}
+  - component: {fileID: 8090334554617606135}
   m_Layer: 0
   m_Name: OakTreeTall
   m_TagString: Untagged
@@ -591,6 +592,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8090334554617606135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093189844265541444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731a5d0bf7b494d47ac95362b60eb43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3573566009451676704
