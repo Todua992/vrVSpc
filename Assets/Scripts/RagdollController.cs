@@ -1,7 +1,8 @@
+using Unity.Netcode;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class RagdollController : MonoBehaviour
+public class RagdollController : NetworkBehaviour
 {
     private Rigidbody[] rb;
     private Animator animator;
@@ -51,7 +52,11 @@ public class RagdollController : MonoBehaviour
 
         }
 
-        transform.position = hips.position;
+        if (IsOwner) {
+            transform.position = hips.position;
+        }      
+
+        
         animator.enabled = true;
         controller.enabled = true;
     }
