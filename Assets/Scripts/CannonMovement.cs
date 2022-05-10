@@ -15,7 +15,7 @@ public class CannonMovement : MonoBehaviour {
 
     private void Update() {
         if (track) {
-            Vector3 targetPosition = target.transform.position + new Vector3(0f, 0.5f, 0f);
+            Vector3 targetPosition = target.transform.position;
 
             targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime );
