@@ -11,11 +11,16 @@ public class RagdollController : MonoBehaviour
 
 
 
-    void Start()
-    {
+    void Start() {
         rb = GetComponentsInChildren<Rigidbody>();
         animator = GetComponent<Animator>();
         DisableRagdoll();
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.R)) {
+            EnableRagdoll();
+        }
     }
 
     public async void EnableRagdoll()
