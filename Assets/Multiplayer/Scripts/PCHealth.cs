@@ -39,6 +39,8 @@ public class PCHealth : NetworkBehaviour {
                 below = true;
             } else if (transform.position.y > -0.5f && below) {
                 below = false;
+            } else {
+                transform.position = spawnPositions[Random.Range(0, spawnPositions.Count)].position;
             }
         } else if (!dead && IsOwner) {
             PCGameOver();
