@@ -19,8 +19,7 @@ public class MissileController : NetworkBehaviour {
                 shoot = true;
             }
         } else {
-            timer = holdTime;
-        }
+            timer = holdTime;        }
 
         if (shoot) {
             transform.position += transform.forward * flySpeed * Time.deltaTime;
