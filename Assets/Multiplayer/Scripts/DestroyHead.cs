@@ -7,6 +7,7 @@ public class DestroyHead : NetworkBehaviour {
     public NetworkVariable<int> networkIndex = new();
 
     private TMP_Text healthText;
+    private GameObject vrPlayer;
 
     [SerializeField] private int maxHealth;
     private int health;
@@ -17,6 +18,7 @@ public class DestroyHead : NetworkBehaviour {
             health = maxHealth;
 
             healthText = GameObject.Find("HealthTextVR").GetComponent<TMP_Text>();
+            vrPlayer = GameObject.Find("NetworkPlayerVR(Clone)");
         }
     }
 
@@ -25,6 +27,12 @@ public class DestroyHead : NetworkBehaviour {
             if (networkIndex.Value != oldIndex) {
                 oldIndex = networkIndex.Value;
                 DestoryPartClient(networkHit.Value);
+            }
+        }
+
+        if (IsOwner) {
+            if (health >= 0f) {
+                Destroy(vrPlayer);
             }
         }
 
