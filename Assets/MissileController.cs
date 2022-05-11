@@ -18,10 +18,6 @@ public class MissileController : NetworkBehaviour {
 
     private DestroyHead destroyHead;
 
-    public override void OnNetworkSpawn() {
-        destroyHead = GameObject.Find("Camera (head)").GetComponent<DestroyHead>();
-    }
-
     private void Update() {
         if (colliding && Input.GetKey(KeyCode.E)) {
             if (timer > 0f) {
@@ -57,6 +53,7 @@ public class MissileController : NetworkBehaviour {
     private void CheckNetworkValues() {
         foreach (PlayerRocket selceted in playerRockets) {
             if (networkShoot != selceted.networkShoot.Value && index == selceted.networkIndex.Value) {
+                destroyHead = GameObject.Find("Camera (head)").GetComponent<DestroyHead>();
                 networkShoot = selceted.networkShoot.Value;
             }
         }
