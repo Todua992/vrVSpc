@@ -95,10 +95,13 @@ public class PlayerControlAuthorative : NetworkBehaviour {
 
         inputSprint = Input.GetKey(KeyCode.LeftShift);
 
+        inputVertical = 0f;
+        inputHorizontal = 0f;
+
         if (Input.GetKey(KeyCode.W)) {
-            inputVertical = -1f;
-        } else if (Input.GetKey(KeyCode.S)) {
             inputVertical = 1f;
+        } else if (Input.GetKey(KeyCode.S)) {
+            inputVertical = -1f;
         }
 
         if (Input.GetKey(KeyCode.A)) {
