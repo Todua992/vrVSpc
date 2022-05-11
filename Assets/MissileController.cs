@@ -99,7 +99,7 @@ public class MissileController : NetworkBehaviour {
                 colliding = true;
             }
         }
-        if (collider.gameObject.layer == 13)
+        if (collider.CompareTag("Head"))
         {
             destroyHead.DestroyPartHost(hit.position);
             Destroy(gameObject);
