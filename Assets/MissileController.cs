@@ -45,15 +45,15 @@ public class MissileController : NetworkBehaviour {
 
             foreach (PlayerRocket selected in playerRockets) {
                 if (Input.GetKey(KeyCode.UpArrow)) {
-                    vertical = 1f;
-                } else if (Input.GetKey(KeyCode.DownArrow)) {
                     vertical = -1f;
+                } else if (Input.GetKey(KeyCode.DownArrow)) {
+                    vertical = 1f;
                 }
 
                 if(Input.GetKey(KeyCode.LeftArrow)) {
-                    horizontal = 1f;
-                } else if (Input.GetKey(KeyCode.RightArrow)) {
                     horizontal = -1f;
+                } else if (Input.GetKey(KeyCode.RightArrow)) {
+                    horizontal = 1f;
                 }
 
                 selected.UpdateInput(horizontal, vertical);

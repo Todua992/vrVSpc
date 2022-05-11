@@ -94,8 +94,18 @@ public class PlayerControlAuthorative : NetworkBehaviour {
         }
 
         inputSprint = Input.GetKey(KeyCode.LeftShift);
-        inputHorizontal = Input.GetAxisRaw("Horizontal");
-        inputVertical = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKey(KeyCode.W)) {
+            inputVertical = -1f;
+        } else if (Input.GetKey(KeyCode.S)) {
+            inputVertical = 1f;
+        }
+
+        if (Input.GetKey(KeyCode.A)) {
+            inputHorizontal = -1f;
+        } else if (Input.GetKey(KeyCode.D)) {
+            inputHorizontal = 1f;
+        }
 
         movement = (transform.TransformDirection(Vector3.forward) * inputVertical + transform.TransformDirection(Vector3.right) * inputHorizontal).normalized * walkSpeed;
 
