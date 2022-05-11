@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Unity.Netcode;
 using UnityEngine;
+using TMPro;
 
 public class PCHealth : NetworkBehaviour {
     [SerializeField] private Camera pcCamera;
@@ -12,6 +12,8 @@ public class PCHealth : NetworkBehaviour {
     [SerializeField] private int maxHealth;
     [SerializeField] private bool dead;
     [SerializeField] private bool below;
+
+    private TMP_Text healthText;
     
     private int health;
 
@@ -28,11 +30,15 @@ public class PCHealth : NetworkBehaviour {
             spawnPositions.RemoveAt(0);
 
             health = maxHealth;
+
+            healthText = GameObject.Find("HealthTextPC").GetComponent<TMP_Text>();
         }
     }
 
     private void Update() {
         if (IsOwner && health > 0) {
+            healthText.text = "Health: " + health + "/" + maxHealth;
+
             if (transform.position.y < -0.5f && !below) {
                 health--;
 
@@ -47,6 +53,7 @@ public class PCHealth : NetworkBehaviour {
                 transform.position = spawnPositions[Random.Range(0, spawnPositions.Count)].position;
             }
         } else if (!dead && IsOwner) {
+            healthText.text = "Health: " + health + "/" + maxHealth;
             PCGameOver();
         }
     }
