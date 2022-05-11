@@ -103,7 +103,6 @@ public class MissileController : NetworkBehaviour {
         {
             destroyHead.DestroyPartHost(hit.position);
             Destroy(gameObject);
-            Debug.Log("Hit");
         }
     }
 
