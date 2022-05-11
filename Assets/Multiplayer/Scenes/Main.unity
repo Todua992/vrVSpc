@@ -11785,7 +11785,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2528148, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12130,6 +12130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8421755635423194555}
     m_Modifications:
+    - target: {fileID: 692120233, guid: 4eb7750815f96274b92294f88d1defd0, type: 3}
+      propertyPath: index
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 221479678113715341, guid: 4eb7750815f96274b92294f88d1defd0,
         type: 3}
       propertyPath: m_IsActive
@@ -17503,6 +17507,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8421755635423194555}
     m_Modifications:
+    - target: {fileID: 692120233, guid: 4eb7750815f96274b92294f88d1defd0, type: 3}
+      propertyPath: index
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 221479679269544305, guid: 4eb7750815f96274b92294f88d1defd0,
         type: 3}
       propertyPath: m_Name
@@ -24040,6 +24048,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8421755635423194555}
     m_Modifications:
+    - target: {fileID: 692120233, guid: 4eb7750815f96274b92294f88d1defd0, type: 3}
+      propertyPath: index
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 221479678113715340, guid: 4eb7750815f96274b92294f88d1defd0,
         type: 3}
       propertyPath: m_LocalRotation.w

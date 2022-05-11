@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -5,11 +6,14 @@ public class MissileController : NetworkBehaviour {
     [SerializeField] private float holdTime;
     [SerializeField] private float flySpeed;
     [SerializeField] private float rotateSpeed;
+    [SerializeField] private int index;
 
     private bool shoot;
     private bool colliding;
     private float timer;
+    private bool networkShoot;
 
+    private List<PlayerRocket> playerRockets = new();
 
     private void Update() {
         if (colliding && Input.GetKey(KeyCode.E)) {
@@ -19,28 +23,68 @@ public class MissileController : NetworkBehaviour {
                 shoot = true;
             }
         } else {
-            timer = holdTime;        }
+            timer = holdTime;        
+        }
+
+        if (networkShoot) {
+            Shoot();
+        }
+
+        if (shoot && !networkShoot) {
+            foreach (PlayerRocket selected in playerRockets) {
+                selected.UpdateShoot(true, index);
+            }
+        }
 
         if (shoot) {
+            foreach (PlayerRocket selected in playerRockets) {
+                selected.UpdateInput(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            }
+        }
+
+        if (!networkShoot) {
+            CheckNetworkValues();
+        }
+    }
+
+    private void CheckNetworkValues() {
+        foreach (PlayerRocket selceted in playerRockets) {
+            if (networkShoot != selceted.networkShoot.Value && index == selceted.networkIndex.Value) {
+                networkShoot = selceted.networkShoot.Value;
+            }
+        }
+    }
+
+    private void Shoot() {
+        if (IsHost) {
             transform.position += transform.forward * flySpeed * Time.deltaTime;
-            float horizontalInput = Input.GetAxis("Horizontal");
-            float verticalInput = Input.GetAxis("Vertical");
+            float verticalInput = 0f;
+            float horizontalInput = 0f;
+
+
+            foreach (PlayerRocket selected in playerRockets) {
+                verticalInput = selected.networkVertical.Value;
+                horizontalInput = selected.networkHorizontal.Value;
+            }
 
             transform.Rotate(verticalInput * rotateSpeed * Time.deltaTime, horizontalInput * rotateSpeed * Time.deltaTime, 0, Space.Self);
         }
     }
 
+
     private void OnTriggerEnter(Collider collider) {
         if (collider.CompareTag("Player")) {
             if (collider.GetComponent<NetworkObject>().IsOwner) {
+                playerRockets.Add(collider.GetComponent<PlayerRocket>());
                 colliding = true;
             }
         }
     }
 
     private void OnTriggerExit(Collider collider) {
-        if (collider.CompareTag("Player")) {
+        if (collider.CompareTag("Player") && !shoot) {
             if (collider.GetComponent<NetworkObject>().IsOwner) {
+                playerRockets.Remove(collider.GetComponent<PlayerRocket>());
                 colliding = false;
             }
         }
