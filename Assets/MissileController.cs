@@ -115,7 +115,7 @@ public class MissileController : NetworkBehaviour {
             if (collision.gameObject.tag == "Head") {
                 destroyHead.DestroyPartHost(hit.position);
                 Destroy(gameObject);
-            
+            Debug.Log("Hit");
         }
     }
 }
