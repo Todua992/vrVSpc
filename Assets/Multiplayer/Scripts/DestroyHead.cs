@@ -34,7 +34,7 @@ public class DestroyHead : NetworkBehaviour {
     }
 
     public void DestoryPartClient(Vector3 hit) {
-        Collider[] colliders = Physics.OverlapSphere(hit, 0.05f);
+        Collider[] colliders = Physics.OverlapSphere(hit, 0.025f);
 
         foreach (Collider collider in colliders) {
             if (collider.name == "CubeCell") {
