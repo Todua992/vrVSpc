@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: -5837954281419341252}
   m_Layer: 0
   m_Name: Throwable Rock
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,6 +60,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad2f22fe18c2bf46b033941144afa2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkDestory:
+    m_InternalValue: 0
+  networkTimer:
+    m_InternalValue: 0
+  networkForce:
+    m_InternalValue: {x: 0, y: 0, z: 0}
+  handbase: {fileID: 0}
+  link: {fileID: 0}
+  button: 0
   handMaterial: {fileID: -3963241562183589234, guid: 5dee120cea365a7429acdc6ad517fcea,
     type: 3}
   rock: {fileID: 0}

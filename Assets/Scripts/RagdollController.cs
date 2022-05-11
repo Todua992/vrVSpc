@@ -22,7 +22,7 @@ public class RagdollController : NetworkBehaviour
 
 
     private void OnCollisionEnter(Collision collision) {
-        if(collision.gameObject.layer == 13) {
+        if(collision.gameObject.layer == 13 || collision.gameObject.tag == " Stone") {
             EnableRagdoll();
         }
     }
