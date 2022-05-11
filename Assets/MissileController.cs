@@ -100,10 +100,10 @@ public class MissileController : NetworkBehaviour {
         if (IsHost) {
             if (collision.transform.CompareTag("Head")) {
                 destroyHead.DestroyPartHost(hit.position);
-                
             }
-        }
 
-        Destroy(gameObject);
+
+            Destroy(gameObject);
+        }
     }
 }
