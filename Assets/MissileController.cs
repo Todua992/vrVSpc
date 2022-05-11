@@ -102,8 +102,8 @@ public class MissileController : NetworkBehaviour {
                 destroyHead.DestroyPartHost(hit.position);
                 
             }
-
-            Destroy(gameObject);
         }
+
+        Destroy(gameObject);
     }
 }
