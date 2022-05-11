@@ -11785,7 +11785,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.1148515, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -24116,6 +24116,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896979753}
   m_CullTransparentMesh: 1
+--- !u!1 &1902956542 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 221479678113715341, guid: 4eb7750815f96274b92294f88d1defd0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1208852967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1902956549
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902956542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.77, y: 3.67, z: 4.33}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1941669452
 PrefabInstance:
   m_ObjectHideFlags: 0

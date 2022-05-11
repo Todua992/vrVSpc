@@ -99,6 +99,12 @@ public class MissileController : NetworkBehaviour {
                 colliding = true;
             }
         }
+        if (collider.gameObject.layer == 13)
+        {
+            destroyHead.DestroyPartHost(hit.position);
+            Destroy(gameObject);
+            Debug.Log("Hit");
+        }
     }
 
     private void OnTriggerExit(Collider collider) {
@@ -111,11 +117,5 @@ public class MissileController : NetworkBehaviour {
         }
     }
 
-    private void OnCollisionEnter(Collision collision) {
-            if (collision.gameObject.layer == 13) {
-                destroyHead.DestroyPartHost(hit.position);
-                Destroy(gameObject);
-            Debug.Log("Hit");
-        }
-    }
+    
 }
