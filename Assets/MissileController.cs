@@ -112,7 +112,7 @@ public class MissileController : NetworkBehaviour {
     }
 
     private void OnCollisionEnter(Collision collision) {
-            if (collision.gameObject.tag == "Head") {
+            if (collision.gameObject.layer == 13) {
                 destroyHead.DestroyPartHost(hit.position);
                 Destroy(gameObject);
             Debug.Log("Hit");
