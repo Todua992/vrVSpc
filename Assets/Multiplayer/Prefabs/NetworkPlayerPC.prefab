@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultInitialPosition: {x: -0.6, y: 0.7, z: -0.6}
   walkSpeed: 0.2
-  sprintSpeedMultiplier: 1.75
+  sprintSpeedMultiplier: 1.4
   gravity: 0.5
   jumpHeight: 0.275
   groundForce: 0.05

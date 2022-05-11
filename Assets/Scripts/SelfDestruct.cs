@@ -27,13 +27,13 @@ public class SelfDestruct : NetworkBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
         if (IsHost && !shoot) {
-            shoot = true;
+            
 
             if (collision.transform.CompareTag("Head")) {
+                shoot = true;
                 destroyHead.DestroyPartHost(transform.position);
+                Destroy(gameObject);
             }
-
-            Destroy(gameObject);
         }
     }
 }
