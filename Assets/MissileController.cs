@@ -74,8 +74,9 @@ public class MissileController : NetworkBehaviour {
 
     private void OnTriggerEnter(Collider collider) {
         if (collider.CompareTag("Player")) {
+            playerRockets.Add(collider.GetComponent<PlayerRocket>());
+
             if (collider.GetComponent<NetworkObject>().IsOwner) {
-                playerRockets.Add(collider.GetComponent<PlayerRocket>());
                 colliding = true;
             }
         }
@@ -83,8 +84,9 @@ public class MissileController : NetworkBehaviour {
 
     private void OnTriggerExit(Collider collider) {
         if (collider.CompareTag("Player") && !shoot) {
+            playerRockets.Remove(collider.GetComponent<PlayerRocket>());
+
             if (collider.GetComponent<NetworkObject>().IsOwner) {
-                playerRockets.Remove(collider.GetComponent<PlayerRocket>());
                 colliding = false;
             }
         }
