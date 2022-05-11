@@ -9,6 +9,10 @@ public class SelfDestruct : NetworkBehaviour {
         destroyHead = GameObject.Find("Camera (head)").GetComponent<DestroyHead>();    
     }
 
+    public override void OnNetworkSpawn() {
+        destroyHead = GameObject.Find("Camera (head)").GetComponent<DestroyHead>();
+    }
+
     private void Update() {
         if (IsHost) {
             if (timer > 0f) {
