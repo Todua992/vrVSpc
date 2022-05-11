@@ -168,6 +168,11 @@ namespace Autohand.Demo {
                         UpdateDestoryServerRpc();
                     }
                 }
+                if(transform.position.y <= -2f)
+                {
+                    destroy();
+                    UpdateDestoryServerRpc();
+                }
             }
         }
         float GetMagnitude() {
