@@ -2591,7 +2591,9 @@ MonoBehaviour:
   vrCamera: {fileID: 0}
   face: {fileID: 0}
   spawnPositions: []
-  maxHealth: 3
+  maxHealth: 2
+  dead: 0
+  below: 0
 --- !u!1 &5525554799805595219
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,12 @@
 using Unity.Netcode;
 using UnityEngine;
+using TMPro;
 
 public class DestroyHead : NetworkBehaviour {
     public NetworkVariable<Vector3> networkHit = new();
     public NetworkVariable<int> networkIndex = new();
+
+    private TMP_Text healthText;
 
     [SerializeField] private int maxHealth;
     private int health;
@@ -12,6 +15,7 @@ public class DestroyHead : NetworkBehaviour {
     private void Start() {
         if (IsHost) {
             health = maxHealth;
+            healthText = GameObject.Find("HealthText").GetComponent<TMP_Text>();
         }
     }
 
@@ -21,6 +25,10 @@ public class DestroyHead : NetworkBehaviour {
                 oldIndex = networkIndex.Value;
                 DestoryPartClient(networkHit.Value);
             }
+        }
+
+        if (IsOwner) {
+            healthText.text = "Health: " + health + "/" + maxHealth;
         }
     }
 
@@ -36,6 +44,7 @@ public class DestroyHead : NetworkBehaviour {
 
     public void DestroyPartHost(Vector3 hit) {
         UpdateDestroyPartServerRpc(hit);
+        health--;
     }
 
     [ServerRpc]
