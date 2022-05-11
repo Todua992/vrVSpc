@@ -31,7 +31,7 @@ public class DestroyHead : NetworkBehaviour {
         }
 
         if (IsOwner) {
-            if (health >= 0f) {
+            if (health <= 0f) {
                 Destroy(vrPlayer);
             }
         }
