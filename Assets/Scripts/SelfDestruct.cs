@@ -21,7 +21,7 @@ public class SelfDestruct : NetworkBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
         if (IsHost) {
-            if (collision.transform.CompareTag("MainCamera")) {
+            if (collision.transform.CompareTag("Head")) {
                 destroyHead.DestroyPartHost(transform.position);
             }
 

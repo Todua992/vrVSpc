@@ -25,10 +25,12 @@ public class DestroyHead : NetworkBehaviour {
     }
 
     public void DestoryPartClient(Vector3 hit) {
-        Collider[] colliders = Physics.OverlapSphere(hit, 0.1f);
+        Collider[] colliders = Physics.OverlapSphere(hit, 0.05f);
 
         foreach (Collider collider in colliders) {
-            collider.GetComponent<Rigidbody>().isKinematic = false;
+            if (collider.name == "CubeCell") {
+                collider.GetComponent<Rigidbody>().isKinematic = false;
+            }
         }
     }
 
