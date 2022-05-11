@@ -40,8 +40,23 @@ public class MissileController : NetworkBehaviour {
         }
 
         if (shoot) {
+            float horizontal = 0f;
+            float vertical = 0f;
+
             foreach (PlayerRocket selected in playerRockets) {
-                selected.UpdateInput(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+                if (Input.GetKey(KeyCode.UpArrow)) {
+                    vertical = 1f;
+                } else if (Input.GetKey(KeyCode.DownArrow)) {
+                    vertical = -1f;
+                }
+
+                if(Input.GetKey(KeyCode.LeftArrow)) {
+                    horizontal = 1f;
+                } else if (Input.GetKey(KeyCode.RightArrow)) {
+                    horizontal = -1f;
+                }
+
+                selected.UpdateInput(horizontal, vertical);
             }
         }
 
@@ -100,10 +115,8 @@ public class MissileController : NetworkBehaviour {
         if (IsHost) {
             if (collision.transform.CompareTag("Head")) {
                 destroyHead.DestroyPartHost(hit.position);
+                Destroy(gameObject);
             }
-
-
-            Destroy(gameObject);
         }
     }
 }
