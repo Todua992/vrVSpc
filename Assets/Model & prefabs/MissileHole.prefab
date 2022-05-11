@@ -60,6 +60,8 @@ MonoBehaviour:
   holdTime: 1
   flySpeed: 0.25
   rotateSpeed: 60
+  index: 0
+  hit: {fileID: 221479679675637336}
 --- !u!114 &1031236499490520827
 MonoBehaviour:
   m_ObjectHideFlags: 0

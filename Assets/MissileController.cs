@@ -7,6 +7,7 @@ public class MissileController : NetworkBehaviour {
     [SerializeField] private float flySpeed;
     [SerializeField] private float rotateSpeed;
     [SerializeField] private int index;
+    [SerializeField] private Transform hit;
 
     private bool shoot;
     private bool colliding;
@@ -14,6 +15,12 @@ public class MissileController : NetworkBehaviour {
     private bool networkShoot;
 
     private List<PlayerRocket> playerRockets = new();
+
+    private DestroyHead destroyHead;
+
+    public override void OnNetworkSpawn() {
+        destroyHead = GameObject.Find("Camera (head)").GetComponent<DestroyHead>();
+    }
 
     private void Update() {
         if (colliding && Input.GetKey(KeyCode.E)) {
@@ -89,6 +96,17 @@ public class MissileController : NetworkBehaviour {
             if (collider.GetComponent<NetworkObject>().IsOwner) {
                 colliding = false;
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        if (IsHost) {
+            if (collision.transform.CompareTag("Head")) {
+                destroyHead.DestroyPartHost(hit.position);
+                
+            }
+
+            Destroy(gameObject);
         }
     }
 }
