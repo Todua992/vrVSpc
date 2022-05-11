@@ -1,13 +1,14 @@
-using System.Threading.Tasks;
+using Unity.Netcode;
 using UnityEngine;
 
-public class MissileMechanics : MonoBehaviour {
+public class MissileMechanics : NetworkBehaviour {
 
     private float endY;
     private float RightendZ;
     private float LeftendZ;
 
     [SerializeField] private float time;
+    private bool started;
 
     //Target
     public GameObject RocketTargetPosition;
@@ -36,24 +37,27 @@ public class MissileMechanics : MonoBehaviour {
 
 
 
-    private float currentTime;
-    private float rocketCurrentTime;
+    private float currentTime = 0;
 
-    void Start() {
-        Setup();
-        currentTime = 0f;
+
+    public override void OnNetworkSpawn() {
+        if (IsHost) {
+            Setup();
+            currentTime = 0f;
+            started = true;
+        }
     }
 
     void Update() {
+        if (started && IsHost) {
+            currentTime += Time.deltaTime;
+            if (currentTime < time) {
+                OpenMissile();
+            }
 
-
-        currentTime += Time.deltaTime;
-        if (currentTime < time) {
-            OpenMissile();
-        }
-
-        if( currentTime < 2 * time) {
-            LiftMissile();
+            if (currentTime < 2 * time) {
+                LiftMissile();
+            }
         }
     }
 

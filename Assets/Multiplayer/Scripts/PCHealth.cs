@@ -22,12 +22,8 @@ public class PCHealth : NetworkBehaviour {
             pcCamera = GameObject.Find("MainCamera").GetComponent<Camera>();
             vrCamera = GameObject.Find("Camera (head)").GetComponent<Camera>();
             face = GameObject.Find("Face");
-            
-            foreach (Transform t in GameObject.Find("CannonSpawnpoints").GetComponentsInChildren<Transform>()) {
-                spawnPositions.Add(t);
-            }
 
-            spawnPositions.RemoveAt(0);
+            spawnPositions.Add(GameObject.Find("PlayerSpawn").GetComponent<Transform>());
 
             health = maxHealth;
 
