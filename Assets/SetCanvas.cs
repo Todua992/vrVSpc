@@ -6,6 +6,8 @@ public class SetCanvas : NetworkBehaviour {
         if (IsHost) {
             Canvas canvas = GetComponent<Canvas>();
 
+            canvas.enabled = true;
+
             canvas.worldCamera = GameObject.Find("Camera (head)").GetComponent<Camera>();
         }
     }

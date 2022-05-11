@@ -15,6 +15,7 @@ public class DestroyHead : NetworkBehaviour {
     private void Start() {
         if (IsHost) {
             health = maxHealth;
+
             healthText = GameObject.Find("HealthText").GetComponent<TMP_Text>();
         }
     }

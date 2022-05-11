@@ -5,6 +5,8 @@ public class SelfDestruct : NetworkBehaviour {
     [SerializeField] private float timer;
     [SerializeField] private DestroyHead destroyHead;
 
+    private bool shoot;
+
     private void Start() {
         destroyHead = GameObject.Find("Camera (head)").GetComponent<DestroyHead>();    
     }
@@ -24,7 +26,9 @@ public class SelfDestruct : NetworkBehaviour {
     }
 
     private void OnCollisionEnter(Collision collision) {
-        if (IsHost) {
+        if (IsHost && !shoot) {
+            shoot = true;
+
             if (collision.transform.CompareTag("Head")) {
                 destroyHead.DestroyPartHost(transform.position);
             }
