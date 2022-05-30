@@ -2,13 +2,18 @@ using Unity.Netcode;
 using UnityEngine;
 
 public class SetCanvas : NetworkBehaviour {
+    [SerializeField] private bool test;
+
     public override void OnNetworkSpawn() {
         if (IsHost) {
-            Canvas canvas = GetComponent<Canvas>();
+            if (!test) {
+                Canvas canvas = GetComponent<Canvas>();
 
-            canvas.enabled = true;
+                canvas.enabled = true;
 
-            canvas.worldCamera = GameObject.Find("Camera (head)").GetComponent<Camera>();
+
+                canvas.worldCamera = GameObject.Find("Camera (head)").GetComponent<Camera>();
+            }
         }
     }
 }

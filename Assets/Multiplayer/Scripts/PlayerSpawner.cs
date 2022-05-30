@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerSpawner : NetworkBehaviour {
     [SerializeField] private GameObject playerPrefabA;
     [SerializeField] private GameObject playerPrefabB;
+    [SerializeField] private bool test;
 
     public override void OnNetworkSpawn() {
         if (IsClient && IsOwner && IsHost) {
@@ -18,7 +19,9 @@ public class PlayerSpawner : NetworkBehaviour {
         GameObject newPlayer;
         if (prefabId == 0) {
             newPlayer = Instantiate(playerPrefabA);
-            Destroy(GameObject.Find("MainCamera"));
+            if (!test) {
+                Destroy(GameObject.Find("MainCamera"));
+            }
         } else {
             newPlayer = Instantiate(playerPrefabB);
         }

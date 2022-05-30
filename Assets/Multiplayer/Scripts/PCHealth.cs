@@ -13,6 +13,8 @@ public class PCHealth : NetworkBehaviour {
     [SerializeField] private bool dead;
     [SerializeField] private bool below;
 
+    [SerializeField] private bool test;
+
     private TMP_Text healthText;
     
     private int health;
@@ -20,8 +22,11 @@ public class PCHealth : NetworkBehaviour {
     private void Start() {
         if (IsOwner) {
             pcCamera = GameObject.Find("MainCamera").GetComponent<Camera>();
-            vrCamera = GameObject.Find("Camera (head)").GetComponent<Camera>();
-            face = GameObject.Find("Face");
+            
+            if (!test) {
+                vrCamera = GameObject.Find("Camera (head)").GetComponent<Camera>();
+                face = GameObject.Find("Face");
+            } 
 
             spawnPositions.Add(GameObject.Find("PlayerSpawn").GetComponent<Transform>());
 
@@ -50,7 +55,9 @@ public class PCHealth : NetworkBehaviour {
             }
         } else if (!dead && IsOwner) {
             healthText.text = "Health: " + health + "/" + maxHealth;
-            PCGameOver();
+            if (!test) {
+                PCGameOver();
+            }
         }
     }
 

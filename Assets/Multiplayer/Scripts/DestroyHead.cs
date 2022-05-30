@@ -12,14 +12,20 @@ public class DestroyHead : NetworkBehaviour {
     [SerializeField] private int maxHealth;
     private int health;
     private int oldIndex;
+    [SerializeField] private bool test;
 
     private void Start() {
-        if (IsHost) {
-            health = maxHealth;
+        health = maxHealth;
 
-            healthText = GameObject.Find("HealthTextVR").GetComponent<TMP_Text>();
-            vrPlayer = GameObject.Find("NetworkPlayerVR(Clone)");
+        if (!test) {
+            if (IsHost) {
+                
+
+                healthText = GameObject.Find("HealthTextVR").GetComponent<TMP_Text>();
+                vrPlayer = GameObject.Find("NetworkPlayerVR(Clone)");
+            }
         }
+        
     }
 
     private void Update() {
@@ -36,9 +42,12 @@ public class DestroyHead : NetworkBehaviour {
             }
         }
 
-        if (IsOwner) {
-            healthText.text = "Health: " + health + "/" + maxHealth;
+        if (!test) {
+            if (IsOwner) {
+                healthText.text = "Health: " + health + "/" + maxHealth;
+            }
         }
+        
     }
 
     public void DestoryPartClient(Vector3 hit) {

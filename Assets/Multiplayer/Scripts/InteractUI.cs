@@ -9,7 +9,12 @@ public class InteractUI : NetworkBehaviour {
     private bool oldIsActive;
     
     private void Start() {
+        Debug.Log(GameObject.Find("Canvas"));
+
         interactUI = GameObject.Find("Canvas").transform.Find("Interact").gameObject;
+
+        
+
         interactObject = null;
     }
 
