@@ -11,6 +11,8 @@ public class RagdollController : NetworkBehaviour
     [SerializeField] private Transform hips;
     [SerializeField] private PlayerControlAuthorative controller;
 
+    [SerializeField] private bool test;
+
 
 
     void Start() {
@@ -39,7 +41,11 @@ public class RagdollController : NetworkBehaviour
             }
 
             animator.enabled = false;
-            controller.enabled = false;
+
+            if (!test) {
+
+                controller.enabled = false;
+            }
 
 
             await Task.Delay(RegDollTime);
@@ -66,6 +72,9 @@ public class RagdollController : NetworkBehaviour
 
         
         animator.enabled = true;
-        controller.enabled = true;
+
+        if (!test) {
+            controller.enabled = true;
+        }
     }
 }

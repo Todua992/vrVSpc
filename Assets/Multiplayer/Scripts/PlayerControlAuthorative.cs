@@ -49,13 +49,19 @@ public class PlayerControlAuthorative : NetworkBehaviour {
 
     protected MeshRenderer Renderer;
 
+    [SerializeField] private bool test;
+
+
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
     }
 
     private void Start() {
-        Cursor.lockState = CursorLockMode.Locked;
+        if (!test) {
+
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         Renderer = GetComponentInChildren<MeshRenderer>();
         if (IsClient && IsOwner) {
             transform.position = defaultInitialPosition;
