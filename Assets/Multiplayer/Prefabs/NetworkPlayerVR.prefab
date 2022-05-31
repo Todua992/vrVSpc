@@ -18688,6 +18688,7 @@ MonoBehaviour:
   networkIndex:
     m_InternalValue: 0
   maxHealth: 5
+  test: 0
 --- !u!1 &8925703659531158115
 GameObject:
   m_ObjectHideFlags: 0
