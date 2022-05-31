@@ -101,8 +101,6 @@ public class MissileController : NetworkBehaviour {
         }
         if (collider.CompareTag("Head"))
         {
-
-            Debug.Log("gamer");
             destroyHead.DestroyPartHost(hit.position);
             Destroy(gameObject);
         }
