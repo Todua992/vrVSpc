@@ -9,6 +9,8 @@ public class MissileController : NetworkBehaviour {
     [SerializeField] private int index;
     [SerializeField] private Transform hit;
 
+    public ParticleSystem rocketboostparticle;
+
     private bool shoot;
     private bool colliding;
     private float timer;
@@ -80,6 +82,7 @@ public class MissileController : NetworkBehaviour {
             float verticalInput = 0f;
             float horizontalInput = 0f;
 
+            rocketboostparticle.Play();
 
             foreach (PlayerRocket selected in playerRockets) {
                 verticalInput = selected.networkVertical.Value;
